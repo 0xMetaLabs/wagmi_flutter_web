@@ -10,7 +10,7 @@ Wagmi provides developers with intuitive building blocks to build their Ethereum
 
 In `pubspec.yaml` file, add the `wagmi_flutter_web` dependency :
 
-T
+Test
 ```yaml
 dependencies:
   wagmi_flutter_web:
