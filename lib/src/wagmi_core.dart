@@ -21,6 +21,7 @@ import 'package:wagmi_flutter_web/src/actions/read_contract.dart';
 import 'package:wagmi_flutter_web/src/actions/read_contracts.dart';
 import 'package:wagmi_flutter_web/src/actions/send_transaction.dart';
 import 'package:wagmi_flutter_web/src/actions/sign_message.dart';
+import 'package:wagmi_flutter_web/src/actions/switch_chain.dart';
 import 'package:wagmi_flutter_web/src/actions/wait_for_transaction_receipt.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_chain_id.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_contract_event.dart';
@@ -403,5 +404,19 @@ class Core {
         )
         .toDart;
     return result.toDart;
+  }
+
+  // switch chain
+  static Future<Map<String, dynamic>> switchChain(
+    SwitchChainParameters switchChainParameters, {
+    bool transportOnlyConfig = false,
+  }) async {
+    final result = await window.wagmiCore
+        .switchChain(
+          switchChainParameters.toJS,
+          transportOnlyConfig.toJS,
+        )
+        .toDart;
+    return UtilsJS.jsObjectToMap(result);
   }
 }

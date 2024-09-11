@@ -63,10 +63,10 @@ class _MyAppState extends State<MyApp> {
         wagmi.Web3Modal.init(
           projectId: 'f642e3f39ba3e375f8f714f18354faa4',
           chains: [
-            // wagmi.Chain.mainnet.name,
-            // wagmi.Chain.sepolia.name,
+            wagmi.Chain.mainnet.name,
+            wagmi.Chain.sepolia.name,
             wagmi.Chain.polygonAmoy.name,
-            // wagmi.Chain.polygon.name,
+            wagmi.Chain.polygon.name,
           ],
           enableAnalytics: true,
           enableOnRamp: true,
@@ -80,17 +80,17 @@ class _MyAppState extends State<MyApp> {
           email: false, // email
           showWallets: true, // showWallets
           walletFeatures: true, // walletFeatures
-          // transportBuilder: (chainId) => const wagmi.Transport.websocket(
-          //   url:
-          //       'wss://eth-sepolia.g.alchemy.com/v2/eLhVAxz79HO5n2y98mdIl_gMkKSDc3G8',
-          // ),
-          transport: [
-            const wagmi.Transport1.url(
-              // http:
-              //     'https://polygon-mainnet.g.alchemy.com/v2/aX3VNdN-hBHFWAs4Gk0EveEEONI7ZEM_',
-              ws: 'wss://polygon-mainnet.g.alchemy.com/v2/aX3VNdN-hBHFWAs4Gk0EveEEONI7ZEM_',
-            ),
-          ],
+          transportBuilder: (chainId) => const wagmi.Transport.websocket(
+            url:
+                'wss://eth-sepolia.g.alchemy.com/v2/eLhVAxz79HO5n2y98mdIl_gMkKSDc3G8',
+          ),
+          // transport: [
+          //   const wagmi.Transport1.url(
+          //     // http:
+          //     //     'https://polygon-mainnet.g.alchemy.com/v2/aX3VNdN-hBHFWAs4Gk0EveEEONI7ZEM_',
+          //     ws: 'wss://polygon-mainnet.g.alchemy.com/v2/aX3VNdN-hBHFWAs4Gk0EveEEONI7ZEM_',
+          //   ),
+          // ],
         );
       },
     );
@@ -137,7 +137,7 @@ class _MyAppState extends State<MyApp> {
               onPressed: () async {
                 // disconnect wallet
                 final getTokenParameters = wagmi.DisconnectParameters(
-                  connector: account?.connector!.id,
+                  connector: account?.connector,
                 );
                 await wagmi.Core.disconnect(getTokenParameters);
               },
@@ -147,7 +147,7 @@ class _MyAppState extends State<MyApp> {
               height: 10,
             ),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 setState(() {
                   signedMessage = null;
                   account = wagmi.Core.getAccount();
@@ -183,13 +183,12 @@ class _MyAppState extends State<MyApp> {
             ElevatedButton(
               onPressed: () async {
                 final getBlockNumberParameters = wagmi.GetBlockNumberParameters(
-                  chainId: 80002,
+                  chainId: account?.chain!.id,
                   cacheTime: 4000,
                 );
                 final getBlockNumberReturnType =
                     await wagmi.Core.getBlockNumber(
                   getBlockNumberParameters,
-                  transportOnlyConfig: true,
                 );
                 setState(() {
                   blockNumber = getBlockNumberReturnType;
@@ -208,10 +207,9 @@ class _MyAppState extends State<MyApp> {
               onPressed: () async {
                 final balanceResult = await wagmi.Core.getBalance(
                   wagmi.GetBalanceParameters(
-                    address: '0xfAd3b616BCD747A12A7c0a6203E7a481606B12E8',
-                    blockTag: 'latest',
+                    address: account?.address ?? '',
+                    blockTag: const wagmi.BlockTag.latest(),
                   ),
-                  transportOnlyConfig: true,
                 );
                 setState(() {
                   balance = balanceResult;
@@ -260,7 +258,7 @@ class _MyAppState extends State<MyApp> {
               onPressed: () async {
                 final getTokenParameters = wagmi.GetTokenParameters(
                   address: bitTokenAddress,
-                  chainId: account!.chain!.id,
+                  chainId: account?.chain!.id,
                   formatUnits: const wagmi.FormatUnit.wei(),
                 );
                 final getTokenReturnType =
@@ -279,10 +277,9 @@ class _MyAppState extends State<MyApp> {
                 final transactionCountResult =
                     await wagmi.Core.getTransactionCount(
                   wagmi.GetTransactionCountParameters(
-                    address: account?.address ??
-                        '0xfAd3b616BCD747A12A7c0a6203E7a481606B12E8',
-                    chainId: 80002,
-                    blockTag: 'latest',
+                    address: account?.address ?? '',
+                    chainId: account?.chain!.id,
+                    blockTag: const wagmi.BlockTag.latest(),
                   ),
                 );
                 setState(() {
@@ -750,6 +747,22 @@ class _MyAppState extends State<MyApp> {
             const SizedBox(
               height: 7,
             ),
+            // switch chain
+            ElevatedButton(
+              onPressed: () async {
+                final switchChainParameters = wagmi.SwitchChainParameters(
+                  connector: account!.connector,
+                  chainId: 80002,
+                );
+                final result =
+                    await wagmi.Core.switchChain(switchChainParameters);
+                showSwitchChainDialog(context, result);
+              },
+              child: const Text('Switch Chain'),
+            ),
+            const SizedBox(
+              height: 7,
+            ),
           ],
         ),
       ),
@@ -807,6 +820,51 @@ class _MyAppState extends State<MyApp> {
               Text('oldestBlock: ${getFeeHistoryReturnType.oldestBlock}'),
               const SizedBox(height: 8),
               Text('reward: ${getFeeHistoryReturnType.reward}'),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void showSwitchChainDialog(
+    BuildContext context,
+    Map<String, dynamic> data,
+  ) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Switch Chain'),
+          content: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('formatters: ${data['formatters']}'),
+              const SizedBox(height: 8),
+              Text('fees: ${data['fees']}'),
+              const SizedBox(height: 8),
+              Text('serializers: ${data['serializers']}'),
+              const SizedBox(height: 8),
+              Text('rpcUrls: ${data['rpcUrls']}'),
+              const SizedBox(height: 8),
+              Text('nativeCurrency: ${data['nativeCurrency']}'),
+              const SizedBox(height: 8),
+              Text('blockExplorer: ${data['blockExplorer']}'),
+              const SizedBox(height: 8),
+              Text('chainId: ${data['id']}'),
+              const SizedBox(height: 8),
+              Text('chainName: ${data['name']}'),
+              const SizedBox(height: 8),
+              Text('contracts: ${data['contracts']}'),
+              const SizedBox(height: 8),
             ],
           ),
           actions: [
