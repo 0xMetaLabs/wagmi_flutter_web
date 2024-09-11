@@ -1,5 +1,3 @@
-import 'package:wagmi_flutter_web/src/js/wagmi.js.dart';
-
 class Connector {
   Connector({
     this.icon,

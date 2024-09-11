@@ -31,8 +31,10 @@ extension type JSConnector(JSObject _) implements JSObject {
         type: type?.toDart,
         uid: uid?.toDart,
         supportsSimulation: supportsSimulation?.toDart,
-        connect: connect?.toDart as dynamic Function(
-            {int? chainId, bool? isReconnecting})?,
+        connect: connect?.toDart as dynamic Function({
+          int? chainId,
+          bool? isReconnecting,
+        })?,
         disconnect: disconnect?.toDart as void Function()?,
         emitter: emitter?.jsify(),
         getAccounts: getAccounts?.toDart as dynamic Function()?,
@@ -45,7 +47,9 @@ extension type JSConnector(JSObject _) implements JSObject {
         onConnect: onConnect?.toDart as Function({dynamic connectionInfo})?,
         onDisconnect: onDisconnect?.toDart as Function({dynamic error})?,
         setup: setup?.toDart as Function()?,
-        switchChain: switchChain?.toDart as Function(
-            {dynamic addEthereumChainParameter, int? chainId})?,
+        switchChain: switchChain?.toDart as Function({
+          dynamic addEthereumChainParameter,
+          int? chainId,
+        })?,
       );
 }

@@ -2,7 +2,6 @@ import 'dart:js_interop';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:js_util' as js_util;
 
-import 'package:wagmi_flutter_web/src/actions/switch_chain.dart';
 import 'package:wagmi_flutter_web/src/models/error.dart';
 import 'package:wagmi_flutter_web/src/models/log.dart';
 import 'package:wagmi_flutter_web/wagmi_flutter_web.dart';
