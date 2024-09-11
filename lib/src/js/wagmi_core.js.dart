@@ -109,4 +109,9 @@ extension type JSWagmiCore(JSObject _) implements JSObject {
     JSWatchContractEventParameters watchContractEventParameters,
     JSBoolean transportOnlyConfig,
   );
+  // switch chain
+  external JSPromise<JSObject> switchChain(
+    JSSwitchChainParameters switchChainParameters,
+    JSBoolean transportOnlyConfig,
+  );
 }

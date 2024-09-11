@@ -108,7 +108,7 @@ class _WriteContractsExampleState extends State<WriteContractsExample> {
   }
 
   void _operationFailed(String? message) {
-    print('Approval failed : $message');
+    debugPrint('Approval failed : $message');
     context.showFailure(
       'Approval failed : $message',
     );
@@ -120,7 +120,7 @@ class _WriteContractsExampleState extends State<WriteContractsExample> {
   }
 
   void _operationSucceed(String? message) {
-    print('Approval succeed : $message');
+    debugPrint('Approval succeed : $message');
     context.showSuccess(
       'Approval succeed : $message',
     );

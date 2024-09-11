@@ -28,7 +28,7 @@ export class JSWagmiContext {
     }
 
     // This is second config
-    public get config2() {
+    public get transportOnlyConfig() {
         if (this.#transportOnlyConfig === undefined) {
             throw new Error('Wagmi not initialized. Call `Web3Modal.init` first.')
         }

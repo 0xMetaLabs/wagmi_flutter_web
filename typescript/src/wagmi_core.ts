@@ -9,6 +9,7 @@ import {
     GetBlockParameters,
     GetBlockTransactionCountParameters,
     GetBytecodeParameters,
+    SwitchChainParameters,
     GetFeeHistoryParameters,
     GetGasPriceParameters,
     GetTokenParameters,
@@ -52,6 +53,7 @@ import {
     watchChainId,
     watchContractEvent,
     writeContract,
+    switchChain
 } from "@wagmi/core";
 import { InvalidAddressError } from "viem";
 import { JSWagmiContext } from "./context";
@@ -59,7 +61,9 @@ import { illegalNullsToUndefined } from "./parameters_utils";
 
 export class JSWagmiCore {
     getAccount = function (transportOnlyConfig: boolean) {
-        return getAccount(transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config);
+        var s = getAccount(transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config);
+        console.log('getAccount', s);
+        return s
     }
 
 
@@ -382,6 +386,17 @@ export class JSWagmiCore {
             )
         } catch (error) {
             console.error("Error getFeeHistory:", error)
+            throw error
+        }
+    }
+    switchChain = async function (switchChainParameters: SwitchChainParameters, transportOnlyConfig: boolean) {
+        try {
+            return await switchChain(
+                transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config,
+                illegalNullsToUndefined(switchChainParameters)
+            );
+        } catch (error) {
+            console.error("Error switchChain:", error)
             throw error
         }
     }

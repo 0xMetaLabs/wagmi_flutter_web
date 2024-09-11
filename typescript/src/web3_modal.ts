@@ -43,7 +43,7 @@ export class JSWeb3Modal {
                 showWallets: showWallets,
                 walletFeatures: walletFeatures
             },
-            client: !transportBuilder ? undefined : this.#clientBuilder(transportBuilder),
+            // client: !transportBuilder ? undefined : this.#clientBuilder(transportBuilder),
         })
 
         if (typeof (transport) !== 'undefined' && transport?.length > 0 && chains.length === transport.length) {
