@@ -20,11 +20,14 @@ import {
     ReadContractParameters,
     ReadContractsParameters,
     SendTransactionParameters,
+    SwitchAccountParameters,
     SignMessageParameters,
     WaitForTransactionReceiptParameters,
     WatchChainIdParameters,
     WatchContractEventParameters,
     WriteContractParameters,
+    VerifyMessageParameters,
+    WatchAccountParameters,
     call,
     disconnect,
     estimateFeesPerGas,
@@ -53,7 +56,10 @@ import {
     watchChainId,
     watchContractEvent,
     writeContract,
-    switchChain
+    switchChain,
+    switchAccount,
+    verifyMessage,
+    watchAccount
 } from "@wagmi/core";
 import { InvalidAddressError } from "viem";
 import { JSWagmiContext } from "./context";
@@ -287,6 +293,18 @@ export class JSWagmiCore {
         }
     }
 
+    watchAccount = async function (watchAccountParameters: WatchAccountParameters, transportOnlyConfig: boolean) {
+        try {
+            return await watchAccount(
+                transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config,
+                illegalNullsToUndefined(watchAccountParameters)
+            );
+        } catch (error) {
+            console.error("Error watchAccount:", error)
+            throw error
+        }
+    }
+
     watchContractEvent = async function (watchContractEventParameters: WatchContractEventParameters, transportOnlyConfig: boolean) {
         try {
             return await watchContractEvent(
@@ -400,4 +418,29 @@ export class JSWagmiCore {
             throw error
         }
     }
+    // switch account
+    switchAccount = async function (switchAccountParameters: SwitchAccountParameters, transportOnlyConfig: boolean) {
+        try {
+            return await switchAccount(
+                transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config,
+                illegalNullsToUndefined(switchAccountParameters)
+            );
+        } catch (error) {
+            console.error("Error switchAccount:", error)
+            throw error
+        }
+    }
+    // verify message
+    verifyMessage = async function (verifyMessageParameters: VerifyMessageParameters, transportOnlyConfig: boolean) {
+        try {
+            return await verifyMessage(
+                transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config,
+                illegalNullsToUndefined(verifyMessageParameters)
+            );
+        } catch (error) {
+            console.error("Error verifyMessage:", error)
+            throw error
+        }
+    }
+
 }

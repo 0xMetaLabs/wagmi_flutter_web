@@ -21,8 +21,11 @@ import 'package:wagmi_flutter_web/src/actions/read_contract.dart';
 import 'package:wagmi_flutter_web/src/actions/read_contracts.dart';
 import 'package:wagmi_flutter_web/src/actions/send_transaction.dart';
 import 'package:wagmi_flutter_web/src/actions/sign_message.dart';
+import 'package:wagmi_flutter_web/src/actions/switch_account.dart';
 import 'package:wagmi_flutter_web/src/actions/switch_chain.dart';
+import 'package:wagmi_flutter_web/src/actions/verify_message.dart';
 import 'package:wagmi_flutter_web/src/actions/wait_for_transaction_receipt.dart';
+import 'package:wagmi_flutter_web/src/actions/watch_account.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_chain_id.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_contract_event.dart';
 import 'package:wagmi_flutter_web/src/actions/write_contract.dart';
@@ -418,5 +421,47 @@ class Core {
         )
         .toDart;
     return UtilsJS.jsObjectToMap(result);
+  }
+
+  // switch account
+  static Future<Map<String, dynamic>> switchAccount(
+    SwitchAccountParameters switchAccountParameters, {
+    bool transportOnlyConfig = false,
+  }) async {
+    final result = await window.wagmiCore
+        .switchAccount(
+          switchAccountParameters.toJS,
+          transportOnlyConfig.toJS,
+        )
+        .toDart;
+    return UtilsJS.jsObjectToMap(result);
+  }
+
+  // verify message
+  static Future<bool> verifyMessage(
+    VerifyMessageParameters verifyMessageParameters, {
+    bool transportOnlyConfig = false,
+  }) async {
+    final result = await window.wagmiCore
+        .verifyMessage(
+          verifyMessageParameters.toJS,
+          transportOnlyConfig.toJS,
+        )
+        .toDart;
+    return result.toDart;
+  }
+
+  // watch account
+  static Future<void Function()> watchAccount(
+    WatchAccountParameters watchAccountParameters, {
+    bool transportOnlyConfig = false,
+  }) async {
+    final result = await window.wagmiCore
+        .watchAccount(
+          watchAccountParameters.toJS1,
+          transportOnlyConfig.toJS,
+        )
+        .toDart;
+    return result.toDart;
   }
 }

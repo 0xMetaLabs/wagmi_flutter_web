@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
   BigInt? blockNumber;
   String? signedMessage;
   wagmi.WatchChainIdReturnType? watchChainIdUnsubscribe;
+  wagmi.WatchAccountReturnType? watchAccountUnsubscribe;
   String? watchChainIdInfo;
   int? gasEstimation;
   int? transactionCount;
@@ -47,6 +48,7 @@ class _MyAppState extends State<MyApp> {
       estimateMaxPriorityFeePerGas = BigInt.zero;
   int? transactionsCountOfChain;
   BigInt callReturnType = BigInt.zero;
+  bool? verifyMsg;
 
   final tabs = [
     const Tab(text: 'Main'),
@@ -763,6 +765,78 @@ class _MyAppState extends State<MyApp> {
             const SizedBox(
               height: 7,
             ),
+            // switch account
+            ElevatedButton(
+              onPressed: () async {
+                final switchAccountParameters = wagmi.SwitchAccountParameters(
+                  connector: account!.connector,
+                );
+                final result =
+                    await wagmi.Core.switchAccount(switchAccountParameters);
+                showSwitchAccountDialog(context, result);
+              },
+              child: const Text('Switch Account'),
+            ),
+            const SizedBox(
+              height: 7,
+            ),
+            // verify message
+            ElevatedButton(
+              onPressed: () async {
+                final verifyMessageParameters = wagmi.VerifyMessageParameters(
+                  message: messageToSign,
+                  signature: signedMessage!,
+                  address: account!.address!,
+                );
+                final result = await wagmi.Core.verifyMessage(
+                  verifyMessageParameters,
+                );
+                setState(() {
+                  verifyMsg = result;
+                });
+              },
+              child: const Text('Verify Message'),
+            ),
+            const SizedBox(
+              height: 7,
+            ),
+            if (verifyMsg != null)
+              Text('Verify Message: $verifyMsg')
+            else
+              Container(),
+            const SizedBox(
+              height: 7,
+            ),
+
+            // watch account
+            if (watchAccountUnsubscribe != null)
+              ElevatedButton(
+                onPressed: () async {
+                  watchAccountUnsubscribe?.call();
+                  setState(() {
+                    watchAccountUnsubscribe = null;
+                  });
+                },
+                child: const Text('Unwatch Account'),
+              )
+            else
+              ElevatedButton(
+                onPressed: () async {
+                  final watchAccountParameters = wagmi.WatchAccountParameters(
+                    onChange: (account) => setState(() {
+                      // print('account: $account');
+                    }),
+                  );
+
+                  final unwatch = await wagmi.Core.watchAccount(
+                    watchAccountParameters,
+                  );
+                  setState(() {
+                    watchAccountUnsubscribe = unwatch;
+                  });
+                },
+                child: const Text('Watch Account'),
+              ),
           ],
         ),
       ),
@@ -799,6 +873,38 @@ class _MyAppState extends State<MyApp> {
   // abi for test3BitApi
   final String test3BitApi =
       '[{"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}]';
+
+// switch account dialog
+  void showSwitchAccountDialog(
+    BuildContext context,
+    Map<String, dynamic> value,
+  ) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Switch Account'),
+          content: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text('account: ${value['accounts']}'),
+              const SizedBox(height: 8),
+              Text('chainId: ${value['chainId']}'),
+              const SizedBox(height: 8),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Close'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   // show get fee history dialog
   void showGetFeeHistoryDialog(
