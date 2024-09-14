@@ -130,4 +130,10 @@ extension type JSWagmiCore(JSObject _) implements JSObject {
     JSWatchAccountParameters watchChainIdParameters,
     JSBoolean transportOnlyConfig,
   );
+
+  // watch connections
+  external JSPromise<JSWatchConnectionsReturnType> watchConnections(
+    JSWatchConnectionsParameters watchConnectionsParameters,
+    JSBoolean transportOnlyConfig,
+  );
 }

@@ -41,4 +41,26 @@ class Connector {
   Function()? setup;
   dynamic Function({dynamic addEthereumChainParameter, int? chainId})?
       switchChain;
+
+  factory Connector.fromJson(Map<String, dynamic> json) => Connector(
+        icon: json['icon'],
+        id: json['id'],
+        name: json['name'],
+        type: json['type'],
+        uid: json['uid'],
+        supportsSimulation: json['supportsSimulation'],
+        connect: json['connect'],
+        disconnect: json['disconnect'],
+        emitter: json['emitter'],
+        getAccounts: json['getAccounts'],
+        getChainId: json['getChainId'],
+        getProvider: json['getProvider'],
+        isAuthorized: json['isAuthorized'],
+        onAccountsChanged: json['onAccountsChanged'],
+        onChainChanged: json['onChainChanged'],
+        onConnect: json['onConnect'],
+        onDisconnect: json['onDisconnect'],
+        setup: json['setup'],
+        switchChain: json['switchChain'],
+      );
 }

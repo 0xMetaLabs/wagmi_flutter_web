@@ -1,6 +1,6 @@
 /// [Documentation API](https://wagmi.sh/core/api/actions/watchAccount)
 
-typedef OnChangeCallback2 = void Function(String accounts);
+typedef OnChangeCallback2 = void Function(Map<String, dynamic> accounts);
 
 class WatchAccountParameters {
   WatchAccountParameters({required this.onChange});

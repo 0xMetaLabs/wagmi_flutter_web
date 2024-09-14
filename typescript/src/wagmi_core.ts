@@ -28,6 +28,7 @@ import {
     WriteContractParameters,
     VerifyMessageParameters,
     WatchAccountParameters,
+    WatchConnectionsParameters,
     call,
     disconnect,
     estimateFeesPerGas,
@@ -59,7 +60,8 @@ import {
     switchChain,
     switchAccount,
     verifyMessage,
-    watchAccount
+    watchAccount,
+    watchConnections,
 } from "@wagmi/core";
 import { InvalidAddressError } from "viem";
 import { JSWagmiContext } from "./context";
@@ -301,6 +303,17 @@ export class JSWagmiCore {
             );
         } catch (error) {
             console.error("Error watchAccount:", error)
+            throw error
+        }
+    }
+    watchConnections = async function (watchConnectionsParameters: WatchConnectionsParameters, transportOnlyConfig: boolean) {
+        try {
+            return await watchConnections(
+                transportOnlyConfig ? JSWagmiContext.instance.transportOnlyConfig : JSWagmiContext.instance.config,
+                illegalNullsToUndefined(watchConnectionsParameters)
+            );
+        } catch (error) {
+            console.error("Error watchConnections:", error)
             throw error
         }
     }

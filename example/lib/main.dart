@@ -29,6 +29,7 @@ class _MyAppState extends State<MyApp> {
   String? signedMessage;
   wagmi.WatchChainIdReturnType? watchChainIdUnsubscribe;
   wagmi.WatchAccountReturnType? watchAccountUnsubscribe;
+  wagmi.WatchConnectionsReturnType? watchConnectionsUnsubscribe;
   String? watchChainIdInfo;
   int? gasEstimation;
   int? transactionCount;
@@ -824,7 +825,7 @@ class _MyAppState extends State<MyApp> {
                 onPressed: () async {
                   final watchAccountParameters = wagmi.WatchAccountParameters(
                     onChange: (account) => setState(() {
-                      // print('account: $account');
+                      print('account changed : $account');
                     }),
                   );
 
@@ -836,6 +837,44 @@ class _MyAppState extends State<MyApp> {
                   });
                 },
                 child: const Text('Watch Account'),
+              ),
+            const SizedBox(
+              height: 7,
+            ),
+            // watch connections
+            if (watchConnectionsUnsubscribe != null)
+              ElevatedButton(
+                onPressed: () async {
+                  watchConnectionsUnsubscribe?.call();
+                  setState(() {
+                    watchConnectionsUnsubscribe = null;
+                  });
+                },
+                child: const Text('Unwatch Connections'),
+              )
+            else
+              ElevatedButton(
+                onPressed: () async {
+                  final watchConnectionsParameters =
+                      wagmi.WatchConnectionsParameters(
+                    onChange: (accounts) => setState(() {
+                      if (accounts.length > 0) {
+                        print('accounts111: ${accounts[0].connector.name}');
+                        print('accounts222: ${accounts[0].connector.type}');
+                      } else {
+                        print('empty accounts: $accounts');
+                      }
+                    }),
+                  );
+
+                  final unwatch = await wagmi.Core.watchConnections(
+                    watchConnectionsParameters,
+                  );
+                  setState(() {
+                    watchConnectionsUnsubscribe = unwatch;
+                  });
+                },
+                child: const Text('Watch Connections'),
               ),
           ],
         ),

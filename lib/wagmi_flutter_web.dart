@@ -32,6 +32,7 @@ export 'src/actions/verify_message.dart';
 export 'src/actions/wait_for_transaction_receipt.dart';
 export 'src/actions/watch_account.dart';
 export 'src/actions/watch_chain_id.dart';
+export 'src/actions/watch_connections.dart';
 export 'src/actions/watch_contract_event.dart';
 export 'src/actions/write_contract.dart';
 export 'src/models/account.dart';

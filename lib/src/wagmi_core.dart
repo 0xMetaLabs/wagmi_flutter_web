@@ -27,6 +27,7 @@ import 'package:wagmi_flutter_web/src/actions/verify_message.dart';
 import 'package:wagmi_flutter_web/src/actions/wait_for_transaction_receipt.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_account.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_chain_id.dart';
+import 'package:wagmi_flutter_web/src/actions/watch_connections.dart';
 import 'package:wagmi_flutter_web/src/actions/watch_contract_event.dart';
 import 'package:wagmi_flutter_web/src/actions/write_contract.dart';
 import 'package:wagmi_flutter_web/src/js/wagmi.js.dart';
@@ -459,6 +460,20 @@ class Core {
     final result = await window.wagmiCore
         .watchAccount(
           watchAccountParameters.toJS1,
+          transportOnlyConfig.toJS,
+        )
+        .toDart;
+    return result.toDart;
+  }
+
+  // watch connections
+  static Future<void Function()> watchConnections(
+    WatchConnectionsParameters watchConnectionsParameters, {
+    bool transportOnlyConfig = false,
+  }) async {
+    final result = await window.wagmiCore
+        .watchConnections(
+          watchConnectionsParameters.toJS2,
           transportOnlyConfig.toJS,
         )
         .toDart;

@@ -23,6 +23,9 @@ extension JSWatchAccountReturnTypeConversion on JSWatchAccountReturnType {
 
 extension JSWatchAccountParametersConversion on WatchAccountParameters {
   // convert dart function to js function
-  JSWatchAccountParameters get toJS1 =>
-      JSWatchAccountParameters(onChange: onChange.toJS);
+  JSWatchAccountParameters get toJS1 => JSWatchAccountParameters(
+        onChange: ((JSObject accounts) {
+          onChange(UtilsJS.jsObjectToMap(accounts, deep: false));
+        }).toJS,
+      );
 }
