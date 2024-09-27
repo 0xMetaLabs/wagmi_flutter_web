@@ -7,33 +7,55 @@ extension type JSTransport._(JSObject _) implements JSObject {}
 extension type JSWebsocketTransport._(JSTransport _) implements JSTransport {
   external JSWebsocketTransport({
     required JSString type,
-    required JSString url,
+    required JSString wsUrl,
+    JSString? httpUrl,
   });
 
   external JSString type;
-  external JSString url;
+  external JSString? httpUrl;
+  external JSString wsUrl;
 }
 
 @JS()
 extension type JSHttpTransport._(JSTransport _) implements JSTransport {
   external JSHttpTransport({
     required JSString type,
-    required JSString url,
+    required JSString httpUrl,
+    JSString? wsUrl,
   });
 
   external JSString type;
-  external JSString url;
+  external JSString httpUrl;
+  external JSString? wsUrl;
+}
+
+@JS()
+extension type JSFallbackTransport._(JSTransport _) implements JSTransport {
+  external JSFallbackTransport({
+    required JSString type,
+    required JSString httpUrl,
+    required JSString wsUrl,
+  });
+
+  external JSString type;
+  external JSString httpUrl;
+  external JSString wsUrl;
 }
 
 extension TransportToJS on Transport {
   JSTransport get toJS => map(
         websocket: (websocketTransport) => JSWebsocketTransport(
           type: 'JSWebsocketTransport'.toJS,
-          url: websocketTransport.url.toJS,
+          wsUrl: websocketTransport.wsUrl.toJS,
         ),
         http: (httpTransport) => JSHttpTransport(
           type: 'JSHttpTransport'.toJS,
-          url: httpTransport.url.toJS,
+          httpUrl: httpTransport.httpUrl.toJS,
+        ),
+        fallback: (fallbackTransport) => JSFallbackTransport(
+          type: 'JSFallbackTransport'.toJS,
+          httpUrl: fallbackTransport.httpUrl.toJS,
+          wsUrl: fallbackTransport.wsUrl.toJS,
         ),
       );
 }

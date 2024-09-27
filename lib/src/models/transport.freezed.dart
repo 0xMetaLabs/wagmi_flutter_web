@@ -16,23 +16,27 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$Transport {
-  String get url => throw _privateConstructorUsedError;
+  String? get wsUrl => throw _privateConstructorUsedError;
+  String? get httpUrl => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String url) websocket,
-    required TResult Function(String url) http,
+    required TResult Function(String wsUrl, String? httpUrl) websocket,
+    required TResult Function(String httpUrl, String? wsUrl) http,
+    required TResult Function(String httpUrl, String wsUrl) fallback,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String url)? websocket,
-    TResult? Function(String url)? http,
+    TResult? Function(String wsUrl, String? httpUrl)? websocket,
+    TResult? Function(String httpUrl, String? wsUrl)? http,
+    TResult? Function(String httpUrl, String wsUrl)? fallback,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String url)? websocket,
-    TResult Function(String url)? http,
+    TResult Function(String wsUrl, String? httpUrl)? websocket,
+    TResult Function(String httpUrl, String? wsUrl)? http,
+    TResult Function(String httpUrl, String wsUrl)? fallback,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,18 +44,21 @@ mixin _$Transport {
   TResult map<TResult extends Object?>({
     required TResult Function(_WebsocketTransport value) websocket,
     required TResult Function(_HttpTransport value) http,
+    required TResult Function(_FallbackTransport value) fallback,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_WebsocketTransport value)? websocket,
     TResult? Function(_HttpTransport value)? http,
+    TResult? Function(_FallbackTransport value)? fallback,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_WebsocketTransport value)? websocket,
     TResult Function(_HttpTransport value)? http,
+    TResult Function(_FallbackTransport value)? fallback,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -68,7 +75,7 @@ abstract class $TransportCopyWith<$Res> {
   factory $TransportCopyWith(Transport value, $Res Function(Transport) then) =
       _$TransportCopyWithImpl<$Res, Transport>;
   @useResult
-  $Res call({String url});
+  $Res call({String wsUrl, String httpUrl});
 }
 
 /// @nodoc
@@ -86,12 +93,17 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
+    Object? wsUrl = null,
+    Object? httpUrl = null,
   }) {
     return _then(_value.copyWith(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      wsUrl: null == wsUrl
+          ? _value.wsUrl!
+          : wsUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      httpUrl: null == httpUrl
+          ? _value.httpUrl!
+          : httpUrl // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -105,7 +117,7 @@ abstract class _$$WebsocketTransportImplCopyWith<$Res>
       __$$WebsocketTransportImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String url});
+  $Res call({String wsUrl, String? httpUrl});
 }
 
 /// @nodoc
@@ -121,13 +133,18 @@ class __$$WebsocketTransportImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
+    Object? wsUrl = null,
+    Object? httpUrl = freezed,
   }) {
     return _then(_$WebsocketTransportImpl(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      wsUrl: null == wsUrl
+          ? _value.wsUrl
+          : wsUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      httpUrl: freezed == httpUrl
+          ? _value.httpUrl
+          : httpUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -135,14 +152,17 @@ class __$$WebsocketTransportImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$WebsocketTransportImpl extends _WebsocketTransport {
-  const _$WebsocketTransportImpl({required this.url}) : super._();
+  const _$WebsocketTransportImpl({required this.wsUrl, this.httpUrl})
+      : super._();
 
   @override
-  final String url;
+  final String wsUrl;
+  @override
+  final String? httpUrl;
 
   @override
   String toString() {
-    return 'Transport.websocket(url: $url)';
+    return 'Transport.websocket(wsUrl: $wsUrl, httpUrl: $httpUrl)';
   }
 
   @override
@@ -150,11 +170,12 @@ class _$WebsocketTransportImpl extends _WebsocketTransport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$WebsocketTransportImpl &&
-            (identical(other.url, url) || other.url == url));
+            (identical(other.wsUrl, wsUrl) || other.wsUrl == wsUrl) &&
+            (identical(other.httpUrl, httpUrl) || other.httpUrl == httpUrl));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, url);
+  int get hashCode => Object.hash(runtimeType, wsUrl, httpUrl);
 
   /// Create a copy of Transport
   /// with the given fields replaced by the non-null parameter values.
@@ -168,30 +189,33 @@ class _$WebsocketTransportImpl extends _WebsocketTransport {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String url) websocket,
-    required TResult Function(String url) http,
+    required TResult Function(String wsUrl, String? httpUrl) websocket,
+    required TResult Function(String httpUrl, String? wsUrl) http,
+    required TResult Function(String httpUrl, String wsUrl) fallback,
   }) {
-    return websocket(url);
+    return websocket(wsUrl, httpUrl);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String url)? websocket,
-    TResult? Function(String url)? http,
+    TResult? Function(String wsUrl, String? httpUrl)? websocket,
+    TResult? Function(String httpUrl, String? wsUrl)? http,
+    TResult? Function(String httpUrl, String wsUrl)? fallback,
   }) {
-    return websocket?.call(url);
+    return websocket?.call(wsUrl, httpUrl);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String url)? websocket,
-    TResult Function(String url)? http,
+    TResult Function(String wsUrl, String? httpUrl)? websocket,
+    TResult Function(String httpUrl, String? wsUrl)? http,
+    TResult Function(String httpUrl, String wsUrl)? fallback,
     required TResult orElse(),
   }) {
     if (websocket != null) {
-      return websocket(url);
+      return websocket(wsUrl, httpUrl);
     }
     return orElse();
   }
@@ -201,6 +225,7 @@ class _$WebsocketTransportImpl extends _WebsocketTransport {
   TResult map<TResult extends Object?>({
     required TResult Function(_WebsocketTransport value) websocket,
     required TResult Function(_HttpTransport value) http,
+    required TResult Function(_FallbackTransport value) fallback,
   }) {
     return websocket(this);
   }
@@ -210,6 +235,7 @@ class _$WebsocketTransportImpl extends _WebsocketTransport {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_WebsocketTransport value)? websocket,
     TResult? Function(_HttpTransport value)? http,
+    TResult? Function(_FallbackTransport value)? fallback,
   }) {
     return websocket?.call(this);
   }
@@ -219,6 +245,7 @@ class _$WebsocketTransportImpl extends _WebsocketTransport {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_WebsocketTransport value)? websocket,
     TResult Function(_HttpTransport value)? http,
+    TResult Function(_FallbackTransport value)? fallback,
     required TResult orElse(),
   }) {
     if (websocket != null) {
@@ -229,12 +256,15 @@ class _$WebsocketTransportImpl extends _WebsocketTransport {
 }
 
 abstract class _WebsocketTransport extends Transport {
-  const factory _WebsocketTransport({required final String url}) =
-      _$WebsocketTransportImpl;
+  const factory _WebsocketTransport(
+      {required final String wsUrl,
+      final String? httpUrl}) = _$WebsocketTransportImpl;
   const _WebsocketTransport._() : super._();
 
   @override
-  String get url;
+  String get wsUrl;
+  @override
+  String? get httpUrl;
 
   /// Create a copy of Transport
   /// with the given fields replaced by the non-null parameter values.
@@ -252,7 +282,7 @@ abstract class _$$HttpTransportImplCopyWith<$Res>
       __$$HttpTransportImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String url});
+  $Res call({String httpUrl, String? wsUrl});
 }
 
 /// @nodoc
@@ -268,13 +298,18 @@ class __$$HttpTransportImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? url = null,
+    Object? httpUrl = null,
+    Object? wsUrl = freezed,
   }) {
     return _then(_$HttpTransportImpl(
-      url: null == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
+      httpUrl: null == httpUrl
+          ? _value.httpUrl
+          : httpUrl // ignore: cast_nullable_to_non_nullable
               as String,
+      wsUrl: freezed == wsUrl
+          ? _value.wsUrl
+          : wsUrl // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -282,14 +317,16 @@ class __$$HttpTransportImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HttpTransportImpl extends _HttpTransport {
-  const _$HttpTransportImpl({required this.url}) : super._();
+  const _$HttpTransportImpl({required this.httpUrl, this.wsUrl}) : super._();
 
   @override
-  final String url;
+  final String httpUrl;
+  @override
+  final String? wsUrl;
 
   @override
   String toString() {
-    return 'Transport.http(url: $url)';
+    return 'Transport.http(httpUrl: $httpUrl, wsUrl: $wsUrl)';
   }
 
   @override
@@ -297,11 +334,12 @@ class _$HttpTransportImpl extends _HttpTransport {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HttpTransportImpl &&
-            (identical(other.url, url) || other.url == url));
+            (identical(other.httpUrl, httpUrl) || other.httpUrl == httpUrl) &&
+            (identical(other.wsUrl, wsUrl) || other.wsUrl == wsUrl));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, url);
+  int get hashCode => Object.hash(runtimeType, httpUrl, wsUrl);
 
   /// Create a copy of Transport
   /// with the given fields replaced by the non-null parameter values.
@@ -314,30 +352,33 @@ class _$HttpTransportImpl extends _HttpTransport {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String url) websocket,
-    required TResult Function(String url) http,
+    required TResult Function(String wsUrl, String? httpUrl) websocket,
+    required TResult Function(String httpUrl, String? wsUrl) http,
+    required TResult Function(String httpUrl, String wsUrl) fallback,
   }) {
-    return http(url);
+    return http(httpUrl, wsUrl);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String url)? websocket,
-    TResult? Function(String url)? http,
+    TResult? Function(String wsUrl, String? httpUrl)? websocket,
+    TResult? Function(String httpUrl, String? wsUrl)? http,
+    TResult? Function(String httpUrl, String wsUrl)? fallback,
   }) {
-    return http?.call(url);
+    return http?.call(httpUrl, wsUrl);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String url)? websocket,
-    TResult Function(String url)? http,
+    TResult Function(String wsUrl, String? httpUrl)? websocket,
+    TResult Function(String httpUrl, String? wsUrl)? http,
+    TResult Function(String httpUrl, String wsUrl)? fallback,
     required TResult orElse(),
   }) {
     if (http != null) {
-      return http(url);
+      return http(httpUrl, wsUrl);
     }
     return orElse();
   }
@@ -347,6 +388,7 @@ class _$HttpTransportImpl extends _HttpTransport {
   TResult map<TResult extends Object?>({
     required TResult Function(_WebsocketTransport value) websocket,
     required TResult Function(_HttpTransport value) http,
+    required TResult Function(_FallbackTransport value) fallback,
   }) {
     return http(this);
   }
@@ -356,6 +398,7 @@ class _$HttpTransportImpl extends _HttpTransport {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_WebsocketTransport value)? websocket,
     TResult? Function(_HttpTransport value)? http,
+    TResult? Function(_FallbackTransport value)? fallback,
   }) {
     return http?.call(this);
   }
@@ -365,6 +408,7 @@ class _$HttpTransportImpl extends _HttpTransport {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_WebsocketTransport value)? websocket,
     TResult Function(_HttpTransport value)? http,
+    TResult Function(_FallbackTransport value)? fallback,
     required TResult orElse(),
   }) {
     if (http != null) {
@@ -375,17 +419,185 @@ class _$HttpTransportImpl extends _HttpTransport {
 }
 
 abstract class _HttpTransport extends Transport {
-  const factory _HttpTransport({required final String url}) =
-      _$HttpTransportImpl;
+  const factory _HttpTransport(
+      {required final String httpUrl,
+      final String? wsUrl}) = _$HttpTransportImpl;
   const _HttpTransport._() : super._();
 
   @override
-  String get url;
+  String get httpUrl;
+  @override
+  String? get wsUrl;
 
   /// Create a copy of Transport
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HttpTransportImplCopyWith<_$HttpTransportImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FallbackTransportImplCopyWith<$Res>
+    implements $TransportCopyWith<$Res> {
+  factory _$$FallbackTransportImplCopyWith(_$FallbackTransportImpl value,
+          $Res Function(_$FallbackTransportImpl) then) =
+      __$$FallbackTransportImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String httpUrl, String wsUrl});
+}
+
+/// @nodoc
+class __$$FallbackTransportImplCopyWithImpl<$Res>
+    extends _$TransportCopyWithImpl<$Res, _$FallbackTransportImpl>
+    implements _$$FallbackTransportImplCopyWith<$Res> {
+  __$$FallbackTransportImplCopyWithImpl(_$FallbackTransportImpl _value,
+      $Res Function(_$FallbackTransportImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Transport
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? httpUrl = null,
+    Object? wsUrl = null,
+  }) {
+    return _then(_$FallbackTransportImpl(
+      httpUrl: null == httpUrl
+          ? _value.httpUrl
+          : httpUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+      wsUrl: null == wsUrl
+          ? _value.wsUrl
+          : wsUrl // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FallbackTransportImpl extends _FallbackTransport {
+  const _$FallbackTransportImpl({required this.httpUrl, required this.wsUrl})
+      : super._();
+
+  @override
+  final String httpUrl;
+  @override
+  final String wsUrl;
+
+  @override
+  String toString() {
+    return 'Transport.fallback(httpUrl: $httpUrl, wsUrl: $wsUrl)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FallbackTransportImpl &&
+            (identical(other.httpUrl, httpUrl) || other.httpUrl == httpUrl) &&
+            (identical(other.wsUrl, wsUrl) || other.wsUrl == wsUrl));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, httpUrl, wsUrl);
+
+  /// Create a copy of Transport
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FallbackTransportImplCopyWith<_$FallbackTransportImpl> get copyWith =>
+      __$$FallbackTransportImplCopyWithImpl<_$FallbackTransportImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String wsUrl, String? httpUrl) websocket,
+    required TResult Function(String httpUrl, String? wsUrl) http,
+    required TResult Function(String httpUrl, String wsUrl) fallback,
+  }) {
+    return fallback(httpUrl, wsUrl);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String wsUrl, String? httpUrl)? websocket,
+    TResult? Function(String httpUrl, String? wsUrl)? http,
+    TResult? Function(String httpUrl, String wsUrl)? fallback,
+  }) {
+    return fallback?.call(httpUrl, wsUrl);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String wsUrl, String? httpUrl)? websocket,
+    TResult Function(String httpUrl, String? wsUrl)? http,
+    TResult Function(String httpUrl, String wsUrl)? fallback,
+    required TResult orElse(),
+  }) {
+    if (fallback != null) {
+      return fallback(httpUrl, wsUrl);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_WebsocketTransport value) websocket,
+    required TResult Function(_HttpTransport value) http,
+    required TResult Function(_FallbackTransport value) fallback,
+  }) {
+    return fallback(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_WebsocketTransport value)? websocket,
+    TResult? Function(_HttpTransport value)? http,
+    TResult? Function(_FallbackTransport value)? fallback,
+  }) {
+    return fallback?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_WebsocketTransport value)? websocket,
+    TResult Function(_HttpTransport value)? http,
+    TResult Function(_FallbackTransport value)? fallback,
+    required TResult orElse(),
+  }) {
+    if (fallback != null) {
+      return fallback(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _FallbackTransport extends Transport {
+  const factory _FallbackTransport(
+      {required final String httpUrl,
+      required final String wsUrl}) = _$FallbackTransportImpl;
+  const _FallbackTransport._() : super._();
+
+  @override
+  String get httpUrl;
+  @override
+  String get wsUrl;
+
+  /// Create a copy of Transport
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FallbackTransportImplCopyWith<_$FallbackTransportImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

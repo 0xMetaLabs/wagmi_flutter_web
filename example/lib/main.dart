@@ -113,7 +113,7 @@ class _MyAppState extends State<MyApp> {
           showWallets: true, // showWallets
           walletFeatures: true, // walletFeatures
           transportBuilder: (chainId) => const wagmi.Transport.http(
-            url:
+            httpUrl:
                 'https://polygon-amoy.g.alchemy.com/v2/tElwptdnZg_9h0k6rhfPCXowCNxqAl3h',
           ),
         );
@@ -239,7 +239,7 @@ class _MyAppState extends State<MyApp> {
               onPressed: () async {
                 final balanceResult = await wagmi.Core.getBalance(
                   wagmi.GetBalanceParameters(
-                    address: account!.address ?? '',
+                    address: account?.address ?? '',
                     blockTag: 'latest',
                   ),
                   configKey: 'withWSSTransport',

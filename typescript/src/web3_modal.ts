@@ -1,10 +1,10 @@
-import { Config } from "@wagmi/core"
+import { Config, fallback } from "@wagmi/core"
 import { AppKit } from "@web3modal/base"
 import * as Web3modal from '@web3modal/wagmi'
 import { Chain, Client, createClient, EIP1193RequestFn, http, Transport, webSocket } from "viem"
 import { chainsFromIds } from "./chains"
 import { JSWagmiContext } from "./context"
-import { JSHttpTransport, JSTransport, JSTransportBuilder, JSWebsocketTransport } from "./transport"
+import { JSHttpTransport, JSTransport, JSTransportBuilder, JSWebsocketTransport, JSFallbackTransport } from "./transport"
 
 export class JSWeb3Modal {
     _modalInstance: AppKit | undefined
@@ -104,12 +104,18 @@ export class JSWeb3Modal {
         }
     }
 
+
     #transportBuilder(jsTransport: JSTransport): Transport<string, Record<string, any>, EIP1193RequestFn> {
         switch (jsTransport.type) {
             case JSHttpTransport.type:
-                return http(jsTransport.url)
+                return http(jsTransport.httpUrl)
             case JSWebsocketTransport.type:
-                return webSocket(jsTransport.url)
+                return webSocket(jsTransport.wsUrl)
+            case JSFallbackTransport.type:
+                return fallback([
+                    http(jsTransport.httpUrl),
+                    webSocket(jsTransport.wsUrl)
+                ])
             default:
                 throw new Error(`Unknown Transport type ${typeof jsTransport}`)
         }
