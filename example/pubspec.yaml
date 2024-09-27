@@ -38,6 +38,7 @@ dependencies:
   flutter_svg: ^2.0.10+1
   url_launcher: ^6.2.5
   
+  
 
   wagmi_flutter_web:
     path: ../

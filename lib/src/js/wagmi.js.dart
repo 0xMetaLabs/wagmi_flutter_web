@@ -35,6 +35,7 @@ part 'actions/wait_for_transaction_receipt.js.dart';
 part 'actions/watch_chain_id.js.dart';
 part 'actions/watch_contract_event.js.dart';
 part 'actions/write_contract.js.dart';
+part 'actions/reconnect.js.dart';
 part 'actions/watch_account.js.dart';
 part 'actions/watch_connections.js.dart';
 part 'actions/get_wallet_client.js.dart';
