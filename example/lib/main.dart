@@ -240,7 +240,7 @@ class _MyAppState extends State<MyApp> {
                 final balanceResult = await wagmi.Core.getBalance(
                   wagmi.GetBalanceParameters(
                     address: account?.address ?? '',
-                    blockTag: 'latest',
+                    blockTag: const wagmi.BlockTag.latest(),
                   ),
                   configKey: 'withWSSTransport',
                 );
@@ -312,7 +312,7 @@ class _MyAppState extends State<MyApp> {
                   wagmi.GetTransactionCountParameters(
                     address: account?.address ?? '',
                     chainId: account!.chain!.id,
-                    blockTag: 'latest',
+                    blockTag: const wagmi.BlockTag.latest(),
                   ),
                 );
                 setState(() {
