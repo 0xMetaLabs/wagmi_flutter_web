@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 extension SnackbarExt on BuildContext {
   void showSuccess(String message) {

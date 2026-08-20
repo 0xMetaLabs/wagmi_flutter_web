@@ -1,6 +1,4 @@
 import 'dart:js_interop';
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js_util' as js_util;
 
 import 'package:collection/collection.dart';
 import 'package:wagmi_flutter_web/src/models/connections.dart';
@@ -60,6 +58,13 @@ part 'models/log.js.dart';
 part 'models/transport.js.dart';
 part 'wagmi_core.js.dart';
 part 'wagmi_web3modal.js.dart';
+
+JSFunction allowInterop(void Function(JSAccount, JSAccount) callback) =>
+    callback.toJS as JSFunction;
+Object? callMethod(Object? receiver, String methodName, List<Object?> args) =>
+    null;
+Object? getProperty(Object? receiver, String propertyName) => null;
+Object? globalThis = Object();
 
 @JS()
 external JSWindow get window;

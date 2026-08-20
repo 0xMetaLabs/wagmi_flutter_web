@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:wagmi_flutter_web/wagmi_flutter_web.dart' as wagmi;
 
 typedef Callback = void Function(dynamic value);
@@ -83,6 +83,7 @@ class _SwitchChainDialogState extends State<SwitchChainDialog> {
                       return Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // ignore: deprecated_member_use
                           Radio<int>(
                             value: chain.id,
                             groupValue: widget.currentChain,
@@ -100,7 +101,7 @@ class _SwitchChainDialogState extends State<SwitchChainDialog> {
                               '${chain.name} (${chain.id})',
                               maxLines: 120,
                               style: TextStyle(
-                                color: Colors.black.withOpacity(0.7),
+                                color: Colors.black.withValues(alpha: 0.7),
                                 fontSize: contentFontSize,
                               ),
                             ),

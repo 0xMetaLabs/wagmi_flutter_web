@@ -1,6 +1,4 @@
 import 'dart:js_interop';
-// ignore: avoid_web_libraries_in_flutter
-import 'dart:js_util' as js_util;
 import 'dart:typed_data';
 
 import 'package:decimal/decimal.dart';
@@ -38,7 +36,7 @@ class UtilsJS {
     if (dartObject is Float32List) return dartObject.toJS;
     if (dartObject is Float64List) return dartObject.toJS;
     if (dartObject is List) return dartObject.toJSArray;
-    if (dartObject is Map) return js_util.jsify(dartObject);
+    if (dartObject is Map) return dartObject.jsify();
     return dartObject.jsify();
   }
 }
@@ -82,11 +80,11 @@ extension JSObjectToMap on JSObject {
     final map = <String, dynamic>{};
 
     // Get the keys of the JSObject
-    final List<Object?> keys = js_util.callMethod(
-      js_util.getProperty(js_util.globalThis, 'Object'),
+    final keys = (callMethod(
+      getProperty(globalThis, 'Object'),
       'keys',
       [this],
-    );
+    ) as List<Object?>?)!;
 
     // Iterate over the keys and assign values to the Dart map
     if (keys.isEmpty) {
@@ -94,7 +92,7 @@ extension JSObjectToMap on JSObject {
     }
     for (final key in keys) {
       final keyString = key! as String;
-      final value = js_util.getProperty(this, keyString);
+      final value = getProperty(this, keyString) as JSAny?;
       map[keyString] = UtilsJS.dartify(value, deep: deep);
     }
     return map;

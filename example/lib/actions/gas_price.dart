@@ -1,5 +1,5 @@
 import 'package:example/actions/components/tab_header.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:wagmi_flutter_web/wagmi_flutter_web.dart' as wagmi;
 
 class GasPriceExample extends StatefulWidget {

@@ -21,14 +21,13 @@ dependencies:
 
   # Defines the annotations used by json_serializable to create code for JSON serialization and deserialization.
   json_annotation: ^4.6.0
+  web: ^1.1.1
 
 dev_dependencies:
   # A build system for Dart code generation and modular compilation.
   build_runner: ^2.4.8
 
   flutter_lints: ^3.0.0
-  flutter_test:
-    sdk: flutter
 
   # Code generation for immutable classes that has a simple syntax/API without compromising on the features
   freezed: ^2.5.2

@@ -1,8 +1,9 @@
 library wagmi_flutter_web;
 
 import 'dart:async';
-// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
+
+import 'package:flutter/foundation.dart';
 
 export 'src/actions/call.dart';
 export 'src/actions/deploy_contract.dart';
@@ -87,8 +88,10 @@ Future<void> init() async {
 
 void _completeOnReadyEvent(Completer completer) {
   const readyEventName = 'wagmi_flutter_web_ready';
+  debugPrint('Adding listener for event: $readyEventName');
 
-  void readyEventListener(event) {
+  void readyEventListener(html.Event event) {
+    debugPrint('Event triggered: $readyEventName');
     html.window.document.removeEventListener(
       readyEventName,
       readyEventListener,
@@ -104,7 +107,7 @@ void _completeOnReadyEvent(Completer completer) {
 
 Future<void> _injectJavascriptModule(String assetPath) async {
   final scriptPath = 'assets/packages/wagmi_flutter_web/$assetPath';
-
+  debugPrint('Injecting script at path: $scriptPath');
   final scriptNode = html.ScriptElement()
     ..type = 'module'
     ..src = scriptPath;

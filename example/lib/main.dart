@@ -7,7 +7,7 @@ import 'package:example/actions/config_switch.dart';
 import 'package:example/actions/gas_price.dart';
 import 'package:example/actions/read_contract.dart';
 import 'package:example/actions/write_contract.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wagmi_flutter_web/wagmi_flutter_web.dart' as wagmi;
 import 'package:webthree/crypto.dart';
@@ -76,10 +76,10 @@ class _MyAppState extends State<MyApp> {
         wagmi.Web3Modal.init(
           projectId: _projectId,
           chains: [
-            wagmi.Chain.mainnet.id,
-            wagmi.Chain.sepolia.id,
+            // wagmi.Chain.mainnet.id,
+            // wagmi.Chain.sepolia.id,
             wagmi.Chain.polygonAmoy.id,
-            wagmi.Chain.polygon.id,
+            // wagmi.Chain.polygon.id,
           ],
           enableAnalytics: true,
           enableOnRamp: true,
@@ -117,9 +117,10 @@ class _MyAppState extends State<MyApp> {
           walletFeatures: true, // walletFeatures
           transportBuilder: (chainId) => const wagmi.Transport.http(
             url:
-                'https://polygon-amoy.g.alchemy.com/v2/', //TODO(dev): Add your own API Key to use example
+                'https://polygon-amoy.g.alchemy.com/v2/5rlpAx-2ZPosqZhE61bkYp9nTx-ZURyL', //TODO(dev): Add your own API Key to use example
           ),
         );
+        debugPrint('Web3Modal initialized');
         await wagmi.Core.reconnect(
           wagmi.ReconnectParameters(),
         ); // whenever the page is refreshed manually, it will reconnect to the wallet
@@ -500,12 +501,12 @@ class _MyAppState extends State<MyApp> {
                     gasPrice: BigInt.parse('150000000000'),
                   ),
                   // chainId: account!.chain!.id,
-                  account: account!.address!,
+                  account: '0xfAd3b616BCD747A12A7c0a6203E7a481606B12E8',
                   value: BigInt.parse('10000000000000000'),
                 );
                 final result = await wagmi.Core.sendTransaction(
-                  sendTransactionParameters,
-                );
+                    sendTransactionParameters,
+                    configKey: 'withWSSTransport');
                 setState(() {
                   txHash = result;
                 });
@@ -860,15 +861,20 @@ class _MyAppState extends State<MyApp> {
               ElevatedButton(
                 onPressed: () async {
                   final watchAccountParameters = wagmi.WatchAccountParameters(
-                    onChange: (accountInfo) => setState(() {
-                      debugPrint('accountInfo changed : $accountInfo');
-                      if (accountInfo['isConnected'] &&
-                          accountInfo['addresses'].length >= 2) {
+                    onChange: (account, prevAccount) => setState(() {
+                      debugPrint(
+                        'accountInfo new : ${account.address ?? 'unknown'}',
+                      );
+                      debugPrint(
+                        'accountInfo prev : ${prevAccount.address ?? 'unknown'}',
+                      );
+
+                      if (account.isConnected && account.address != null) {
                         // show snackbar
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              'Account switched to ${accountInfo['address']}',
+                              'Account switched from ${prevAccount.address} to ${account.address}',
                             ),
                           ),
                         );
@@ -908,6 +914,9 @@ class _MyAppState extends State<MyApp> {
                       if (connectionsData.isNotEmpty &&
                           connectionsData[0].accounts.length == 1 &&
                           chainId == 0) {
+                        debugPrint(
+                          'new connection : ${connectionsData[0].accounts[0]}',
+                        );
                         chainId = connectionsData[0].chainId;
                         // show snackbar
                         ScaffoldMessenger.of(context).showSnackBar(
@@ -918,6 +927,7 @@ class _MyAppState extends State<MyApp> {
                           ),
                         );
                       } else if (connectionsData.isEmpty) {
+                        debugPrint('account disconnected');
                         // show snackbar
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
