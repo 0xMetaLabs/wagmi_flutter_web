@@ -45,4 +45,4 @@ extension type JSGetBalanceReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetBalanceErrorType(JSObject _) implements JSObject {}
+extension type JSGetBalanceErrorType(JSObject _) implements JSObject;

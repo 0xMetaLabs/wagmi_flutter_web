@@ -111,9 +111,9 @@ extension type JSWriteContractParametersLegacy._(JSObject _)
 }
 
 @JS()
-extension type JSWriteContractReturnType(JSString _) implements JSString {}
+extension type JSWriteContractReturnType(JSString _) implements JSString;
 @JS()
-extension type JSWriteContractErrorType(JSObject _) implements JSObject {}
+extension type JSWriteContractErrorType(JSObject _) implements JSObject;
 
 extension WriteContractParametersToJS on WriteContractParameters {
   JSObject get toJS => map(

@@ -10,4 +10,4 @@ extension type JSSwitchAccountParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSSwitchAccountErrorType(JSObject _) implements JSObject {}
+extension type JSSwitchAccountErrorType(JSObject _) implements JSObject;

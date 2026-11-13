@@ -28,4 +28,4 @@ extension type JSDeployContractReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSDeployContractErrorType(JSObject _) implements JSObject {}
+extension type JSDeployContractErrorType(JSObject _) implements JSObject;

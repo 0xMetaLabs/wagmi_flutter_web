@@ -4,7 +4,7 @@ import 'package:wagmi_flutter_web/src/models/connector.dart';
 part 'connections.freezed.dart';
 
 @freezed
-class Connections with _$Connections {
+abstract class Connections with _$Connections {
   const factory Connections({
     required List<String> accounts,
     required int chainId,

@@ -6,52 +6,47 @@ part of 'message_to_sign.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$StringMessageImpl _$$StringMessageImplFromJson(Map<String, dynamic> json) =>
-    _$StringMessageImpl(
+StringMessage _$StringMessageFromJson(Map<String, dynamic> json) =>
+    StringMessage(
       message: json['message'] as String,
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$StringMessageImplToJson(_$StringMessageImpl instance) =>
+Map<String, dynamic> _$StringMessageToJson(StringMessage instance) =>
     <String, dynamic>{
       'message': instance.message,
       'runtimeType': instance.$type,
     };
 
-_$RawMessageContainerImpl _$$RawMessageContainerImplFromJson(
-        Map<String, dynamic> json) =>
-    _$RawMessageContainerImpl(
+RawMessageContainer _$RawMessageContainerFromJson(Map<String, dynamic> json) =>
+    RawMessageContainer(
       message: RawMessage.fromJson(json['message'] as Map<String, dynamic>),
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$RawMessageContainerImplToJson(
-        _$RawMessageContainerImpl instance) =>
-    <String, dynamic>{
-      'message': instance.message,
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$RawMessageContainerToJson(
+  RawMessageContainer instance,
+) => <String, dynamic>{
+  'message': instance.message,
+  'runtimeType': instance.$type,
+};
 
-_$RawHexImpl _$$RawHexImplFromJson(Map<String, dynamic> json) => _$RawHexImpl(
-      raw: json['raw'] as String,
-      $type: json['runtimeType'] as String?,
-    );
+RawHex _$RawHexFromJson(Map<String, dynamic> json) =>
+    RawHex(raw: json['raw'] as String, $type: json['runtimeType'] as String?);
 
-Map<String, dynamic> _$$RawHexImplToJson(_$RawHexImpl instance) =>
-    <String, dynamic>{
-      'raw': instance.raw,
-      'runtimeType': instance.$type,
-    };
+Map<String, dynamic> _$RawHexToJson(RawHex instance) => <String, dynamic>{
+  'raw': instance.raw,
+  'runtimeType': instance.$type,
+};
 
-_$RawByteArrayImpl _$$RawByteArrayImplFromJson(Map<String, dynamic> json) =>
-    _$RawByteArrayImpl(
-      byteArray: (json['byteArray'] as List<dynamic>)
-          .map((e) => (e as num).toInt())
-          .toList(),
-      $type: json['runtimeType'] as String?,
-    );
+RawByteArray _$RawByteArrayFromJson(Map<String, dynamic> json) => RawByteArray(
+  byteArray: (json['byteArray'] as List<dynamic>)
+      .map((e) => (e as num).toInt())
+      .toList(),
+  $type: json['runtimeType'] as String?,
+);
 
-Map<String, dynamic> _$$RawByteArrayImplToJson(_$RawByteArrayImpl instance) =>
+Map<String, dynamic> _$RawByteArrayToJson(RawByteArray instance) =>
     <String, dynamic>{
       'byteArray': instance.byteArray,
       'runtimeType': instance.$type,

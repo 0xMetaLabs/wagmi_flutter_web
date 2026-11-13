@@ -59,4 +59,4 @@ extension type JSWaitForTransactionReceiptReturnType(JSObject _)
 
 @JS()
 extension type JSWaitForTransactionReceiptErrorType(JSObject _)
-    implements JSObject {}
+    implements JSObject;

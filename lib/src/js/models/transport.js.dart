@@ -1,7 +1,7 @@
 part of '../wagmi.js.dart';
 
 @JS()
-extension type JSTransport._(JSObject _) implements JSObject {}
+extension type JSTransport._(JSObject _) implements JSObject;
 
 @JS()
 extension type JSWebsocketTransport._(JSTransport _) implements JSTransport {

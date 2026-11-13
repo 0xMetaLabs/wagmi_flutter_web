@@ -12,4 +12,4 @@ extension type JSGetBlockNumberParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type GetBlockNumberErrorType(JSObject _) implements JSObject {}
+extension type GetBlockNumberErrorType(JSObject _) implements JSObject;

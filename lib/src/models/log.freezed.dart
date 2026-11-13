@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'log.dart';
@@ -9,280 +9,292 @@ part of 'log.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$Log {
-  String get address => throw _privateConstructorUsedError;
-  String? get blockHash => throw _privateConstructorUsedError;
-  BigInt? get blockNumber => throw _privateConstructorUsedError;
-  String get data => throw _privateConstructorUsedError;
-  int? get logIndex => throw _privateConstructorUsedError;
-  String? get transactionHash => throw _privateConstructorUsedError;
-  int? get transactionIndex => throw _privateConstructorUsedError;
-  bool get removed => throw _privateConstructorUsedError;
 
-  /// Create a copy of Log
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $LogCopyWith<Log> get copyWith => throw _privateConstructorUsedError;
+ String get address; String? get blockHash; BigInt? get blockNumber; String get data; int? get logIndex; String? get transactionHash; int? get transactionIndex; bool get removed;
+/// Create a copy of Log
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$LogCopyWith<Log> get copyWith => _$LogCopyWithImpl<Log>(this as Log, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  final _this = this as Log;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Log&&(identical(other.address, _this.address) || other.address == _this.address)&&(identical(other.blockHash, _this.blockHash) || other.blockHash == _this.blockHash)&&(identical(other.blockNumber, _this.blockNumber) || other.blockNumber == _this.blockNumber)&&(identical(other.data, _this.data) || other.data == _this.data)&&(identical(other.logIndex, _this.logIndex) || other.logIndex == _this.logIndex)&&(identical(other.transactionHash, _this.transactionHash) || other.transactionHash == _this.transactionHash)&&(identical(other.transactionIndex, _this.transactionIndex) || other.transactionIndex == _this.transactionIndex)&&(identical(other.removed, _this.removed) || other.removed == _this.removed));
+}
+
+
+@override
+int get hashCode {
+  final _this = this as Log;
+  return Object.hash(runtimeType,_this.address,_this.blockHash,_this.blockNumber,_this.data,_this.logIndex,_this.transactionHash,_this.transactionIndex,_this.removed);
+}
+
+@override
+String toString() {
+  final _this = this as Log;
+  return 'Log(address: ${_this.address}, blockHash: ${_this.blockHash}, blockNumber: ${_this.blockNumber}, data: ${_this.data}, logIndex: ${_this.logIndex}, transactionHash: ${_this.transactionHash}, transactionIndex: ${_this.transactionIndex}, removed: ${_this.removed})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $LogCopyWith<$Res> {
-  factory $LogCopyWith(Log value, $Res Function(Log) then) =
-      _$LogCopyWithImpl<$Res, Log>;
-  @useResult
-  $Res call(
-      {String address,
-      String? blockHash,
-      BigInt? blockNumber,
-      String data,
-      int? logIndex,
-      String? transactionHash,
-      int? transactionIndex,
-      bool removed});
+abstract mixin class $LogCopyWith<$Res>  {
+  factory $LogCopyWith(Log value, $Res Function(Log) _then) = _$LogCopyWithImpl;
+@useResult
+$Res call({
+ String address, String? blockHash, BigInt? blockNumber, String data, int? logIndex, String? transactionHash, int? transactionIndex, bool removed
+});
+
+
+
+
+}
+/// @nodoc
+class _$LogCopyWithImpl<$Res>
+    implements $LogCopyWith<$Res> {
+  _$LogCopyWithImpl(this._self, this._then);
+
+  final Log _self;
+  final $Res Function(Log) _then;
+
+/// Create a copy of Log
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? address = null,Object? blockHash = freezed,Object? blockNumber = freezed,Object? data = null,Object? logIndex = freezed,Object? transactionHash = freezed,Object? transactionIndex = freezed,Object? removed = null,}) {
+  return _then(Log(
+address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
+as String,blockHash: freezed == blockHash ? _self.blockHash : blockHash // ignore: cast_nullable_to_non_nullable
+as String?,blockNumber: freezed == blockNumber ? _self.blockNumber : blockNumber // ignore: cast_nullable_to_non_nullable
+as BigInt?,data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as String,logIndex: freezed == logIndex ? _self.logIndex : logIndex // ignore: cast_nullable_to_non_nullable
+as int?,transactionHash: freezed == transactionHash ? _self.transactionHash : transactionHash // ignore: cast_nullable_to_non_nullable
+as String?,transactionIndex: freezed == transactionIndex ? _self.transactionIndex : transactionIndex // ignore: cast_nullable_to_non_nullable
+as int?,removed: null == removed ? _self.removed : removed // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [Log].
+extension LogPatterns on Log {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Log value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Log() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Log value)  $default,){
+final _that = this;
+switch (_that) {
+case _Log():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Log value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Log() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String address,  String? blockHash,  BigInt? blockNumber,  String data,  int? logIndex,  String? transactionHash,  int? transactionIndex,  bool removed)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Log() when $default != null:
+return $default(_that.address,_that.blockHash,_that.blockNumber,_that.data,_that.logIndex,_that.transactionHash,_that.transactionIndex,_that.removed);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String address,  String? blockHash,  BigInt? blockNumber,  String data,  int? logIndex,  String? transactionHash,  int? transactionIndex,  bool removed)  $default,) {final _that = this;
+switch (_that) {
+case _Log():
+return $default(_that.address,_that.blockHash,_that.blockNumber,_that.data,_that.logIndex,_that.transactionHash,_that.transactionIndex,_that.removed);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String address,  String? blockHash,  BigInt? blockNumber,  String data,  int? logIndex,  String? transactionHash,  int? transactionIndex,  bool removed)?  $default,) {final _that = this;
+switch (_that) {
+case _Log() when $default != null:
+return $default(_that.address,_that.blockHash,_that.blockNumber,_that.data,_that.logIndex,_that.transactionHash,_that.transactionIndex,_that.removed);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-class _$LogCopyWithImpl<$Res, $Val extends Log> implements $LogCopyWith<$Res> {
-  _$LogCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
 
-  /// Create a copy of Log
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? address = null,
-    Object? blockHash = freezed,
-    Object? blockNumber = freezed,
-    Object? data = null,
-    Object? logIndex = freezed,
-    Object? transactionHash = freezed,
-    Object? transactionIndex = freezed,
-    Object? removed = null,
-  }) {
-    return _then(_value.copyWith(
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as String,
-      blockHash: freezed == blockHash
-          ? _value.blockHash
-          : blockHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      blockNumber: freezed == blockNumber
-          ? _value.blockNumber
-          : blockNumber // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      logIndex: freezed == logIndex
-          ? _value.logIndex
-          : logIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
-      transactionHash: freezed == transactionHash
-          ? _value.transactionHash
-          : transactionHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      transactionIndex: freezed == transactionIndex
-          ? _value.transactionIndex
-          : transactionIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
-  }
+class _Log extends Log {
+  const _Log({required this.address, this.blockHash, this.blockNumber, required this.data, this.logIndex, this.transactionHash, this.transactionIndex, required this.removed}): super._();
+  
+
+@override final  String address;
+@override final  String? blockHash;
+@override final  BigInt? blockNumber;
+@override final  String data;
+@override final  int? logIndex;
+@override final  String? transactionHash;
+@override final  int? transactionIndex;
+@override final  bool removed;
+
+/// Create a copy of Log
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$LogCopyWith<_Log> get copyWith => __$LogCopyWithImpl<_Log>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Log&&(identical(other.address, address) || other.address == address)&&(identical(other.blockHash, blockHash) || other.blockHash == blockHash)&&(identical(other.blockNumber, blockNumber) || other.blockNumber == blockNumber)&&(identical(other.data, data) || other.data == data)&&(identical(other.logIndex, logIndex) || other.logIndex == logIndex)&&(identical(other.transactionHash, transactionHash) || other.transactionHash == transactionHash)&&(identical(other.transactionIndex, transactionIndex) || other.transactionIndex == transactionIndex)&&(identical(other.removed, removed) || other.removed == removed));
 }
 
-/// @nodoc
-abstract class _$$LogImplCopyWith<$Res> implements $LogCopyWith<$Res> {
-  factory _$$LogImplCopyWith(_$LogImpl value, $Res Function(_$LogImpl) then) =
-      __$$LogImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String address,
-      String? blockHash,
-      BigInt? blockNumber,
-      String data,
-      int? logIndex,
-      String? transactionHash,
-      int? transactionIndex,
-      bool removed});
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,address,blockHash,blockNumber,data,logIndex,transactionHash,transactionIndex,removed);
 }
 
-/// @nodoc
-class __$$LogImplCopyWithImpl<$Res> extends _$LogCopyWithImpl<$Res, _$LogImpl>
-    implements _$$LogImplCopyWith<$Res> {
-  __$$LogImplCopyWithImpl(_$LogImpl _value, $Res Function(_$LogImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Log
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? address = null,
-    Object? blockHash = freezed,
-    Object? blockNumber = freezed,
-    Object? data = null,
-    Object? logIndex = freezed,
-    Object? transactionHash = freezed,
-    Object? transactionIndex = freezed,
-    Object? removed = null,
-  }) {
-    return _then(_$LogImpl(
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as String,
-      blockHash: freezed == blockHash
-          ? _value.blockHash
-          : blockHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      blockNumber: freezed == blockNumber
-          ? _value.blockNumber
-          : blockNumber // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String,
-      logIndex: freezed == logIndex
-          ? _value.logIndex
-          : logIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
-      transactionHash: freezed == transactionHash
-          ? _value.transactionHash
-          : transactionHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      transactionIndex: freezed == transactionIndex
-          ? _value.transactionIndex
-          : transactionIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
-      removed: null == removed
-          ? _value.removed
-          : removed // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$LogImpl extends _Log {
-  const _$LogImpl(
-      {required this.address,
-      this.blockHash,
-      this.blockNumber,
-      required this.data,
-      this.logIndex,
-      this.transactionHash,
-      this.transactionIndex,
-      required this.removed})
-      : super._();
-
-  @override
-  final String address;
-  @override
-  final String? blockHash;
-  @override
-  final BigInt? blockNumber;
-  @override
-  final String data;
-  @override
-  final int? logIndex;
-  @override
-  final String? transactionHash;
-  @override
-  final int? transactionIndex;
-  @override
-  final bool removed;
-
-  @override
-  String toString() {
+@override
+String toString() {
     return 'Log(address: $address, blockHash: $blockHash, blockNumber: $blockNumber, data: $data, logIndex: $logIndex, transactionHash: $transactionHash, transactionIndex: $transactionIndex, removed: $removed)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LogImpl &&
-            (identical(other.address, address) || other.address == address) &&
-            (identical(other.blockHash, blockHash) ||
-                other.blockHash == blockHash) &&
-            (identical(other.blockNumber, blockNumber) ||
-                other.blockNumber == blockNumber) &&
-            (identical(other.data, data) || other.data == data) &&
-            (identical(other.logIndex, logIndex) ||
-                other.logIndex == logIndex) &&
-            (identical(other.transactionHash, transactionHash) ||
-                other.transactionHash == transactionHash) &&
-            (identical(other.transactionIndex, transactionIndex) ||
-                other.transactionIndex == transactionIndex) &&
-            (identical(other.removed, removed) || other.removed == removed));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, address, blockHash, blockNumber,
-      data, logIndex, transactionHash, transactionIndex, removed);
-
-  /// Create a copy of Log
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$LogImplCopyWith<_$LogImpl> get copyWith =>
-      __$$LogImplCopyWithImpl<_$LogImpl>(this, _$identity);
 }
 
-abstract class _Log extends Log {
-  const factory _Log(
-      {required final String address,
-      final String? blockHash,
-      final BigInt? blockNumber,
-      required final String data,
-      final int? logIndex,
-      final String? transactionHash,
-      final int? transactionIndex,
-      required final bool removed}) = _$LogImpl;
-  const _Log._() : super._();
 
-  @override
-  String get address;
-  @override
-  String? get blockHash;
-  @override
-  BigInt? get blockNumber;
-  @override
-  String get data;
-  @override
-  int? get logIndex;
-  @override
-  String? get transactionHash;
-  @override
-  int? get transactionIndex;
-  @override
-  bool get removed;
-
-  /// Create a copy of Log
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$LogImplCopyWith<_$LogImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$LogCopyWith<$Res> implements $LogCopyWith<$Res> {
+  factory _$LogCopyWith(_Log value, $Res Function(_Log) _then) = __$LogCopyWithImpl;
+@override @useResult
+$Res call({
+ String address, String? blockHash, BigInt? blockNumber, String data, int? logIndex, String? transactionHash, int? transactionIndex, bool removed
+});
+
+
+
+
+}
+/// @nodoc
+class __$LogCopyWithImpl<$Res>
+    implements _$LogCopyWith<$Res> {
+  __$LogCopyWithImpl(this._self, this._then);
+
+  final _Log _self;
+  final $Res Function(_Log) _then;
+
+/// Create a copy of Log
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? address = null,Object? blockHash = freezed,Object? blockNumber = freezed,Object? data = null,Object? logIndex = freezed,Object? transactionHash = freezed,Object? transactionIndex = freezed,Object? removed = null,}) {
+  return _then(_Log(
+address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
+as String,blockHash: freezed == blockHash ? _self.blockHash : blockHash // ignore: cast_nullable_to_non_nullable
+as String?,blockNumber: freezed == blockNumber ? _self.blockNumber : blockNumber // ignore: cast_nullable_to_non_nullable
+as BigInt?,data: null == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as String,logIndex: freezed == logIndex ? _self.logIndex : logIndex // ignore: cast_nullable_to_non_nullable
+as int?,transactionHash: freezed == transactionHash ? _self.transactionHash : transactionHash // ignore: cast_nullable_to_non_nullable
+as String?,transactionIndex: freezed == transactionIndex ? _self.transactionIndex : transactionIndex // ignore: cast_nullable_to_non_nullable
+as int?,removed: null == removed ? _self.removed : removed // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+// dart format on

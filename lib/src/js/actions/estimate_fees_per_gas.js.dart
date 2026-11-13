@@ -28,4 +28,4 @@ extension type JSEstimateFeesPerGasReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSEstimateFeesPerGasErrorType(JSObject _) implements JSObject {}
+extension type JSEstimateFeesPerGasErrorType(JSObject _) implements JSObject;

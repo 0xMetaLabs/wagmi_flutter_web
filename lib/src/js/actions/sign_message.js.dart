@@ -12,10 +12,10 @@ extension type JSSignMessageParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSSignMessageReturnType(JSString _) implements JSString {}
+extension type JSSignMessageReturnType(JSString _) implements JSString;
 
 @JS()
-extension type JSSignMessageErrorType(JSObject _) implements JSObject {}
+extension type JSSignMessageErrorType(JSObject _) implements JSObject;
 
 @JS()
 @anonymous

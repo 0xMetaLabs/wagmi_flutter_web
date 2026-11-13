@@ -48,7 +48,7 @@ class GetBalanceReturnType {
 }
 
 @freezed
-class Unit with _$Unit {
+abstract class Unit with _$Unit {
   const Unit._();
   const factory Unit.ether() = _UnitEther;
   const factory Unit.gwei() = _UnitGwei;

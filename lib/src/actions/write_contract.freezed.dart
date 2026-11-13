@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'write_contract.dart';
@@ -9,1768 +9,567 @@ part of 'write_contract.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$WriteContractParameters {
-  List<Map<dynamic, dynamic>> get abi => throw _privateConstructorUsedError;
-  String get address => throw _privateConstructorUsedError;
-  String get functionName => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get accessList =>
-      throw _privateConstructorUsedError;
-  String? get account => throw _privateConstructorUsedError;
-  List<dynamic>? get args => throw _privateConstructorUsedError;
-  int? get chainId => throw _privateConstructorUsedError;
-  String? get dataSuffix => throw _privateConstructorUsedError;
-  BigInt? get gas => throw _privateConstructorUsedError;
-  FeeValues? get feeValues => throw _privateConstructorUsedError;
-  BigInt? get nonce => throw _privateConstructorUsedError;
-  BigInt? get value => throw _privateConstructorUsedError;
-  String? get type => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        legacy,
-    required TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip1559,
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult? Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(WriteContractParametersLegacy value) legacy,
-    required TResult Function(WriteContractParametersEIP1559 value) eip1559,
-    required TResult Function(WriteContractParametersEIP4844 value) eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(WriteContractParametersLegacy value)? legacy,
-    TResult? Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult? Function(WriteContractParametersEIP4844 value)? eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(WriteContractParametersLegacy value)? legacy,
-    TResult Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult Function(WriteContractParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
 
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $WriteContractParametersCopyWith<WriteContractParameters> get copyWith =>
-      throw _privateConstructorUsedError;
+ List<Map<dynamic, dynamic>> get abi; String get address; String get functionName; List<Map<String, dynamic>>? get accessList; String? get account; List<dynamic>? get args; int? get chainId; String? get dataSuffix; BigInt? get gas; FeeValues? get feeValues; BigInt? get nonce; BigInt? get value; String? get type;
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$WriteContractParametersCopyWith<WriteContractParameters> get copyWith => _$WriteContractParametersCopyWithImpl<WriteContractParameters>(this as WriteContractParameters, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  final _this = this as WriteContractParameters;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is WriteContractParameters&&const DeepCollectionEquality().equals(other.abi, _this.abi)&&(identical(other.address, _this.address) || other.address == _this.address)&&(identical(other.functionName, _this.functionName) || other.functionName == _this.functionName)&&const DeepCollectionEquality().equals(other.accessList, _this.accessList)&&(identical(other.account, _this.account) || other.account == _this.account)&&const DeepCollectionEquality().equals(other.args, _this.args)&&(identical(other.chainId, _this.chainId) || other.chainId == _this.chainId)&&(identical(other.dataSuffix, _this.dataSuffix) || other.dataSuffix == _this.dataSuffix)&&(identical(other.gas, _this.gas) || other.gas == _this.gas)&&(identical(other.feeValues, _this.feeValues) || other.feeValues == _this.feeValues)&&(identical(other.nonce, _this.nonce) || other.nonce == _this.nonce)&&(identical(other.value, _this.value) || other.value == _this.value)&&(identical(other.type, _this.type) || other.type == _this.type));
+}
+
+
+@override
+int get hashCode {
+  final _this = this as WriteContractParameters;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.abi),_this.address,_this.functionName,const DeepCollectionEquality().hash(_this.accessList),_this.account,const DeepCollectionEquality().hash(_this.args),_this.chainId,_this.dataSuffix,_this.gas,_this.feeValues,_this.nonce,_this.value,_this.type);
+}
+
+@override
+String toString() {
+  final _this = this as WriteContractParameters;
+  return 'WriteContractParameters(abi: ${_this.abi}, address: ${_this.address}, functionName: ${_this.functionName}, accessList: ${_this.accessList}, account: ${_this.account}, args: ${_this.args}, chainId: ${_this.chainId}, dataSuffix: ${_this.dataSuffix}, gas: ${_this.gas}, feeValues: ${_this.feeValues}, nonce: ${_this.nonce}, value: ${_this.value}, type: ${_this.type})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $WriteContractParametersCopyWith<$Res> {
-  factory $WriteContractParametersCopyWith(WriteContractParameters value,
-          $Res Function(WriteContractParameters) then) =
-      _$WriteContractParametersCopyWithImpl<$Res, WriteContractParameters>;
-  @useResult
-  $Res call(
-      {String address,
-      String functionName,
-      List<Map<String, dynamic>>? accessList,
-      String? account,
-      List<dynamic>? args,
-      int? chainId,
-      String? dataSuffix,
-      BigInt? gas,
-      BigInt? nonce,
-      BigInt? value,
-      String? type});
-}
+abstract mixin class $WriteContractParametersCopyWith<$Res>  {
+  factory $WriteContractParametersCopyWith(WriteContractParameters value, $Res Function(WriteContractParameters) _then) = _$WriteContractParametersCopyWithImpl;
+@useResult
+$Res call({
+ String address, String functionName, List<Map<String, dynamic>>? accessList, String? account, List<dynamic>? args, int? chainId, String? dataSuffix, BigInt? gas, BigInt? nonce, BigInt? value, String? type
+});
 
+
+
+
+}
 /// @nodoc
-class _$WriteContractParametersCopyWithImpl<$Res,
-        $Val extends WriteContractParameters>
+class _$WriteContractParametersCopyWithImpl<$Res>
     implements $WriteContractParametersCopyWith<$Res> {
-  _$WriteContractParametersCopyWithImpl(this._value, this._then);
+  _$WriteContractParametersCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final WriteContractParameters _self;
+  final $Res Function(WriteContractParameters) _then;
 
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? address = null,
-    Object? functionName = null,
-    Object? accessList = freezed,
-    Object? account = freezed,
-    Object? args = freezed,
-    Object? chainId = freezed,
-    Object? dataSuffix = freezed,
-    Object? gas = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? type = freezed,
-  }) {
-    return _then(_value.copyWith(
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as String,
-      functionName: null == functionName
-          ? _value.functionName
-          : functionName // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value.accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: freezed == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String?,
-      args: freezed == args
-          ? _value.args
-          : args // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dataSuffix: freezed == dataSuffix
-          ? _value.dataSuffix
-          : dataSuffix // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? address = null,Object? functionName = null,Object? accessList = freezed,Object? account = freezed,Object? args = freezed,Object? chainId = freezed,Object? dataSuffix = freezed,Object? gas = freezed,Object? nonce = freezed,Object? value = freezed,Object? type = freezed,}) {
+  return _then(_self.copyWith(
+address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
+as String,functionName: null == functionName ? _self.functionName : functionName // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self.accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: freezed == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String?,args: freezed == args ? _self.args : args // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,dataSuffix: freezed == dataSuffix ? _self.dataSuffix : dataSuffix // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$WriteContractParametersLegacyImplCopyWith<$Res>
-    implements $WriteContractParametersCopyWith<$Res> {
-  factory _$$WriteContractParametersLegacyImplCopyWith(
-          _$WriteContractParametersLegacyImpl value,
-          $Res Function(_$WriteContractParametersLegacyImpl) then) =
-      __$$WriteContractParametersLegacyImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {List<Map> abi,
-      String address,
-      String functionName,
-      List<Map<String, dynamic>>? accessList,
-      String? account,
-      List<dynamic>? args,
-      int? chainId,
-      String? dataSuffix,
-      BigInt? gas,
-      FeeValuesLegacy? feeValues,
-      BigInt? nonce,
-      BigInt? value,
-      String? type});
 }
 
-/// @nodoc
-class __$$WriteContractParametersLegacyImplCopyWithImpl<$Res>
-    extends _$WriteContractParametersCopyWithImpl<$Res,
-        _$WriteContractParametersLegacyImpl>
-    implements _$$WriteContractParametersLegacyImplCopyWith<$Res> {
-  __$$WriteContractParametersLegacyImplCopyWithImpl(
-      _$WriteContractParametersLegacyImpl _value,
-      $Res Function(_$WriteContractParametersLegacyImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? abi = null,
-    Object? address = null,
-    Object? functionName = null,
-    Object? accessList = freezed,
-    Object? account = freezed,
-    Object? args = freezed,
-    Object? chainId = freezed,
-    Object? dataSuffix = freezed,
-    Object? gas = freezed,
-    Object? feeValues = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? type = freezed,
-  }) {
-    return _then(_$WriteContractParametersLegacyImpl(
-      abi: null == abi
-          ? _value._abi
-          : abi // ignore: cast_nullable_to_non_nullable
-              as List<Map>,
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as String,
-      functionName: null == functionName
-          ? _value.functionName
-          : functionName // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value._accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: freezed == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String?,
-      args: freezed == args
-          ? _value._args
-          : args // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dataSuffix: freezed == dataSuffix
-          ? _value.dataSuffix
-          : dataSuffix // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      feeValues: freezed == feeValues
-          ? _value.feeValues
-          : feeValues // ignore: cast_nullable_to_non_nullable
-              as FeeValuesLegacy?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [WriteContractParameters].
+extension WriteContractParametersPatterns on WriteContractParameters {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( WriteContractParametersLegacy value)?  legacy,TResult Function( WriteContractParametersEIP1559 value)?  eip1559,TResult Function( WriteContractParametersEIP4844 value)?  eip4844,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case WriteContractParametersLegacy() when legacy != null:
+return legacy(_that);case WriteContractParametersEIP1559() when eip1559 != null:
+return eip1559(_that);case WriteContractParametersEIP4844() when eip4844 != null:
+return eip4844(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( WriteContractParametersLegacy value)  legacy,required TResult Function( WriteContractParametersEIP1559 value)  eip1559,required TResult Function( WriteContractParametersEIP4844 value)  eip4844,}){
+final _that = this;
+switch (_that) {
+case WriteContractParametersLegacy():
+return legacy(_that);case WriteContractParametersEIP1559():
+return eip1559(_that);case WriteContractParametersEIP4844():
+return eip4844(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( WriteContractParametersLegacy value)?  legacy,TResult? Function( WriteContractParametersEIP1559 value)?  eip1559,TResult? Function( WriteContractParametersEIP4844 value)?  eip4844,}){
+final _that = this;
+switch (_that) {
+case WriteContractParametersLegacy() when legacy != null:
+return legacy(_that);case WriteContractParametersEIP1559() when eip1559 != null:
+return eip1559(_that);case WriteContractParametersEIP4844() when eip4844 != null:
+return eip4844(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( List<Map<dynamic, dynamic>> abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesLegacy? feeValues,  BigInt? nonce,  BigInt? value,  String? type)?  legacy,TResult Function( Abi abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesEIP1559? feeValues,  BigInt? nonce,  BigInt? value,  String? type)?  eip1559,TResult Function( List<Map<dynamic, dynamic>> abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesEIP4844? feeValues,  BigInt? nonce,  BigInt? value,  String? type)?  eip4844,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case WriteContractParametersLegacy() when legacy != null:
+return legacy(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case WriteContractParametersEIP1559() when eip1559 != null:
+return eip1559(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case WriteContractParametersEIP4844() when eip4844 != null:
+return eip4844(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( List<Map<dynamic, dynamic>> abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesLegacy? feeValues,  BigInt? nonce,  BigInt? value,  String? type)  legacy,required TResult Function( Abi abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesEIP1559? feeValues,  BigInt? nonce,  BigInt? value,  String? type)  eip1559,required TResult Function( List<Map<dynamic, dynamic>> abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesEIP4844? feeValues,  BigInt? nonce,  BigInt? value,  String? type)  eip4844,}) {final _that = this;
+switch (_that) {
+case WriteContractParametersLegacy():
+return legacy(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case WriteContractParametersEIP1559():
+return eip1559(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case WriteContractParametersEIP4844():
+return eip4844(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( List<Map<dynamic, dynamic>> abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesLegacy? feeValues,  BigInt? nonce,  BigInt? value,  String? type)?  legacy,TResult? Function( Abi abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesEIP1559? feeValues,  BigInt? nonce,  BigInt? value,  String? type)?  eip1559,TResult? Function( List<Map<dynamic, dynamic>> abi,  String address,  String functionName,  List<Map<String, dynamic>>? accessList,  String? account,  List<dynamic>? args,  int? chainId,  String? dataSuffix,  BigInt? gas,  FeeValuesEIP4844? feeValues,  BigInt? nonce,  BigInt? value,  String? type)?  eip4844,}) {final _that = this;
+switch (_that) {
+case WriteContractParametersLegacy() when legacy != null:
+return legacy(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case WriteContractParametersEIP1559() when eip1559 != null:
+return eip1559(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case WriteContractParametersEIP4844() when eip4844 != null:
+return eip4844(_that.abi,_that.address,_that.functionName,_that.accessList,_that.account,_that.args,_that.chainId,_that.dataSuffix,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.type);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 
-class _$WriteContractParametersLegacyImpl
-    extends WriteContractParametersLegacy {
-  const _$WriteContractParametersLegacyImpl(
-      {required final List<Map> abi,
-      required this.address,
-      required this.functionName,
-      final List<Map<String, dynamic>>? accessList,
-      this.account,
-      final List<dynamic>? args,
-      this.chainId,
-      this.dataSuffix,
-      this.gas,
-      this.feeValues,
-      this.nonce,
-      this.value,
-      this.type})
-      : _abi = abi,
-        _accessList = accessList,
-        _args = args,
-        super._();
 
-  final List<Map> _abi;
-  @override
-  List<Map> get abi {
-    if (_abi is EqualUnmodifiableListView) return _abi;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_abi);
-  }
+class WriteContractParametersLegacy extends WriteContractParameters {
+  const WriteContractParametersLegacy({required  List<Map<dynamic, dynamic>> abi, required this.address, required this.functionName,  List<Map<String, dynamic>>? accessList, this.account,  List<dynamic>? args, this.chainId, this.dataSuffix, this.gas, this.feeValues, this.nonce, this.value, this.type}): _abi = abi,_accessList = accessList,_args = args,super._();
+  
 
-  @override
-  final String address;
-  @override
-  final String functionName;
-  final List<Map<String, dynamic>>? _accessList;
-  @override
-  List<Map<String, dynamic>>? get accessList {
-    final value = _accessList;
-    if (value == null) return null;
-    if (_accessList is EqualUnmodifiableListView) return _accessList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+ final  List<Map<dynamic, dynamic>> _abi;
+@override List<Map<dynamic, dynamic>> get abi {
+  if (_abi is EqualUnmodifiableListView) return _abi;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_abi);
+}
 
-  @override
-  final String? account;
-  final List<dynamic>? _args;
-  @override
-  List<dynamic>? get args {
-    final value = _args;
-    if (value == null) return null;
-    if (_args is EqualUnmodifiableListView) return _args;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+@override final  String address;
+@override final  String functionName;
+ final  List<Map<String, dynamic>>? _accessList;
+@override List<Map<String, dynamic>>? get accessList {
+  final value = _accessList;
+  if (value == null) return null;
+  if (_accessList is EqualUnmodifiableListView) return _accessList;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  final int? chainId;
-  @override
-  final String? dataSuffix;
-  @override
-  final BigInt? gas;
-  @override
-  final FeeValuesLegacy? feeValues;
-  @override
-  final BigInt? nonce;
-  @override
-  final BigInt? value;
-  @override
-  final String? type;
+@override final  String? account;
+ final  List<dynamic>? _args;
+@override List<dynamic>? get args {
+  final value = _args;
+  if (value == null) return null;
+  if (_args is EqualUnmodifiableListView) return _args;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  String toString() {
+@override final  int? chainId;
+@override final  String? dataSuffix;
+@override final  BigInt? gas;
+@override final  FeeValuesLegacy? feeValues;
+@override final  BigInt? nonce;
+@override final  BigInt? value;
+@override final  String? type;
+
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$WriteContractParametersLegacyCopyWith<WriteContractParametersLegacy> get copyWith => _$WriteContractParametersLegacyCopyWithImpl<WriteContractParametersLegacy>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is WriteContractParametersLegacy&&const DeepCollectionEquality().equals(other.abi, _abi)&&(identical(other.address, address) || other.address == address)&&(identical(other.functionName, functionName) || other.functionName == functionName)&&const DeepCollectionEquality().equals(other.accessList, _accessList)&&(identical(other.account, account) || other.account == account)&&const DeepCollectionEquality().equals(other.args, _args)&&(identical(other.chainId, chainId) || other.chainId == chainId)&&(identical(other.dataSuffix, dataSuffix) || other.dataSuffix == dataSuffix)&&(identical(other.gas, gas) || other.gas == gas)&&(identical(other.feeValues, feeValues) || other.feeValues == feeValues)&&(identical(other.nonce, nonce) || other.nonce == nonce)&&(identical(other.value, value) || other.value == value)&&(identical(other.type, type) || other.type == type));
+}
+
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_abi),address,functionName,const DeepCollectionEquality().hash(_accessList),account,const DeepCollectionEquality().hash(_args),chainId,dataSuffix,gas,feeValues,nonce,value,type);
+}
+
+@override
+String toString() {
     return 'WriteContractParameters.legacy(abi: $abi, address: $address, functionName: $functionName, accessList: $accessList, account: $account, args: $args, chainId: $chainId, dataSuffix: $dataSuffix, gas: $gas, feeValues: $feeValues, nonce: $nonce, value: $value, type: $type)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$WriteContractParametersLegacyImpl &&
-            const DeepCollectionEquality().equals(other._abi, _abi) &&
-            (identical(other.address, address) || other.address == address) &&
-            (identical(other.functionName, functionName) ||
-                other.functionName == functionName) &&
-            const DeepCollectionEquality()
-                .equals(other._accessList, _accessList) &&
-            (identical(other.account, account) || other.account == account) &&
-            const DeepCollectionEquality().equals(other._args, _args) &&
-            (identical(other.chainId, chainId) || other.chainId == chainId) &&
-            (identical(other.dataSuffix, dataSuffix) ||
-                other.dataSuffix == dataSuffix) &&
-            (identical(other.gas, gas) || other.gas == gas) &&
-            (identical(other.feeValues, feeValues) ||
-                other.feeValues == feeValues) &&
-            (identical(other.nonce, nonce) || other.nonce == nonce) &&
-            (identical(other.value, value) || other.value == value) &&
-            (identical(other.type, type) || other.type == type));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_abi),
-      address,
-      functionName,
-      const DeepCollectionEquality().hash(_accessList),
-      account,
-      const DeepCollectionEquality().hash(_args),
-      chainId,
-      dataSuffix,
-      gas,
-      feeValues,
-      nonce,
-      value,
-      type);
-
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$WriteContractParametersLegacyImplCopyWith<
-          _$WriteContractParametersLegacyImpl>
-      get copyWith => __$$WriteContractParametersLegacyImplCopyWithImpl<
-          _$WriteContractParametersLegacyImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        legacy,
-    required TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip1559,
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip4844,
-  }) {
-    return legacy(abi, address, functionName, accessList, account, args,
-        chainId, dataSuffix, gas, feeValues, nonce, value, type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult? Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-  }) {
-    return legacy?.call(abi, address, functionName, accessList, account, args,
-        chainId, dataSuffix, gas, feeValues, nonce, value, type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-    required TResult orElse(),
-  }) {
-    if (legacy != null) {
-      return legacy(abi, address, functionName, accessList, account, args,
-          chainId, dataSuffix, gas, feeValues, nonce, value, type);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(WriteContractParametersLegacy value) legacy,
-    required TResult Function(WriteContractParametersEIP1559 value) eip1559,
-    required TResult Function(WriteContractParametersEIP4844 value) eip4844,
-  }) {
-    return legacy(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(WriteContractParametersLegacy value)? legacy,
-    TResult? Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult? Function(WriteContractParametersEIP4844 value)? eip4844,
-  }) {
-    return legacy?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(WriteContractParametersLegacy value)? legacy,
-    TResult Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult Function(WriteContractParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) {
-    if (legacy != null) {
-      return legacy(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class WriteContractParametersLegacy extends WriteContractParameters {
-  const factory WriteContractParametersLegacy(
-      {required final List<Map> abi,
-      required final String address,
-      required final String functionName,
-      final List<Map<String, dynamic>>? accessList,
-      final String? account,
-      final List<dynamic>? args,
-      final int? chainId,
-      final String? dataSuffix,
-      final BigInt? gas,
-      final FeeValuesLegacy? feeValues,
-      final BigInt? nonce,
-      final BigInt? value,
-      final String? type}) = _$WriteContractParametersLegacyImpl;
-  const WriteContractParametersLegacy._() : super._();
 
-  @override
-  List<Map> get abi;
-  @override
-  String get address;
-  @override
-  String get functionName;
-  @override
-  List<Map<String, dynamic>>? get accessList;
-  @override
-  String? get account;
-  @override
-  List<dynamic>? get args;
-  @override
-  int? get chainId;
-  @override
-  String? get dataSuffix;
-  @override
-  BigInt? get gas;
-  @override
-  FeeValuesLegacy? get feeValues;
-  @override
-  BigInt? get nonce;
-  @override
-  BigInt? get value;
-  @override
-  String? get type;
-
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$WriteContractParametersLegacyImplCopyWith<
-          _$WriteContractParametersLegacyImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$WriteContractParametersEIP1559ImplCopyWith<$Res>
-    implements $WriteContractParametersCopyWith<$Res> {
-  factory _$$WriteContractParametersEIP1559ImplCopyWith(
-          _$WriteContractParametersEIP1559Impl value,
-          $Res Function(_$WriteContractParametersEIP1559Impl) then) =
-      __$$WriteContractParametersEIP1559ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {List<Map<String, dynamic>> abi,
-      String address,
-      String functionName,
-      List<Map<String, dynamic>>? accessList,
-      String? account,
-      List<dynamic>? args,
-      int? chainId,
-      String? dataSuffix,
-      BigInt? gas,
-      FeeValuesEIP1559? feeValues,
-      BigInt? nonce,
-      BigInt? value,
-      String? type});
+abstract mixin class $WriteContractParametersLegacyCopyWith<$Res> implements $WriteContractParametersCopyWith<$Res> {
+  factory $WriteContractParametersLegacyCopyWith(WriteContractParametersLegacy value, $Res Function(WriteContractParametersLegacy) _then) = _$WriteContractParametersLegacyCopyWithImpl;
+@override @useResult
+$Res call({
+ List<Map<dynamic, dynamic>> abi, String address, String functionName, List<Map<String, dynamic>>? accessList, String? account, List<dynamic>? args, int? chainId, String? dataSuffix, BigInt? gas, FeeValuesLegacy? feeValues, BigInt? nonce, BigInt? value, String? type
+});
+
+
+
+
+}
+/// @nodoc
+class _$WriteContractParametersLegacyCopyWithImpl<$Res>
+    implements $WriteContractParametersLegacyCopyWith<$Res> {
+  _$WriteContractParametersLegacyCopyWithImpl(this._self, this._then);
+
+  final WriteContractParametersLegacy _self;
+  final $Res Function(WriteContractParametersLegacy) _then;
+
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? abi = null,Object? address = null,Object? functionName = null,Object? accessList = freezed,Object? account = freezed,Object? args = freezed,Object? chainId = freezed,Object? dataSuffix = freezed,Object? gas = freezed,Object? feeValues = freezed,Object? nonce = freezed,Object? value = freezed,Object? type = freezed,}) {
+  return _then(WriteContractParametersLegacy(
+abi: null == abi ? _self._abi : abi // ignore: cast_nullable_to_non_nullable
+as List<Map<dynamic, dynamic>>,address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
+as String,functionName: null == functionName ? _self.functionName : functionName // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self._accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: freezed == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String?,args: freezed == args ? _self._args : args // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,dataSuffix: freezed == dataSuffix ? _self.dataSuffix : dataSuffix // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,feeValues: freezed == feeValues ? _self.feeValues : feeValues // ignore: cast_nullable_to_non_nullable
+as FeeValuesLegacy?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-class __$$WriteContractParametersEIP1559ImplCopyWithImpl<$Res>
-    extends _$WriteContractParametersCopyWithImpl<$Res,
-        _$WriteContractParametersEIP1559Impl>
-    implements _$$WriteContractParametersEIP1559ImplCopyWith<$Res> {
-  __$$WriteContractParametersEIP1559ImplCopyWithImpl(
-      _$WriteContractParametersEIP1559Impl _value,
-      $Res Function(_$WriteContractParametersEIP1559Impl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? abi = null,
-    Object? address = null,
-    Object? functionName = null,
-    Object? accessList = freezed,
-    Object? account = freezed,
-    Object? args = freezed,
-    Object? chainId = freezed,
-    Object? dataSuffix = freezed,
-    Object? gas = freezed,
-    Object? feeValues = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? type = freezed,
-  }) {
-    return _then(_$WriteContractParametersEIP1559Impl(
-      abi: null == abi
-          ? _value._abi
-          : abi // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>,
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as String,
-      functionName: null == functionName
-          ? _value.functionName
-          : functionName // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value._accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: freezed == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String?,
-      args: freezed == args
-          ? _value._args
-          : args // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dataSuffix: freezed == dataSuffix
-          ? _value.dataSuffix
-          : dataSuffix // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      feeValues: freezed == feeValues
-          ? _value.feeValues
-          : feeValues // ignore: cast_nullable_to_non_nullable
-              as FeeValuesEIP1559?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$WriteContractParametersEIP1559Impl
-    extends WriteContractParametersEIP1559 {
-  const _$WriteContractParametersEIP1559Impl(
-      {required final List<Map<String, dynamic>> abi,
-      required this.address,
-      required this.functionName,
-      final List<Map<String, dynamic>>? accessList,
-      this.account,
-      final List<dynamic>? args,
-      this.chainId,
-      this.dataSuffix,
-      this.gas,
-      this.feeValues,
-      this.nonce,
-      this.value,
-      this.type})
-      : _abi = abi,
-        _accessList = accessList,
-        _args = args,
-        super._();
 
-  final List<Map<String, dynamic>> _abi;
-  @override
-  List<Map<String, dynamic>> get abi {
-    if (_abi is EqualUnmodifiableListView) return _abi;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_abi);
-  }
+class WriteContractParametersEIP1559 extends WriteContractParameters {
+  const WriteContractParametersEIP1559({required  Abi abi, required this.address, required this.functionName,  List<Map<String, dynamic>>? accessList, this.account,  List<dynamic>? args, this.chainId, this.dataSuffix, this.gas, this.feeValues, this.nonce, this.value, this.type}): _abi = abi,_accessList = accessList,_args = args,super._();
+  
 
-  @override
-  final String address;
-  @override
-  final String functionName;
-  final List<Map<String, dynamic>>? _accessList;
-  @override
-  List<Map<String, dynamic>>? get accessList {
-    final value = _accessList;
-    if (value == null) return null;
-    if (_accessList is EqualUnmodifiableListView) return _accessList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+ final  Abi _abi;
+@override Abi get abi {
+  if (_abi is EqualUnmodifiableListView) return _abi;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_abi);
+}
 
-  @override
-  final String? account;
-  final List<dynamic>? _args;
-  @override
-  List<dynamic>? get args {
-    final value = _args;
-    if (value == null) return null;
-    if (_args is EqualUnmodifiableListView) return _args;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+@override final  String address;
+@override final  String functionName;
+ final  List<Map<String, dynamic>>? _accessList;
+@override List<Map<String, dynamic>>? get accessList {
+  final value = _accessList;
+  if (value == null) return null;
+  if (_accessList is EqualUnmodifiableListView) return _accessList;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  final int? chainId;
-  @override
-  final String? dataSuffix;
-  @override
-  final BigInt? gas;
-  @override
-  final FeeValuesEIP1559? feeValues;
-  @override
-  final BigInt? nonce;
-  @override
-  final BigInt? value;
-  @override
-  final String? type;
+@override final  String? account;
+ final  List<dynamic>? _args;
+@override List<dynamic>? get args {
+  final value = _args;
+  if (value == null) return null;
+  if (_args is EqualUnmodifiableListView) return _args;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  String toString() {
+@override final  int? chainId;
+@override final  String? dataSuffix;
+@override final  BigInt? gas;
+@override final  FeeValuesEIP1559? feeValues;
+@override final  BigInt? nonce;
+@override final  BigInt? value;
+@override final  String? type;
+
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$WriteContractParametersEIP1559CopyWith<WriteContractParametersEIP1559> get copyWith => _$WriteContractParametersEIP1559CopyWithImpl<WriteContractParametersEIP1559>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is WriteContractParametersEIP1559&&const DeepCollectionEquality().equals(other.abi, _abi)&&(identical(other.address, address) || other.address == address)&&(identical(other.functionName, functionName) || other.functionName == functionName)&&const DeepCollectionEquality().equals(other.accessList, _accessList)&&(identical(other.account, account) || other.account == account)&&const DeepCollectionEquality().equals(other.args, _args)&&(identical(other.chainId, chainId) || other.chainId == chainId)&&(identical(other.dataSuffix, dataSuffix) || other.dataSuffix == dataSuffix)&&(identical(other.gas, gas) || other.gas == gas)&&(identical(other.feeValues, feeValues) || other.feeValues == feeValues)&&(identical(other.nonce, nonce) || other.nonce == nonce)&&(identical(other.value, value) || other.value == value)&&(identical(other.type, type) || other.type == type));
+}
+
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_abi),address,functionName,const DeepCollectionEquality().hash(_accessList),account,const DeepCollectionEquality().hash(_args),chainId,dataSuffix,gas,feeValues,nonce,value,type);
+}
+
+@override
+String toString() {
     return 'WriteContractParameters.eip1559(abi: $abi, address: $address, functionName: $functionName, accessList: $accessList, account: $account, args: $args, chainId: $chainId, dataSuffix: $dataSuffix, gas: $gas, feeValues: $feeValues, nonce: $nonce, value: $value, type: $type)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$WriteContractParametersEIP1559Impl &&
-            const DeepCollectionEquality().equals(other._abi, _abi) &&
-            (identical(other.address, address) || other.address == address) &&
-            (identical(other.functionName, functionName) ||
-                other.functionName == functionName) &&
-            const DeepCollectionEquality()
-                .equals(other._accessList, _accessList) &&
-            (identical(other.account, account) || other.account == account) &&
-            const DeepCollectionEquality().equals(other._args, _args) &&
-            (identical(other.chainId, chainId) || other.chainId == chainId) &&
-            (identical(other.dataSuffix, dataSuffix) ||
-                other.dataSuffix == dataSuffix) &&
-            (identical(other.gas, gas) || other.gas == gas) &&
-            (identical(other.feeValues, feeValues) ||
-                other.feeValues == feeValues) &&
-            (identical(other.nonce, nonce) || other.nonce == nonce) &&
-            (identical(other.value, value) || other.value == value) &&
-            (identical(other.type, type) || other.type == type));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_abi),
-      address,
-      functionName,
-      const DeepCollectionEquality().hash(_accessList),
-      account,
-      const DeepCollectionEquality().hash(_args),
-      chainId,
-      dataSuffix,
-      gas,
-      feeValues,
-      nonce,
-      value,
-      type);
-
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$WriteContractParametersEIP1559ImplCopyWith<
-          _$WriteContractParametersEIP1559Impl>
-      get copyWith => __$$WriteContractParametersEIP1559ImplCopyWithImpl<
-          _$WriteContractParametersEIP1559Impl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        legacy,
-    required TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip1559,
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip4844,
-  }) {
-    return eip1559(abi, address, functionName, accessList, account, args,
-        chainId, dataSuffix, gas, feeValues, nonce, value, type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult? Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-  }) {
-    return eip1559?.call(abi, address, functionName, accessList, account, args,
-        chainId, dataSuffix, gas, feeValues, nonce, value, type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip1559 != null) {
-      return eip1559(abi, address, functionName, accessList, account, args,
-          chainId, dataSuffix, gas, feeValues, nonce, value, type);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(WriteContractParametersLegacy value) legacy,
-    required TResult Function(WriteContractParametersEIP1559 value) eip1559,
-    required TResult Function(WriteContractParametersEIP4844 value) eip4844,
-  }) {
-    return eip1559(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(WriteContractParametersLegacy value)? legacy,
-    TResult? Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult? Function(WriteContractParametersEIP4844 value)? eip4844,
-  }) {
-    return eip1559?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(WriteContractParametersLegacy value)? legacy,
-    TResult Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult Function(WriteContractParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip1559 != null) {
-      return eip1559(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class WriteContractParametersEIP1559 extends WriteContractParameters {
-  const factory WriteContractParametersEIP1559(
-      {required final List<Map<String, dynamic>> abi,
-      required final String address,
-      required final String functionName,
-      final List<Map<String, dynamic>>? accessList,
-      final String? account,
-      final List<dynamic>? args,
-      final int? chainId,
-      final String? dataSuffix,
-      final BigInt? gas,
-      final FeeValuesEIP1559? feeValues,
-      final BigInt? nonce,
-      final BigInt? value,
-      final String? type}) = _$WriteContractParametersEIP1559Impl;
-  const WriteContractParametersEIP1559._() : super._();
 
-  @override
-  List<Map<String, dynamic>> get abi;
-  @override
-  String get address;
-  @override
-  String get functionName;
-  @override
-  List<Map<String, dynamic>>? get accessList;
-  @override
-  String? get account;
-  @override
-  List<dynamic>? get args;
-  @override
-  int? get chainId;
-  @override
-  String? get dataSuffix;
-  @override
-  BigInt? get gas;
-  @override
-  FeeValuesEIP1559? get feeValues;
-  @override
-  BigInt? get nonce;
-  @override
-  BigInt? get value;
-  @override
-  String? get type;
-
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$WriteContractParametersEIP1559ImplCopyWith<
-          _$WriteContractParametersEIP1559Impl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$WriteContractParametersEIP4844ImplCopyWith<$Res>
-    implements $WriteContractParametersCopyWith<$Res> {
-  factory _$$WriteContractParametersEIP4844ImplCopyWith(
-          _$WriteContractParametersEIP4844Impl value,
-          $Res Function(_$WriteContractParametersEIP4844Impl) then) =
-      __$$WriteContractParametersEIP4844ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {List<Map> abi,
-      String address,
-      String functionName,
-      List<Map<String, dynamic>>? accessList,
-      String? account,
-      List<dynamic>? args,
-      int? chainId,
-      String? dataSuffix,
-      BigInt? gas,
-      FeeValuesEIP4844? feeValues,
-      BigInt? nonce,
-      BigInt? value,
-      String? type});
+abstract mixin class $WriteContractParametersEIP1559CopyWith<$Res> implements $WriteContractParametersCopyWith<$Res> {
+  factory $WriteContractParametersEIP1559CopyWith(WriteContractParametersEIP1559 value, $Res Function(WriteContractParametersEIP1559) _then) = _$WriteContractParametersEIP1559CopyWithImpl;
+@override @useResult
+$Res call({
+ Abi abi, String address, String functionName, List<Map<String, dynamic>>? accessList, String? account, List<dynamic>? args, int? chainId, String? dataSuffix, BigInt? gas, FeeValuesEIP1559? feeValues, BigInt? nonce, BigInt? value, String? type
+});
+
+
+
+
+}
+/// @nodoc
+class _$WriteContractParametersEIP1559CopyWithImpl<$Res>
+    implements $WriteContractParametersEIP1559CopyWith<$Res> {
+  _$WriteContractParametersEIP1559CopyWithImpl(this._self, this._then);
+
+  final WriteContractParametersEIP1559 _self;
+  final $Res Function(WriteContractParametersEIP1559) _then;
+
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? abi = null,Object? address = null,Object? functionName = null,Object? accessList = freezed,Object? account = freezed,Object? args = freezed,Object? chainId = freezed,Object? dataSuffix = freezed,Object? gas = freezed,Object? feeValues = freezed,Object? nonce = freezed,Object? value = freezed,Object? type = freezed,}) {
+  return _then(WriteContractParametersEIP1559(
+abi: null == abi ? _self._abi : abi // ignore: cast_nullable_to_non_nullable
+as Abi,address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
+as String,functionName: null == functionName ? _self.functionName : functionName // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self._accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: freezed == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String?,args: freezed == args ? _self._args : args // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,dataSuffix: freezed == dataSuffix ? _self.dataSuffix : dataSuffix // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,feeValues: freezed == feeValues ? _self.feeValues : feeValues // ignore: cast_nullable_to_non_nullable
+as FeeValuesEIP1559?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-class __$$WriteContractParametersEIP4844ImplCopyWithImpl<$Res>
-    extends _$WriteContractParametersCopyWithImpl<$Res,
-        _$WriteContractParametersEIP4844Impl>
-    implements _$$WriteContractParametersEIP4844ImplCopyWith<$Res> {
-  __$$WriteContractParametersEIP4844ImplCopyWithImpl(
-      _$WriteContractParametersEIP4844Impl _value,
-      $Res Function(_$WriteContractParametersEIP4844Impl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? abi = null,
-    Object? address = null,
-    Object? functionName = null,
-    Object? accessList = freezed,
-    Object? account = freezed,
-    Object? args = freezed,
-    Object? chainId = freezed,
-    Object? dataSuffix = freezed,
-    Object? gas = freezed,
-    Object? feeValues = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? type = freezed,
-  }) {
-    return _then(_$WriteContractParametersEIP4844Impl(
-      abi: null == abi
-          ? _value._abi
-          : abi // ignore: cast_nullable_to_non_nullable
-              as List<Map>,
-      address: null == address
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as String,
-      functionName: null == functionName
-          ? _value.functionName
-          : functionName // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value._accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: freezed == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String?,
-      args: freezed == args
-          ? _value._args
-          : args // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      dataSuffix: freezed == dataSuffix
-          ? _value.dataSuffix
-          : dataSuffix // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      feeValues: freezed == feeValues
-          ? _value.feeValues
-          : feeValues // ignore: cast_nullable_to_non_nullable
-              as FeeValuesEIP4844?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$WriteContractParametersEIP4844Impl
-    extends WriteContractParametersEIP4844 {
-  const _$WriteContractParametersEIP4844Impl(
-      {required final List<Map> abi,
-      required this.address,
-      required this.functionName,
-      final List<Map<String, dynamic>>? accessList,
-      this.account,
-      final List<dynamic>? args,
-      this.chainId,
-      this.dataSuffix,
-      this.gas,
-      this.feeValues,
-      this.nonce,
-      this.value,
-      this.type})
-      : _abi = abi,
-        _accessList = accessList,
-        _args = args,
-        super._();
 
-  final List<Map> _abi;
-  @override
-  List<Map> get abi {
-    if (_abi is EqualUnmodifiableListView) return _abi;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_abi);
-  }
+class WriteContractParametersEIP4844 extends WriteContractParameters {
+  const WriteContractParametersEIP4844({required  List<Map<dynamic, dynamic>> abi, required this.address, required this.functionName,  List<Map<String, dynamic>>? accessList, this.account,  List<dynamic>? args, this.chainId, this.dataSuffix, this.gas, this.feeValues, this.nonce, this.value, this.type}): _abi = abi,_accessList = accessList,_args = args,super._();
+  
 
-  @override
-  final String address;
-  @override
-  final String functionName;
-  final List<Map<String, dynamic>>? _accessList;
-  @override
-  List<Map<String, dynamic>>? get accessList {
-    final value = _accessList;
-    if (value == null) return null;
-    if (_accessList is EqualUnmodifiableListView) return _accessList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+ final  List<Map<dynamic, dynamic>> _abi;
+@override List<Map<dynamic, dynamic>> get abi {
+  if (_abi is EqualUnmodifiableListView) return _abi;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_abi);
+}
 
-  @override
-  final String? account;
-  final List<dynamic>? _args;
-  @override
-  List<dynamic>? get args {
-    final value = _args;
-    if (value == null) return null;
-    if (_args is EqualUnmodifiableListView) return _args;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+@override final  String address;
+@override final  String functionName;
+ final  List<Map<String, dynamic>>? _accessList;
+@override List<Map<String, dynamic>>? get accessList {
+  final value = _accessList;
+  if (value == null) return null;
+  if (_accessList is EqualUnmodifiableListView) return _accessList;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  final int? chainId;
-  @override
-  final String? dataSuffix;
-  @override
-  final BigInt? gas;
-  @override
-  final FeeValuesEIP4844? feeValues;
-  @override
-  final BigInt? nonce;
-  @override
-  final BigInt? value;
-  @override
-  final String? type;
+@override final  String? account;
+ final  List<dynamic>? _args;
+@override List<dynamic>? get args {
+  final value = _args;
+  if (value == null) return null;
+  if (_args is EqualUnmodifiableListView) return _args;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  String toString() {
+@override final  int? chainId;
+@override final  String? dataSuffix;
+@override final  BigInt? gas;
+@override final  FeeValuesEIP4844? feeValues;
+@override final  BigInt? nonce;
+@override final  BigInt? value;
+@override final  String? type;
+
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$WriteContractParametersEIP4844CopyWith<WriteContractParametersEIP4844> get copyWith => _$WriteContractParametersEIP4844CopyWithImpl<WriteContractParametersEIP4844>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is WriteContractParametersEIP4844&&const DeepCollectionEquality().equals(other.abi, _abi)&&(identical(other.address, address) || other.address == address)&&(identical(other.functionName, functionName) || other.functionName == functionName)&&const DeepCollectionEquality().equals(other.accessList, _accessList)&&(identical(other.account, account) || other.account == account)&&const DeepCollectionEquality().equals(other.args, _args)&&(identical(other.chainId, chainId) || other.chainId == chainId)&&(identical(other.dataSuffix, dataSuffix) || other.dataSuffix == dataSuffix)&&(identical(other.gas, gas) || other.gas == gas)&&(identical(other.feeValues, feeValues) || other.feeValues == feeValues)&&(identical(other.nonce, nonce) || other.nonce == nonce)&&(identical(other.value, value) || other.value == value)&&(identical(other.type, type) || other.type == type));
+}
+
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_abi),address,functionName,const DeepCollectionEquality().hash(_accessList),account,const DeepCollectionEquality().hash(_args),chainId,dataSuffix,gas,feeValues,nonce,value,type);
+}
+
+@override
+String toString() {
     return 'WriteContractParameters.eip4844(abi: $abi, address: $address, functionName: $functionName, accessList: $accessList, account: $account, args: $args, chainId: $chainId, dataSuffix: $dataSuffix, gas: $gas, feeValues: $feeValues, nonce: $nonce, value: $value, type: $type)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$WriteContractParametersEIP4844Impl &&
-            const DeepCollectionEquality().equals(other._abi, _abi) &&
-            (identical(other.address, address) || other.address == address) &&
-            (identical(other.functionName, functionName) ||
-                other.functionName == functionName) &&
-            const DeepCollectionEquality()
-                .equals(other._accessList, _accessList) &&
-            (identical(other.account, account) || other.account == account) &&
-            const DeepCollectionEquality().equals(other._args, _args) &&
-            (identical(other.chainId, chainId) || other.chainId == chainId) &&
-            (identical(other.dataSuffix, dataSuffix) ||
-                other.dataSuffix == dataSuffix) &&
-            (identical(other.gas, gas) || other.gas == gas) &&
-            (identical(other.feeValues, feeValues) ||
-                other.feeValues == feeValues) &&
-            (identical(other.nonce, nonce) || other.nonce == nonce) &&
-            (identical(other.value, value) || other.value == value) &&
-            (identical(other.type, type) || other.type == type));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_abi),
-      address,
-      functionName,
-      const DeepCollectionEquality().hash(_accessList),
-      account,
-      const DeepCollectionEquality().hash(_args),
-      chainId,
-      dataSuffix,
-      gas,
-      feeValues,
-      nonce,
-      value,
-      type);
-
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$WriteContractParametersEIP4844ImplCopyWith<
-          _$WriteContractParametersEIP4844Impl>
-      get copyWith => __$$WriteContractParametersEIP4844ImplCopyWithImpl<
-          _$WriteContractParametersEIP4844Impl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        legacy,
-    required TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip1559,
-    required TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)
-        eip4844,
-  }) {
-    return eip4844(abi, address, functionName, accessList, account, args,
-        chainId, dataSuffix, gas, feeValues, nonce, value, type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult? Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult? Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-  }) {
-    return eip4844?.call(abi, address, functionName, accessList, account, args,
-        chainId, dataSuffix, gas, feeValues, nonce, value, type);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        legacy,
-    TResult Function(
-            List<Map<String, dynamic>> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip1559,
-    TResult Function(
-            List<Map> abi,
-            String address,
-            String functionName,
-            List<Map<String, dynamic>>? accessList,
-            String? account,
-            List<dynamic>? args,
-            int? chainId,
-            String? dataSuffix,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            String? type)?
-        eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip4844 != null) {
-      return eip4844(abi, address, functionName, accessList, account, args,
-          chainId, dataSuffix, gas, feeValues, nonce, value, type);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(WriteContractParametersLegacy value) legacy,
-    required TResult Function(WriteContractParametersEIP1559 value) eip1559,
-    required TResult Function(WriteContractParametersEIP4844 value) eip4844,
-  }) {
-    return eip4844(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(WriteContractParametersLegacy value)? legacy,
-    TResult? Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult? Function(WriteContractParametersEIP4844 value)? eip4844,
-  }) {
-    return eip4844?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(WriteContractParametersLegacy value)? legacy,
-    TResult Function(WriteContractParametersEIP1559 value)? eip1559,
-    TResult Function(WriteContractParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip4844 != null) {
-      return eip4844(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class WriteContractParametersEIP4844 extends WriteContractParameters {
-  const factory WriteContractParametersEIP4844(
-      {required final List<Map> abi,
-      required final String address,
-      required final String functionName,
-      final List<Map<String, dynamic>>? accessList,
-      final String? account,
-      final List<dynamic>? args,
-      final int? chainId,
-      final String? dataSuffix,
-      final BigInt? gas,
-      final FeeValuesEIP4844? feeValues,
-      final BigInt? nonce,
-      final BigInt? value,
-      final String? type}) = _$WriteContractParametersEIP4844Impl;
-  const WriteContractParametersEIP4844._() : super._();
 
-  @override
-  List<Map> get abi;
-  @override
-  String get address;
-  @override
-  String get functionName;
-  @override
-  List<Map<String, dynamic>>? get accessList;
-  @override
-  String? get account;
-  @override
-  List<dynamic>? get args;
-  @override
-  int? get chainId;
-  @override
-  String? get dataSuffix;
-  @override
-  BigInt? get gas;
-  @override
-  FeeValuesEIP4844? get feeValues;
-  @override
-  BigInt? get nonce;
-  @override
-  BigInt? get value;
-  @override
-  String? get type;
-
-  /// Create a copy of WriteContractParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$WriteContractParametersEIP4844ImplCopyWith<
-          _$WriteContractParametersEIP4844Impl>
-      get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class $WriteContractParametersEIP4844CopyWith<$Res> implements $WriteContractParametersCopyWith<$Res> {
+  factory $WriteContractParametersEIP4844CopyWith(WriteContractParametersEIP4844 value, $Res Function(WriteContractParametersEIP4844) _then) = _$WriteContractParametersEIP4844CopyWithImpl;
+@override @useResult
+$Res call({
+ List<Map<dynamic, dynamic>> abi, String address, String functionName, List<Map<String, dynamic>>? accessList, String? account, List<dynamic>? args, int? chainId, String? dataSuffix, BigInt? gas, FeeValuesEIP4844? feeValues, BigInt? nonce, BigInt? value, String? type
+});
+
+
+
+
+}
+/// @nodoc
+class _$WriteContractParametersEIP4844CopyWithImpl<$Res>
+    implements $WriteContractParametersEIP4844CopyWith<$Res> {
+  _$WriteContractParametersEIP4844CopyWithImpl(this._self, this._then);
+
+  final WriteContractParametersEIP4844 _self;
+  final $Res Function(WriteContractParametersEIP4844) _then;
+
+/// Create a copy of WriteContractParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? abi = null,Object? address = null,Object? functionName = null,Object? accessList = freezed,Object? account = freezed,Object? args = freezed,Object? chainId = freezed,Object? dataSuffix = freezed,Object? gas = freezed,Object? feeValues = freezed,Object? nonce = freezed,Object? value = freezed,Object? type = freezed,}) {
+  return _then(WriteContractParametersEIP4844(
+abi: null == abi ? _self._abi : abi // ignore: cast_nullable_to_non_nullable
+as List<Map<dynamic, dynamic>>,address: null == address ? _self.address : address // ignore: cast_nullable_to_non_nullable
+as String,functionName: null == functionName ? _self.functionName : functionName // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self._accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: freezed == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String?,args: freezed == args ? _self._args : args // ignore: cast_nullable_to_non_nullable
+as List<dynamic>?,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,dataSuffix: freezed == dataSuffix ? _self.dataSuffix : dataSuffix // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,feeValues: freezed == feeValues ? _self.feeValues : feeValues // ignore: cast_nullable_to_non_nullable
+as FeeValuesEIP4844?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,type: freezed == type ? _self.type : type // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

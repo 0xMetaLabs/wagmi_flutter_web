@@ -88,7 +88,7 @@ extension type JSEstimateGasParametersLegacy._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSEstimateGasErrorType(JSObject _) implements JSObject {}
+extension type JSEstimateGasErrorType(JSObject _) implements JSObject;
 
 extension EstimatedGasParametersToJS on EstimateGasParameters {
   JSObject get toJS => map(

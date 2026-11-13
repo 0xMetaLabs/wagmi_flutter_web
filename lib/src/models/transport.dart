@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'transport.freezed.dart';
 
 @freezed
-class Transport with _$Transport {
+abstract class Transport with _$Transport {
   const Transport._();
   const factory Transport.websocket({
     required String url,

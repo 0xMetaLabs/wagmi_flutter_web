@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'send_transaction.dart';
@@ -9,1468 +9,505 @@ part of 'send_transaction.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$SendTransactionParameters {
-  String get to => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get accessList =>
-      throw _privateConstructorUsedError;
-  String get account => throw _privateConstructorUsedError;
-  int? get chainId => throw _privateConstructorUsedError;
-  String? get data => throw _privateConstructorUsedError;
-  BigInt? get gas => throw _privateConstructorUsedError;
-  FeeValues? get feeValues => throw _privateConstructorUsedError;
-  BigInt? get nonce => throw _privateConstructorUsedError;
-  BigInt? get value => throw _privateConstructorUsedError;
-  dynamic get connector => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        legacy,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip1559,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SendTransactionParametersLegacy value) legacy,
-    required TResult Function(SendTransactionParametersEIP1559 value) eip1559,
-    required TResult Function(SendTransactionParametersEIP4844 value) eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SendTransactionParametersLegacy value)? legacy,
-    TResult? Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult? Function(SendTransactionParametersEIP4844 value)? eip4844,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SendTransactionParametersLegacy value)? legacy,
-    TResult Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult Function(SendTransactionParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
 
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $SendTransactionParametersCopyWith<SendTransactionParameters> get copyWith =>
-      throw _privateConstructorUsedError;
+ String get to; List<Map<String, dynamic>>? get accessList; String get account; int? get chainId; String? get data; BigInt? get gas; FeeValues? get feeValues; BigInt? get nonce; BigInt? get value; dynamic get connector;
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SendTransactionParametersCopyWith<SendTransactionParameters> get copyWith => _$SendTransactionParametersCopyWithImpl<SendTransactionParameters>(this as SendTransactionParameters, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  final _this = this as SendTransactionParameters;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SendTransactionParameters&&(identical(other.to, _this.to) || other.to == _this.to)&&const DeepCollectionEquality().equals(other.accessList, _this.accessList)&&(identical(other.account, _this.account) || other.account == _this.account)&&(identical(other.chainId, _this.chainId) || other.chainId == _this.chainId)&&(identical(other.data, _this.data) || other.data == _this.data)&&(identical(other.gas, _this.gas) || other.gas == _this.gas)&&(identical(other.feeValues, _this.feeValues) || other.feeValues == _this.feeValues)&&(identical(other.nonce, _this.nonce) || other.nonce == _this.nonce)&&(identical(other.value, _this.value) || other.value == _this.value)&&const DeepCollectionEquality().equals(other.connector, _this.connector));
+}
+
+
+@override
+int get hashCode {
+  final _this = this as SendTransactionParameters;
+  return Object.hash(runtimeType,_this.to,const DeepCollectionEquality().hash(_this.accessList),_this.account,_this.chainId,_this.data,_this.gas,_this.feeValues,_this.nonce,_this.value,const DeepCollectionEquality().hash(_this.connector));
+}
+
+@override
+String toString() {
+  final _this = this as SendTransactionParameters;
+  return 'SendTransactionParameters(to: ${_this.to}, accessList: ${_this.accessList}, account: ${_this.account}, chainId: ${_this.chainId}, data: ${_this.data}, gas: ${_this.gas}, feeValues: ${_this.feeValues}, nonce: ${_this.nonce}, value: ${_this.value}, connector: ${_this.connector})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $SendTransactionParametersCopyWith<$Res> {
-  factory $SendTransactionParametersCopyWith(SendTransactionParameters value,
-          $Res Function(SendTransactionParameters) then) =
-      _$SendTransactionParametersCopyWithImpl<$Res, SendTransactionParameters>;
-  @useResult
-  $Res call(
-      {String to,
-      List<Map<String, dynamic>>? accessList,
-      String account,
-      int? chainId,
-      String? data,
-      BigInt? gas,
-      BigInt? nonce,
-      BigInt? value,
-      dynamic connector});
-}
+abstract mixin class $SendTransactionParametersCopyWith<$Res>  {
+  factory $SendTransactionParametersCopyWith(SendTransactionParameters value, $Res Function(SendTransactionParameters) _then) = _$SendTransactionParametersCopyWithImpl;
+@useResult
+$Res call({
+ String to, List<Map<String, dynamic>>? accessList, String account, int? chainId, String? data, BigInt? gas, BigInt? nonce, BigInt? value, dynamic connector
+});
 
+
+
+
+}
 /// @nodoc
-class _$SendTransactionParametersCopyWithImpl<$Res,
-        $Val extends SendTransactionParameters>
+class _$SendTransactionParametersCopyWithImpl<$Res>
     implements $SendTransactionParametersCopyWith<$Res> {
-  _$SendTransactionParametersCopyWithImpl(this._value, this._then);
+  _$SendTransactionParametersCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final SendTransactionParameters _self;
+  final $Res Function(SendTransactionParameters) _then;
 
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? to = null,
-    Object? accessList = freezed,
-    Object? account = null,
-    Object? chainId = freezed,
-    Object? data = freezed,
-    Object? gas = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? connector = freezed,
-  }) {
-    return _then(_value.copyWith(
-      to: null == to
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value.accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: null == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      connector: freezed == connector
-          ? _value.connector
-          : connector // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ) as $Val);
-  }
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? to = null,Object? accessList = freezed,Object? account = null,Object? chainId = freezed,Object? data = freezed,Object? gas = freezed,Object? nonce = freezed,Object? value = freezed,Object? connector = freezed,}) {
+  return _then(_self.copyWith(
+to: null == to ? _self.to : to // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self.accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: null == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,connector: freezed == connector ? _self.connector : connector // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
+}
+
+}
+
+
+/// Adds pattern-matching-related methods to [SendTransactionParameters].
+extension SendTransactionParametersPatterns on SendTransactionParameters {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( SendTransactionParametersLegacy value)?  legacy,TResult Function( SendTransactionParametersEIP1559 value)?  eip1559,TResult Function( SendTransactionParametersEIP4844 value)?  eip4844,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case SendTransactionParametersLegacy() when legacy != null:
+return legacy(_that);case SendTransactionParametersEIP1559() when eip1559 != null:
+return eip1559(_that);case SendTransactionParametersEIP4844() when eip4844 != null:
+return eip4844(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( SendTransactionParametersLegacy value)  legacy,required TResult Function( SendTransactionParametersEIP1559 value)  eip1559,required TResult Function( SendTransactionParametersEIP4844 value)  eip4844,}){
+final _that = this;
+switch (_that) {
+case SendTransactionParametersLegacy():
+return legacy(_that);case SendTransactionParametersEIP1559():
+return eip1559(_that);case SendTransactionParametersEIP4844():
+return eip4844(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( SendTransactionParametersLegacy value)?  legacy,TResult? Function( SendTransactionParametersEIP1559 value)?  eip1559,TResult? Function( SendTransactionParametersEIP4844 value)?  eip4844,}){
+final _that = this;
+switch (_that) {
+case SendTransactionParametersLegacy() when legacy != null:
+return legacy(_that);case SendTransactionParametersEIP1559() when eip1559 != null:
+return eip1559(_that);case SendTransactionParametersEIP4844() when eip4844 != null:
+return eip4844(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesLegacy? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)?  legacy,TResult Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesEIP1559? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)?  eip1559,TResult Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesEIP4844? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)?  eip4844,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case SendTransactionParametersLegacy() when legacy != null:
+return legacy(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case SendTransactionParametersEIP1559() when eip1559 != null:
+return eip1559(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case SendTransactionParametersEIP4844() when eip4844 != null:
+return eip4844(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesLegacy? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)  legacy,required TResult Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesEIP1559? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)  eip1559,required TResult Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesEIP4844? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)  eip4844,}) {final _that = this;
+switch (_that) {
+case SendTransactionParametersLegacy():
+return legacy(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case SendTransactionParametersEIP1559():
+return eip1559(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case SendTransactionParametersEIP4844():
+return eip4844(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesLegacy? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)?  legacy,TResult? Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesEIP1559? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)?  eip1559,TResult? Function( String to,  List<Map<String, dynamic>>? accessList,  String account,  int? chainId,  String? data,  BigInt? gas,  FeeValuesEIP4844? feeValues,  BigInt? nonce,  BigInt? value,  dynamic connector)?  eip4844,}) {final _that = this;
+switch (_that) {
+case SendTransactionParametersLegacy() when legacy != null:
+return legacy(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case SendTransactionParametersEIP1559() when eip1559 != null:
+return eip1559(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case SendTransactionParametersEIP4844() when eip4844 != null:
+return eip4844(_that.to,_that.accessList,_that.account,_that.chainId,_that.data,_that.gas,_that.feeValues,_that.nonce,_that.value,_that.connector);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-abstract class _$$SendTransactionParametersLegacyImplCopyWith<$Res>
-    implements $SendTransactionParametersCopyWith<$Res> {
-  factory _$$SendTransactionParametersLegacyImplCopyWith(
-          _$SendTransactionParametersLegacyImpl value,
-          $Res Function(_$SendTransactionParametersLegacyImpl) then) =
-      __$$SendTransactionParametersLegacyImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String to,
-      List<Map<String, dynamic>>? accessList,
-      String account,
-      int? chainId,
-      String? data,
-      BigInt? gas,
-      FeeValuesLegacy? feeValues,
-      BigInt? nonce,
-      BigInt? value,
-      dynamic connector});
+
+
+class SendTransactionParametersLegacy extends SendTransactionParameters {
+  const SendTransactionParametersLegacy({required this.to,  List<Map<String, dynamic>>? accessList, required this.account, this.chainId, this.data, this.gas, this.feeValues, this.nonce, this.value, this.connector}): _accessList = accessList,super._();
+  
+
+@override final  String to;
+ final  List<Map<String, dynamic>>? _accessList;
+@override List<Map<String, dynamic>>? get accessList {
+  final value = _accessList;
+  if (value == null) return null;
+  if (_accessList is EqualUnmodifiableListView) return _accessList;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
 }
 
-/// @nodoc
-class __$$SendTransactionParametersLegacyImplCopyWithImpl<$Res>
-    extends _$SendTransactionParametersCopyWithImpl<$Res,
-        _$SendTransactionParametersLegacyImpl>
-    implements _$$SendTransactionParametersLegacyImplCopyWith<$Res> {
-  __$$SendTransactionParametersLegacyImplCopyWithImpl(
-      _$SendTransactionParametersLegacyImpl _value,
-      $Res Function(_$SendTransactionParametersLegacyImpl) _then)
-      : super(_value, _then);
+@override final  String account;
+@override final  int? chainId;
+@override final  String? data;
+@override final  BigInt? gas;
+@override final  FeeValuesLegacy? feeValues;
+@override final  BigInt? nonce;
+@override final  BigInt? value;
+@override final  dynamic connector;
 
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? to = null,
-    Object? accessList = freezed,
-    Object? account = null,
-    Object? chainId = freezed,
-    Object? data = freezed,
-    Object? gas = freezed,
-    Object? feeValues = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? connector = freezed,
-  }) {
-    return _then(_$SendTransactionParametersLegacyImpl(
-      to: null == to
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value._accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: null == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      feeValues: freezed == feeValues
-          ? _value.feeValues
-          : feeValues // ignore: cast_nullable_to_non_nullable
-              as FeeValuesLegacy?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      connector: freezed == connector
-          ? _value.connector
-          : connector // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
-  }
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SendTransactionParametersLegacyCopyWith<SendTransactionParametersLegacy> get copyWith => _$SendTransactionParametersLegacyCopyWithImpl<SendTransactionParametersLegacy>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is SendTransactionParametersLegacy&&(identical(other.to, to) || other.to == to)&&const DeepCollectionEquality().equals(other.accessList, _accessList)&&(identical(other.account, account) || other.account == account)&&(identical(other.chainId, chainId) || other.chainId == chainId)&&(identical(other.data, data) || other.data == data)&&(identical(other.gas, gas) || other.gas == gas)&&(identical(other.feeValues, feeValues) || other.feeValues == feeValues)&&(identical(other.nonce, nonce) || other.nonce == nonce)&&(identical(other.value, value) || other.value == value)&&const DeepCollectionEquality().equals(other.connector, connector));
 }
 
-/// @nodoc
 
-class _$SendTransactionParametersLegacyImpl
-    extends SendTransactionParametersLegacy {
-  const _$SendTransactionParametersLegacyImpl(
-      {required this.to,
-      final List<Map<String, dynamic>>? accessList,
-      required this.account,
-      this.chainId,
-      this.data,
-      this.gas,
-      this.feeValues,
-      this.nonce,
-      this.value,
-      this.connector})
-      : _accessList = accessList,
-        super._();
+@override
+int get hashCode {
+    return Object.hash(runtimeType,to,const DeepCollectionEquality().hash(_accessList),account,chainId,data,gas,feeValues,nonce,value,const DeepCollectionEquality().hash(connector));
+}
 
-  @override
-  final String to;
-  final List<Map<String, dynamic>>? _accessList;
-  @override
-  List<Map<String, dynamic>>? get accessList {
-    final value = _accessList;
-    if (value == null) return null;
-    if (_accessList is EqualUnmodifiableListView) return _accessList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String account;
-  @override
-  final int? chainId;
-  @override
-  final String? data;
-  @override
-  final BigInt? gas;
-  @override
-  final FeeValuesLegacy? feeValues;
-  @override
-  final BigInt? nonce;
-  @override
-  final BigInt? value;
-  @override
-  final dynamic connector;
-
-  @override
-  String toString() {
+@override
+String toString() {
     return 'SendTransactionParameters.legacy(to: $to, accessList: $accessList, account: $account, chainId: $chainId, data: $data, gas: $gas, feeValues: $feeValues, nonce: $nonce, value: $value, connector: $connector)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SendTransactionParametersLegacyImpl &&
-            (identical(other.to, to) || other.to == to) &&
-            const DeepCollectionEquality()
-                .equals(other._accessList, _accessList) &&
-            (identical(other.account, account) || other.account == account) &&
-            (identical(other.chainId, chainId) || other.chainId == chainId) &&
-            (identical(other.data, data) || other.data == data) &&
-            (identical(other.gas, gas) || other.gas == gas) &&
-            (identical(other.feeValues, feeValues) ||
-                other.feeValues == feeValues) &&
-            (identical(other.nonce, nonce) || other.nonce == nonce) &&
-            (identical(other.value, value) || other.value == value) &&
-            const DeepCollectionEquality().equals(other.connector, connector));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      to,
-      const DeepCollectionEquality().hash(_accessList),
-      account,
-      chainId,
-      data,
-      gas,
-      feeValues,
-      nonce,
-      value,
-      const DeepCollectionEquality().hash(connector));
-
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SendTransactionParametersLegacyImplCopyWith<
-          _$SendTransactionParametersLegacyImpl>
-      get copyWith => __$$SendTransactionParametersLegacyImplCopyWithImpl<
-          _$SendTransactionParametersLegacyImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        legacy,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip1559,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip4844,
-  }) {
-    return legacy(to, accessList, account, chainId, data, gas, feeValues, nonce,
-        value, connector);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-  }) {
-    return legacy?.call(to, accessList, account, chainId, data, gas, feeValues,
-        nonce, value, connector);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-    required TResult orElse(),
-  }) {
-    if (legacy != null) {
-      return legacy(to, accessList, account, chainId, data, gas, feeValues,
-          nonce, value, connector);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SendTransactionParametersLegacy value) legacy,
-    required TResult Function(SendTransactionParametersEIP1559 value) eip1559,
-    required TResult Function(SendTransactionParametersEIP4844 value) eip4844,
-  }) {
-    return legacy(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SendTransactionParametersLegacy value)? legacy,
-    TResult? Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult? Function(SendTransactionParametersEIP4844 value)? eip4844,
-  }) {
-    return legacy?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SendTransactionParametersLegacy value)? legacy,
-    TResult Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult Function(SendTransactionParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) {
-    if (legacy != null) {
-      return legacy(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class SendTransactionParametersLegacy
-    extends SendTransactionParameters {
-  const factory SendTransactionParametersLegacy(
-      {required final String to,
-      final List<Map<String, dynamic>>? accessList,
-      required final String account,
-      final int? chainId,
-      final String? data,
-      final BigInt? gas,
-      final FeeValuesLegacy? feeValues,
-      final BigInt? nonce,
-      final BigInt? value,
-      final dynamic connector}) = _$SendTransactionParametersLegacyImpl;
-  const SendTransactionParametersLegacy._() : super._();
 
-  @override
-  String get to;
-  @override
-  List<Map<String, dynamic>>? get accessList;
-  @override
-  String get account;
-  @override
-  int? get chainId;
-  @override
-  String? get data;
-  @override
-  BigInt? get gas;
-  @override
-  FeeValuesLegacy? get feeValues;
-  @override
-  BigInt? get nonce;
-  @override
-  BigInt? get value;
-  @override
-  dynamic get connector;
-
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SendTransactionParametersLegacyImplCopyWith<
-          _$SendTransactionParametersLegacyImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SendTransactionParametersEIP1559ImplCopyWith<$Res>
-    implements $SendTransactionParametersCopyWith<$Res> {
-  factory _$$SendTransactionParametersEIP1559ImplCopyWith(
-          _$SendTransactionParametersEIP1559Impl value,
-          $Res Function(_$SendTransactionParametersEIP1559Impl) then) =
-      __$$SendTransactionParametersEIP1559ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String to,
-      List<Map<String, dynamic>>? accessList,
-      String account,
-      int? chainId,
-      String? data,
-      BigInt? gas,
-      FeeValuesEIP1559? feeValues,
-      BigInt? nonce,
-      BigInt? value,
-      dynamic connector});
+abstract mixin class $SendTransactionParametersLegacyCopyWith<$Res> implements $SendTransactionParametersCopyWith<$Res> {
+  factory $SendTransactionParametersLegacyCopyWith(SendTransactionParametersLegacy value, $Res Function(SendTransactionParametersLegacy) _then) = _$SendTransactionParametersLegacyCopyWithImpl;
+@override @useResult
+$Res call({
+ String to, List<Map<String, dynamic>>? accessList, String account, int? chainId, String? data, BigInt? gas, FeeValuesLegacy? feeValues, BigInt? nonce, BigInt? value, dynamic connector
+});
+
+
+
+
+}
+/// @nodoc
+class _$SendTransactionParametersLegacyCopyWithImpl<$Res>
+    implements $SendTransactionParametersLegacyCopyWith<$Res> {
+  _$SendTransactionParametersLegacyCopyWithImpl(this._self, this._then);
+
+  final SendTransactionParametersLegacy _self;
+  final $Res Function(SendTransactionParametersLegacy) _then;
+
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? to = null,Object? accessList = freezed,Object? account = null,Object? chainId = freezed,Object? data = freezed,Object? gas = freezed,Object? feeValues = freezed,Object? nonce = freezed,Object? value = freezed,Object? connector = freezed,}) {
+  return _then(SendTransactionParametersLegacy(
+to: null == to ? _self.to : to // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self._accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: null == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,feeValues: freezed == feeValues ? _self.feeValues : feeValues // ignore: cast_nullable_to_non_nullable
+as FeeValuesLegacy?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,connector: freezed == connector ? _self.connector : connector // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
 }
 
-/// @nodoc
-class __$$SendTransactionParametersEIP1559ImplCopyWithImpl<$Res>
-    extends _$SendTransactionParametersCopyWithImpl<$Res,
-        _$SendTransactionParametersEIP1559Impl>
-    implements _$$SendTransactionParametersEIP1559ImplCopyWith<$Res> {
-  __$$SendTransactionParametersEIP1559ImplCopyWithImpl(
-      _$SendTransactionParametersEIP1559Impl _value,
-      $Res Function(_$SendTransactionParametersEIP1559Impl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? to = null,
-    Object? accessList = freezed,
-    Object? account = null,
-    Object? chainId = freezed,
-    Object? data = freezed,
-    Object? gas = freezed,
-    Object? feeValues = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? connector = freezed,
-  }) {
-    return _then(_$SendTransactionParametersEIP1559Impl(
-      to: null == to
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value._accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: null == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      feeValues: freezed == feeValues
-          ? _value.feeValues
-          : feeValues // ignore: cast_nullable_to_non_nullable
-              as FeeValuesEIP1559?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      connector: freezed == connector
-          ? _value.connector
-          : connector // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$SendTransactionParametersEIP1559Impl
-    extends SendTransactionParametersEIP1559 {
-  const _$SendTransactionParametersEIP1559Impl(
-      {required this.to,
-      final List<Map<String, dynamic>>? accessList,
-      required this.account,
-      this.chainId,
-      this.data,
-      this.gas,
-      this.feeValues,
-      this.nonce,
-      this.value,
-      this.connector})
-      : _accessList = accessList,
-        super._();
 
-  @override
-  final String to;
-  final List<Map<String, dynamic>>? _accessList;
-  @override
-  List<Map<String, dynamic>>? get accessList {
-    final value = _accessList;
-    if (value == null) return null;
-    if (_accessList is EqualUnmodifiableListView) return _accessList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+class SendTransactionParametersEIP1559 extends SendTransactionParameters {
+  const SendTransactionParametersEIP1559({required this.to,  List<Map<String, dynamic>>? accessList, required this.account, this.chainId, this.data, this.gas, this.feeValues, this.nonce, this.value, this.connector}): _accessList = accessList,super._();
+  
 
-  @override
-  final String account;
-  @override
-  final int? chainId;
-  @override
-  final String? data;
-  @override
-  final BigInt? gas;
-  @override
-  final FeeValuesEIP1559? feeValues;
-  @override
-  final BigInt? nonce;
-  @override
-  final BigInt? value;
-  @override
-  final dynamic connector;
+@override final  String to;
+ final  List<Map<String, dynamic>>? _accessList;
+@override List<Map<String, dynamic>>? get accessList {
+  final value = _accessList;
+  if (value == null) return null;
+  if (_accessList is EqualUnmodifiableListView) return _accessList;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  String toString() {
+@override final  String account;
+@override final  int? chainId;
+@override final  String? data;
+@override final  BigInt? gas;
+@override final  FeeValuesEIP1559? feeValues;
+@override final  BigInt? nonce;
+@override final  BigInt? value;
+@override final  dynamic connector;
+
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SendTransactionParametersEIP1559CopyWith<SendTransactionParametersEIP1559> get copyWith => _$SendTransactionParametersEIP1559CopyWithImpl<SendTransactionParametersEIP1559>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is SendTransactionParametersEIP1559&&(identical(other.to, to) || other.to == to)&&const DeepCollectionEquality().equals(other.accessList, _accessList)&&(identical(other.account, account) || other.account == account)&&(identical(other.chainId, chainId) || other.chainId == chainId)&&(identical(other.data, data) || other.data == data)&&(identical(other.gas, gas) || other.gas == gas)&&(identical(other.feeValues, feeValues) || other.feeValues == feeValues)&&(identical(other.nonce, nonce) || other.nonce == nonce)&&(identical(other.value, value) || other.value == value)&&const DeepCollectionEquality().equals(other.connector, connector));
+}
+
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,to,const DeepCollectionEquality().hash(_accessList),account,chainId,data,gas,feeValues,nonce,value,const DeepCollectionEquality().hash(connector));
+}
+
+@override
+String toString() {
     return 'SendTransactionParameters.eip1559(to: $to, accessList: $accessList, account: $account, chainId: $chainId, data: $data, gas: $gas, feeValues: $feeValues, nonce: $nonce, value: $value, connector: $connector)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SendTransactionParametersEIP1559Impl &&
-            (identical(other.to, to) || other.to == to) &&
-            const DeepCollectionEquality()
-                .equals(other._accessList, _accessList) &&
-            (identical(other.account, account) || other.account == account) &&
-            (identical(other.chainId, chainId) || other.chainId == chainId) &&
-            (identical(other.data, data) || other.data == data) &&
-            (identical(other.gas, gas) || other.gas == gas) &&
-            (identical(other.feeValues, feeValues) ||
-                other.feeValues == feeValues) &&
-            (identical(other.nonce, nonce) || other.nonce == nonce) &&
-            (identical(other.value, value) || other.value == value) &&
-            const DeepCollectionEquality().equals(other.connector, connector));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      to,
-      const DeepCollectionEquality().hash(_accessList),
-      account,
-      chainId,
-      data,
-      gas,
-      feeValues,
-      nonce,
-      value,
-      const DeepCollectionEquality().hash(connector));
-
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SendTransactionParametersEIP1559ImplCopyWith<
-          _$SendTransactionParametersEIP1559Impl>
-      get copyWith => __$$SendTransactionParametersEIP1559ImplCopyWithImpl<
-          _$SendTransactionParametersEIP1559Impl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        legacy,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip1559,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip4844,
-  }) {
-    return eip1559(to, accessList, account, chainId, data, gas, feeValues,
-        nonce, value, connector);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-  }) {
-    return eip1559?.call(to, accessList, account, chainId, data, gas, feeValues,
-        nonce, value, connector);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip1559 != null) {
-      return eip1559(to, accessList, account, chainId, data, gas, feeValues,
-          nonce, value, connector);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SendTransactionParametersLegacy value) legacy,
-    required TResult Function(SendTransactionParametersEIP1559 value) eip1559,
-    required TResult Function(SendTransactionParametersEIP4844 value) eip4844,
-  }) {
-    return eip1559(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SendTransactionParametersLegacy value)? legacy,
-    TResult? Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult? Function(SendTransactionParametersEIP4844 value)? eip4844,
-  }) {
-    return eip1559?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SendTransactionParametersLegacy value)? legacy,
-    TResult Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult Function(SendTransactionParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip1559 != null) {
-      return eip1559(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class SendTransactionParametersEIP1559
-    extends SendTransactionParameters {
-  const factory SendTransactionParametersEIP1559(
-      {required final String to,
-      final List<Map<String, dynamic>>? accessList,
-      required final String account,
-      final int? chainId,
-      final String? data,
-      final BigInt? gas,
-      final FeeValuesEIP1559? feeValues,
-      final BigInt? nonce,
-      final BigInt? value,
-      final dynamic connector}) = _$SendTransactionParametersEIP1559Impl;
-  const SendTransactionParametersEIP1559._() : super._();
 
-  @override
-  String get to;
-  @override
-  List<Map<String, dynamic>>? get accessList;
-  @override
-  String get account;
-  @override
-  int? get chainId;
-  @override
-  String? get data;
-  @override
-  BigInt? get gas;
-  @override
-  FeeValuesEIP1559? get feeValues;
-  @override
-  BigInt? get nonce;
-  @override
-  BigInt? get value;
-  @override
-  dynamic get connector;
-
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SendTransactionParametersEIP1559ImplCopyWith<
-          _$SendTransactionParametersEIP1559Impl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SendTransactionParametersEIP4844ImplCopyWith<$Res>
-    implements $SendTransactionParametersCopyWith<$Res> {
-  factory _$$SendTransactionParametersEIP4844ImplCopyWith(
-          _$SendTransactionParametersEIP4844Impl value,
-          $Res Function(_$SendTransactionParametersEIP4844Impl) then) =
-      __$$SendTransactionParametersEIP4844ImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String to,
-      List<Map<String, dynamic>>? accessList,
-      String account,
-      int? chainId,
-      String? data,
-      BigInt? gas,
-      FeeValuesEIP4844? feeValues,
-      BigInt? nonce,
-      BigInt? value,
-      dynamic connector});
+abstract mixin class $SendTransactionParametersEIP1559CopyWith<$Res> implements $SendTransactionParametersCopyWith<$Res> {
+  factory $SendTransactionParametersEIP1559CopyWith(SendTransactionParametersEIP1559 value, $Res Function(SendTransactionParametersEIP1559) _then) = _$SendTransactionParametersEIP1559CopyWithImpl;
+@override @useResult
+$Res call({
+ String to, List<Map<String, dynamic>>? accessList, String account, int? chainId, String? data, BigInt? gas, FeeValuesEIP1559? feeValues, BigInt? nonce, BigInt? value, dynamic connector
+});
+
+
+
+
+}
+/// @nodoc
+class _$SendTransactionParametersEIP1559CopyWithImpl<$Res>
+    implements $SendTransactionParametersEIP1559CopyWith<$Res> {
+  _$SendTransactionParametersEIP1559CopyWithImpl(this._self, this._then);
+
+  final SendTransactionParametersEIP1559 _self;
+  final $Res Function(SendTransactionParametersEIP1559) _then;
+
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? to = null,Object? accessList = freezed,Object? account = null,Object? chainId = freezed,Object? data = freezed,Object? gas = freezed,Object? feeValues = freezed,Object? nonce = freezed,Object? value = freezed,Object? connector = freezed,}) {
+  return _then(SendTransactionParametersEIP1559(
+to: null == to ? _self.to : to // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self._accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: null == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,feeValues: freezed == feeValues ? _self.feeValues : feeValues // ignore: cast_nullable_to_non_nullable
+as FeeValuesEIP1559?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,connector: freezed == connector ? _self.connector : connector // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
 }
 
-/// @nodoc
-class __$$SendTransactionParametersEIP4844ImplCopyWithImpl<$Res>
-    extends _$SendTransactionParametersCopyWithImpl<$Res,
-        _$SendTransactionParametersEIP4844Impl>
-    implements _$$SendTransactionParametersEIP4844ImplCopyWith<$Res> {
-  __$$SendTransactionParametersEIP4844ImplCopyWithImpl(
-      _$SendTransactionParametersEIP4844Impl _value,
-      $Res Function(_$SendTransactionParametersEIP4844Impl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? to = null,
-    Object? accessList = freezed,
-    Object? account = null,
-    Object? chainId = freezed,
-    Object? data = freezed,
-    Object? gas = freezed,
-    Object? feeValues = freezed,
-    Object? nonce = freezed,
-    Object? value = freezed,
-    Object? connector = freezed,
-  }) {
-    return _then(_$SendTransactionParametersEIP4844Impl(
-      to: null == to
-          ? _value.to
-          : to // ignore: cast_nullable_to_non_nullable
-              as String,
-      accessList: freezed == accessList
-          ? _value._accessList
-          : accessList // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      account: null == account
-          ? _value.account
-          : account // ignore: cast_nullable_to_non_nullable
-              as String,
-      chainId: freezed == chainId
-          ? _value.chainId
-          : chainId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      data: freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as String?,
-      gas: freezed == gas
-          ? _value.gas
-          : gas // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      feeValues: freezed == feeValues
-          ? _value.feeValues
-          : feeValues // ignore: cast_nullable_to_non_nullable
-              as FeeValuesEIP4844?,
-      nonce: freezed == nonce
-          ? _value.nonce
-          : nonce // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as BigInt?,
-      connector: freezed == connector
-          ? _value.connector
-          : connector // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$SendTransactionParametersEIP4844Impl
-    extends SendTransactionParametersEIP4844 {
-  const _$SendTransactionParametersEIP4844Impl(
-      {required this.to,
-      final List<Map<String, dynamic>>? accessList,
-      required this.account,
-      this.chainId,
-      this.data,
-      this.gas,
-      this.feeValues,
-      this.nonce,
-      this.value,
-      this.connector})
-      : _accessList = accessList,
-        super._();
 
-  @override
-  final String to;
-  final List<Map<String, dynamic>>? _accessList;
-  @override
-  List<Map<String, dynamic>>? get accessList {
-    final value = _accessList;
-    if (value == null) return null;
-    if (_accessList is EqualUnmodifiableListView) return _accessList;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+class SendTransactionParametersEIP4844 extends SendTransactionParameters {
+  const SendTransactionParametersEIP4844({required this.to,  List<Map<String, dynamic>>? accessList, required this.account, this.chainId, this.data, this.gas, this.feeValues, this.nonce, this.value, this.connector}): _accessList = accessList,super._();
+  
 
-  @override
-  final String account;
-  @override
-  final int? chainId;
-  @override
-  final String? data;
-  @override
-  final BigInt? gas;
-  @override
-  final FeeValuesEIP4844? feeValues;
-  @override
-  final BigInt? nonce;
-  @override
-  final BigInt? value;
-  @override
-  final dynamic connector;
+@override final  String to;
+ final  List<Map<String, dynamic>>? _accessList;
+@override List<Map<String, dynamic>>? get accessList {
+  final value = _accessList;
+  if (value == null) return null;
+  if (_accessList is EqualUnmodifiableListView) return _accessList;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(value);
+}
 
-  @override
-  String toString() {
+@override final  String account;
+@override final  int? chainId;
+@override final  String? data;
+@override final  BigInt? gas;
+@override final  FeeValuesEIP4844? feeValues;
+@override final  BigInt? nonce;
+@override final  BigInt? value;
+@override final  dynamic connector;
+
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SendTransactionParametersEIP4844CopyWith<SendTransactionParametersEIP4844> get copyWith => _$SendTransactionParametersEIP4844CopyWithImpl<SendTransactionParametersEIP4844>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is SendTransactionParametersEIP4844&&(identical(other.to, to) || other.to == to)&&const DeepCollectionEquality().equals(other.accessList, _accessList)&&(identical(other.account, account) || other.account == account)&&(identical(other.chainId, chainId) || other.chainId == chainId)&&(identical(other.data, data) || other.data == data)&&(identical(other.gas, gas) || other.gas == gas)&&(identical(other.feeValues, feeValues) || other.feeValues == feeValues)&&(identical(other.nonce, nonce) || other.nonce == nonce)&&(identical(other.value, value) || other.value == value)&&const DeepCollectionEquality().equals(other.connector, connector));
+}
+
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,to,const DeepCollectionEquality().hash(_accessList),account,chainId,data,gas,feeValues,nonce,value,const DeepCollectionEquality().hash(connector));
+}
+
+@override
+String toString() {
     return 'SendTransactionParameters.eip4844(to: $to, accessList: $accessList, account: $account, chainId: $chainId, data: $data, gas: $gas, feeValues: $feeValues, nonce: $nonce, value: $value, connector: $connector)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SendTransactionParametersEIP4844Impl &&
-            (identical(other.to, to) || other.to == to) &&
-            const DeepCollectionEquality()
-                .equals(other._accessList, _accessList) &&
-            (identical(other.account, account) || other.account == account) &&
-            (identical(other.chainId, chainId) || other.chainId == chainId) &&
-            (identical(other.data, data) || other.data == data) &&
-            (identical(other.gas, gas) || other.gas == gas) &&
-            (identical(other.feeValues, feeValues) ||
-                other.feeValues == feeValues) &&
-            (identical(other.nonce, nonce) || other.nonce == nonce) &&
-            (identical(other.value, value) || other.value == value) &&
-            const DeepCollectionEquality().equals(other.connector, connector));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      to,
-      const DeepCollectionEquality().hash(_accessList),
-      account,
-      chainId,
-      data,
-      gas,
-      feeValues,
-      nonce,
-      value,
-      const DeepCollectionEquality().hash(connector));
-
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SendTransactionParametersEIP4844ImplCopyWith<
-          _$SendTransactionParametersEIP4844Impl>
-      get copyWith => __$$SendTransactionParametersEIP4844ImplCopyWithImpl<
-          _$SendTransactionParametersEIP4844Impl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        legacy,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip1559,
-    required TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)
-        eip4844,
-  }) {
-    return eip4844(to, accessList, account, chainId, data, gas, feeValues,
-        nonce, value, connector);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult? Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-  }) {
-    return eip4844?.call(to, accessList, account, chainId, data, gas, feeValues,
-        nonce, value, connector);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesLegacy? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        legacy,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP1559? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip1559,
-    TResult Function(
-            String to,
-            List<Map<String, dynamic>>? accessList,
-            String account,
-            int? chainId,
-            String? data,
-            BigInt? gas,
-            FeeValuesEIP4844? feeValues,
-            BigInt? nonce,
-            BigInt? value,
-            dynamic connector)?
-        eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip4844 != null) {
-      return eip4844(to, accessList, account, chainId, data, gas, feeValues,
-          nonce, value, connector);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SendTransactionParametersLegacy value) legacy,
-    required TResult Function(SendTransactionParametersEIP1559 value) eip1559,
-    required TResult Function(SendTransactionParametersEIP4844 value) eip4844,
-  }) {
-    return eip4844(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SendTransactionParametersLegacy value)? legacy,
-    TResult? Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult? Function(SendTransactionParametersEIP4844 value)? eip4844,
-  }) {
-    return eip4844?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SendTransactionParametersLegacy value)? legacy,
-    TResult Function(SendTransactionParametersEIP1559 value)? eip1559,
-    TResult Function(SendTransactionParametersEIP4844 value)? eip4844,
-    required TResult orElse(),
-  }) {
-    if (eip4844 != null) {
-      return eip4844(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class SendTransactionParametersEIP4844
-    extends SendTransactionParameters {
-  const factory SendTransactionParametersEIP4844(
-      {required final String to,
-      final List<Map<String, dynamic>>? accessList,
-      required final String account,
-      final int? chainId,
-      final String? data,
-      final BigInt? gas,
-      final FeeValuesEIP4844? feeValues,
-      final BigInt? nonce,
-      final BigInt? value,
-      final dynamic connector}) = _$SendTransactionParametersEIP4844Impl;
-  const SendTransactionParametersEIP4844._() : super._();
 
-  @override
-  String get to;
-  @override
-  List<Map<String, dynamic>>? get accessList;
-  @override
-  String get account;
-  @override
-  int? get chainId;
-  @override
-  String? get data;
-  @override
-  BigInt? get gas;
-  @override
-  FeeValuesEIP4844? get feeValues;
-  @override
-  BigInt? get nonce;
-  @override
-  BigInt? get value;
-  @override
-  dynamic get connector;
-
-  /// Create a copy of SendTransactionParameters
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SendTransactionParametersEIP4844ImplCopyWith<
-          _$SendTransactionParametersEIP4844Impl>
-      get copyWith => throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class $SendTransactionParametersEIP4844CopyWith<$Res> implements $SendTransactionParametersCopyWith<$Res> {
+  factory $SendTransactionParametersEIP4844CopyWith(SendTransactionParametersEIP4844 value, $Res Function(SendTransactionParametersEIP4844) _then) = _$SendTransactionParametersEIP4844CopyWithImpl;
+@override @useResult
+$Res call({
+ String to, List<Map<String, dynamic>>? accessList, String account, int? chainId, String? data, BigInt? gas, FeeValuesEIP4844? feeValues, BigInt? nonce, BigInt? value, dynamic connector
+});
+
+
+
+
+}
+/// @nodoc
+class _$SendTransactionParametersEIP4844CopyWithImpl<$Res>
+    implements $SendTransactionParametersEIP4844CopyWith<$Res> {
+  _$SendTransactionParametersEIP4844CopyWithImpl(this._self, this._then);
+
+  final SendTransactionParametersEIP4844 _self;
+  final $Res Function(SendTransactionParametersEIP4844) _then;
+
+/// Create a copy of SendTransactionParameters
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? to = null,Object? accessList = freezed,Object? account = null,Object? chainId = freezed,Object? data = freezed,Object? gas = freezed,Object? feeValues = freezed,Object? nonce = freezed,Object? value = freezed,Object? connector = freezed,}) {
+  return _then(SendTransactionParametersEIP4844(
+to: null == to ? _self.to : to // ignore: cast_nullable_to_non_nullable
+as String,accessList: freezed == accessList ? _self._accessList : accessList // ignore: cast_nullable_to_non_nullable
+as List<Map<String, dynamic>>?,account: null == account ? _self.account : account // ignore: cast_nullable_to_non_nullable
+as String,chainId: freezed == chainId ? _self.chainId : chainId // ignore: cast_nullable_to_non_nullable
+as int?,data: freezed == data ? _self.data : data // ignore: cast_nullable_to_non_nullable
+as String?,gas: freezed == gas ? _self.gas : gas // ignore: cast_nullable_to_non_nullable
+as BigInt?,feeValues: freezed == feeValues ? _self.feeValues : feeValues // ignore: cast_nullable_to_non_nullable
+as FeeValuesEIP4844?,nonce: freezed == nonce ? _self.nonce : nonce // ignore: cast_nullable_to_non_nullable
+as BigInt?,value: freezed == value ? _self.value : value // ignore: cast_nullable_to_non_nullable
+as BigInt?,connector: freezed == connector ? _self.connector : connector // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
+}
+
+
+}
+
+// dart format on

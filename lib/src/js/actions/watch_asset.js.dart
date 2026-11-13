@@ -14,4 +14,4 @@ extension type JSWatchAssetParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSWatchAssetErrorType(JSObject _) implements JSObject {}
+extension type JSWatchAssetErrorType(JSObject _) implements JSObject;

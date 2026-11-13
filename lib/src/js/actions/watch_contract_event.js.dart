@@ -35,7 +35,7 @@ extension type JSWatchContractEventParameters._(JSObject _)
 
 @JS()
 extension type JSWatchContractEventReturnType(JSFunction _)
-    implements JSFunction {}
+    implements JSFunction;
 
 extension JSWatchContractEventReturnTypeConversion
     on JSWatchContractEventReturnType {
@@ -74,4 +74,4 @@ extension JSWatchContractEventParametersConversion
 }
 
 @JS()
-extension type JSWatchContractErrorType(JSObject _) implements JSObject {}
+extension type JSWatchContractErrorType(JSObject _) implements JSObject;

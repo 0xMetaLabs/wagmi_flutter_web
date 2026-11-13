@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'message_to_sign.dart';
@@ -9,860 +9,748 @@ part of 'message_to_sign.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-MessageToSign _$MessageToSignFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'stringMessage':
-      return StringMessage.fromJson(json);
-    case 'rawMessage':
-      return RawMessageContainer.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'MessageToSign',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+MessageToSign _$MessageToSignFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'stringMessage':
+          return StringMessage.fromJson(
+            json
+          );
+                case 'rawMessage':
+          return RawMessageContainer.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'MessageToSign',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
 }
 
 /// @nodoc
-mixin _$MessageToSign {
-  Object get message => throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) stringMessage,
-    required TResult Function(RawMessage message) rawMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? stringMessage,
-    TResult? Function(RawMessage message)? rawMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? stringMessage,
-    TResult Function(RawMessage message)? rawMessage,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(StringMessage value) stringMessage,
-    required TResult Function(RawMessageContainer value) rawMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(StringMessage value)? stringMessage,
-    TResult? Function(RawMessageContainer value)? rawMessage,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(StringMessage value)? stringMessage,
-    TResult Function(RawMessageContainer value)? rawMessage,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+mixin _$MessageToSign implements DiagnosticableTreeMixin {
+
+ Object get message;
 
   /// Serializes this MessageToSign to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
+
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+  final _this = this as MessageToSign;
+  properties
+    ..add(DiagnosticsProperty('type', 'MessageToSign'))
+    ..add(DiagnosticsProperty('message', _this.message));
+}
+
+@override
+bool operator ==(Object other) {
+  final _this = this as MessageToSign;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MessageToSign&&const DeepCollectionEquality().equals(other.message, _this.message));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as MessageToSign;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.message));
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+  final _this = this as MessageToSign;
+  return 'MessageToSign(message: ${_this.message})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $MessageToSignCopyWith<$Res> {
-  factory $MessageToSignCopyWith(
-          MessageToSign value, $Res Function(MessageToSign) then) =
-      _$MessageToSignCopyWithImpl<$Res, MessageToSign>;
+class $MessageToSignCopyWith<$Res>  {
+$MessageToSignCopyWith(MessageToSign _, $Res Function(MessageToSign) __);
 }
 
-/// @nodoc
-class _$MessageToSignCopyWithImpl<$Res, $Val extends MessageToSign>
-    implements $MessageToSignCopyWith<$Res> {
-  _$MessageToSignCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [MessageToSign].
+extension MessageToSignPatterns on MessageToSign {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( StringMessage value)?  stringMessage,TResult Function( RawMessageContainer value)?  rawMessage,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case StringMessage() when stringMessage != null:
+return stringMessage(_that);case RawMessageContainer() when rawMessage != null:
+return rawMessage(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( StringMessage value)  stringMessage,required TResult Function( RawMessageContainer value)  rawMessage,}){
+final _that = this;
+switch (_that) {
+case StringMessage():
+return stringMessage(_that);case RawMessageContainer():
+return rawMessage(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( StringMessage value)?  stringMessage,TResult? Function( RawMessageContainer value)?  rawMessage,}){
+final _that = this;
+switch (_that) {
+case StringMessage() when stringMessage != null:
+return stringMessage(_that);case RawMessageContainer() when rawMessage != null:
+return rawMessage(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message)?  stringMessage,TResult Function( RawMessage message)?  rawMessage,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case StringMessage() when stringMessage != null:
+return stringMessage(_that.message);case RawMessageContainer() when rawMessage != null:
+return rawMessage(_that.message);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message)  stringMessage,required TResult Function( RawMessage message)  rawMessage,}) {final _that = this;
+switch (_that) {
+case StringMessage():
+return stringMessage(_that.message);case RawMessageContainer():
+return rawMessage(_that.message);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message)?  stringMessage,TResult? Function( RawMessage message)?  rawMessage,}) {final _that = this;
+switch (_that) {
+case StringMessage() when stringMessage != null:
+return stringMessage(_that.message);case RawMessageContainer() when rawMessage != null:
+return rawMessage(_that.message);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$StringMessageImplCopyWith<$Res> {
-  factory _$$StringMessageImplCopyWith(
-          _$StringMessageImpl value, $Res Function(_$StringMessageImpl) then) =
-      __$$StringMessageImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$StringMessageImplCopyWithImpl<$Res>
-    extends _$MessageToSignCopyWithImpl<$Res, _$StringMessageImpl>
-    implements _$$StringMessageImplCopyWith<$Res> {
-  __$$StringMessageImplCopyWithImpl(
-      _$StringMessageImpl _value, $Res Function(_$StringMessageImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$StringMessageImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$StringMessageImpl
-    with DiagnosticableTreeMixin
-    implements StringMessage {
-  const _$StringMessageImpl({required this.message, final String? $type})
-      : $type = $type ?? 'stringMessage';
 
-  factory _$StringMessageImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StringMessageImplFromJson(json);
+class StringMessage with DiagnosticableTreeMixin implements MessageToSign {
+  const StringMessage({required this.message,  String? $type}): $type = $type ?? 'stringMessage';
+  factory StringMessage.fromJson(Map<String, dynamic> json) => _$StringMessageFromJson(json);
 
-  @override
-  final String message;
+@override final  String message;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+
+/// Create a copy of MessageToSign
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$StringMessageCopyWith<StringMessage> get copyWith => _$StringMessageCopyWithImpl<StringMessage>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$StringMessageToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    properties
+    ..add(DiagnosticsProperty('type', 'MessageToSign.stringMessage'))
+    ..add(DiagnosticsProperty('message', message));
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is StringMessage&&(identical(other.message, message) || other.message == message));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,message);
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
     return 'MessageToSign.stringMessage(message: $message)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'MessageToSign.stringMessage'))
-      ..add(DiagnosticsProperty('message', message));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StringMessageImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$StringMessageImplCopyWith<_$StringMessageImpl> get copyWith =>
-      __$$StringMessageImplCopyWithImpl<_$StringMessageImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) stringMessage,
-    required TResult Function(RawMessage message) rawMessage,
-  }) {
-    return stringMessage(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? stringMessage,
-    TResult? Function(RawMessage message)? rawMessage,
-  }) {
-    return stringMessage?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? stringMessage,
-    TResult Function(RawMessage message)? rawMessage,
-    required TResult orElse(),
-  }) {
-    if (stringMessage != null) {
-      return stringMessage(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(StringMessage value) stringMessage,
-    required TResult Function(RawMessageContainer value) rawMessage,
-  }) {
-    return stringMessage(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(StringMessage value)? stringMessage,
-    TResult? Function(RawMessageContainer value)? rawMessage,
-  }) {
-    return stringMessage?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(StringMessage value)? stringMessage,
-    TResult Function(RawMessageContainer value)? rawMessage,
-    required TResult orElse(),
-  }) {
-    if (stringMessage != null) {
-      return stringMessage(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$StringMessageImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class StringMessage implements MessageToSign {
-  const factory StringMessage({required final String message}) =
-      _$StringMessageImpl;
 
-  factory StringMessage.fromJson(Map<String, dynamic> json) =
-      _$StringMessageImpl.fromJson;
-
-  @override
-  String get message;
-
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StringMessageImplCopyWith<_$StringMessageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RawMessageContainerImplCopyWith<$Res> {
-  factory _$$RawMessageContainerImplCopyWith(_$RawMessageContainerImpl value,
-          $Res Function(_$RawMessageContainerImpl) then) =
-      __$$RawMessageContainerImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({RawMessage message});
+abstract mixin class $StringMessageCopyWith<$Res> implements $MessageToSignCopyWith<$Res> {
+  factory $StringMessageCopyWith(StringMessage value, $Res Function(StringMessage) _then) = _$StringMessageCopyWithImpl;
+@useResult
+$Res call({
+ String message
+});
 
-  $RawMessageCopyWith<$Res> get message;
+
+
+
+}
+/// @nodoc
+class _$StringMessageCopyWithImpl<$Res>
+    implements $StringMessageCopyWith<$Res> {
+  _$StringMessageCopyWithImpl(this._self, this._then);
+
+  final StringMessage _self;
+  final $Res Function(StringMessage) _then;
+
+/// Create a copy of MessageToSign
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(StringMessage(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$RawMessageContainerImplCopyWithImpl<$Res>
-    extends _$MessageToSignCopyWithImpl<$Res, _$RawMessageContainerImpl>
-    implements _$$RawMessageContainerImplCopyWith<$Res> {
-  __$$RawMessageContainerImplCopyWithImpl(_$RawMessageContainerImpl _value,
-      $Res Function(_$RawMessageContainerImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$RawMessageContainerImpl(
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as RawMessage,
-    ));
-  }
-
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $RawMessageCopyWith<$Res> get message {
-    return $RawMessageCopyWith<$Res>(_value.message, (value) {
-      return _then(_value.copyWith(message: value));
-    });
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$RawMessageContainerImpl
-    with DiagnosticableTreeMixin
-    implements RawMessageContainer {
-  const _$RawMessageContainerImpl({required this.message, final String? $type})
-      : $type = $type ?? 'rawMessage';
 
-  factory _$RawMessageContainerImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RawMessageContainerImplFromJson(json);
+class RawMessageContainer with DiagnosticableTreeMixin implements MessageToSign {
+  const RawMessageContainer({required this.message,  String? $type}): $type = $type ?? 'rawMessage';
+  factory RawMessageContainer.fromJson(Map<String, dynamic> json) => _$RawMessageContainerFromJson(json);
 
-  @override
-  final RawMessage message;
+@override final  RawMessage message;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'MessageToSign.rawMessage(message: $message)';
-  }
 
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
+/// Create a copy of MessageToSign
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RawMessageContainerCopyWith<RawMessageContainer> get copyWith => _$RawMessageContainerCopyWithImpl<RawMessageContainer>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$RawMessageContainerToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
-      ..add(DiagnosticsProperty('type', 'MessageToSign.rawMessage'))
-      ..add(DiagnosticsProperty('message', message));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RawMessageContainerImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RawMessageContainerImplCopyWith<_$RawMessageContainerImpl> get copyWith =>
-      __$$RawMessageContainerImplCopyWithImpl<_$RawMessageContainerImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String message) stringMessage,
-    required TResult Function(RawMessage message) rawMessage,
-  }) {
-    return rawMessage(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String message)? stringMessage,
-    TResult? Function(RawMessage message)? rawMessage,
-  }) {
-    return rawMessage?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String message)? stringMessage,
-    TResult Function(RawMessage message)? rawMessage,
-    required TResult orElse(),
-  }) {
-    if (rawMessage != null) {
-      return rawMessage(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(StringMessage value) stringMessage,
-    required TResult Function(RawMessageContainer value) rawMessage,
-  }) {
-    return rawMessage(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(StringMessage value)? stringMessage,
-    TResult? Function(RawMessageContainer value)? rawMessage,
-  }) {
-    return rawMessage?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(StringMessage value)? stringMessage,
-    TResult Function(RawMessageContainer value)? rawMessage,
-    required TResult orElse(),
-  }) {
-    if (rawMessage != null) {
-      return rawMessage(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RawMessageContainerImplToJson(
-      this,
-    );
-  }
+    ..add(DiagnosticsProperty('type', 'MessageToSign.rawMessage'))
+    ..add(DiagnosticsProperty('message', message));
 }
 
-abstract class RawMessageContainer implements MessageToSign {
-  const factory RawMessageContainer({required final RawMessage message}) =
-      _$RawMessageContainerImpl;
-
-  factory RawMessageContainer.fromJson(Map<String, dynamic> json) =
-      _$RawMessageContainerImpl.fromJson;
-
-  @override
-  RawMessage get message;
-
-  /// Create a copy of MessageToSign
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RawMessageContainerImplCopyWith<_$RawMessageContainerImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RawMessageContainer&&(identical(other.message, message) || other.message == message));
 }
 
-RawMessage _$RawMessageFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'hex':
-      return RawHex.fromJson(json);
-    case 'byteArray':
-      return RawByteArray.fromJson(json);
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,message);
+}
 
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'RawMessage',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+    return 'MessageToSign.rawMessage(message: $message)';
+}
+
+
 }
 
 /// @nodoc
-mixin _$RawMessage {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String raw) hex,
-    required TResult Function(List<int> byteArray) byteArray,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String raw)? hex,
-    TResult? Function(List<int> byteArray)? byteArray,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String raw)? hex,
-    TResult Function(List<int> byteArray)? byteArray,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RawHex value) hex,
-    required TResult Function(RawByteArray value) byteArray,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(RawHex value)? hex,
-    TResult? Function(RawByteArray value)? byteArray,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RawHex value)? hex,
-    TResult Function(RawByteArray value)? byteArray,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+abstract mixin class $RawMessageContainerCopyWith<$Res> implements $MessageToSignCopyWith<$Res> {
+  factory $RawMessageContainerCopyWith(RawMessageContainer value, $Res Function(RawMessageContainer) _then) = _$RawMessageContainerCopyWithImpl;
+@useResult
+$Res call({
+ RawMessage message
+});
+
+
+$RawMessageCopyWith<$Res> get message;
+
+}
+/// @nodoc
+class _$RawMessageContainerCopyWithImpl<$Res>
+    implements $RawMessageContainerCopyWith<$Res> {
+  _$RawMessageContainerCopyWithImpl(this._self, this._then);
+
+  final RawMessageContainer _self;
+  final $Res Function(RawMessageContainer) _then;
+
+/// Create a copy of MessageToSign
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+  return _then(RawMessageContainer(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as RawMessage,
+  ));
+}
+
+/// Create a copy of MessageToSign
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$RawMessageCopyWith<$Res> get message {
+  
+  return $RawMessageCopyWith<$Res>(_self.message, (value) {
+    return _then(_self.copyWith(message: value));
+  });
+}
+}
+
+RawMessage _$RawMessageFromJson(
+  Map<String, dynamic> json
+) {
+        switch (json['runtimeType']) {
+                  case 'hex':
+          return RawHex.fromJson(
+            json
+          );
+                case 'byteArray':
+          return RawByteArray.fromJson(
+            json
+          );
+        
+          default:
+            throw CheckedFromJsonException(
+  json,
+  'runtimeType',
+  'RawMessage',
+  'Invalid union type "${json['runtimeType']}"!'
+);
+        }
+      
+}
+
+/// @nodoc
+mixin _$RawMessage implements DiagnosticableTreeMixin {
+
+
 
   /// Serializes this RawMessage to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
+
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    properties
+    ..add(DiagnosticsProperty('type', 'RawMessage'))
+    ;
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RawMessage);
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+    return 'RawMessage()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $RawMessageCopyWith<$Res> {
-  factory $RawMessageCopyWith(
-          RawMessage value, $Res Function(RawMessage) then) =
-      _$RawMessageCopyWithImpl<$Res, RawMessage>;
+class $RawMessageCopyWith<$Res>  {
+$RawMessageCopyWith(RawMessage _, $Res Function(RawMessage) __);
 }
 
-/// @nodoc
-class _$RawMessageCopyWithImpl<$Res, $Val extends RawMessage>
-    implements $RawMessageCopyWith<$Res> {
-  _$RawMessageCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+/// Adds pattern-matching-related methods to [RawMessage].
+extension RawMessagePatterns on RawMessage {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
 
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( RawHex value)?  hex,TResult Function( RawByteArray value)?  byteArray,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case RawHex() when hex != null:
+return hex(_that);case RawByteArray() when byteArray != null:
+return byteArray(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( RawHex value)  hex,required TResult Function( RawByteArray value)  byteArray,}){
+final _that = this;
+switch (_that) {
+case RawHex():
+return hex(_that);case RawByteArray():
+return byteArray(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( RawHex value)?  hex,TResult? Function( RawByteArray value)?  byteArray,}){
+final _that = this;
+switch (_that) {
+case RawHex() when hex != null:
+return hex(_that);case RawByteArray() when byteArray != null:
+return byteArray(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String raw)?  hex,TResult Function( List<int> byteArray)?  byteArray,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case RawHex() when hex != null:
+return hex(_that.raw);case RawByteArray() when byteArray != null:
+return byteArray(_that.byteArray);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String raw)  hex,required TResult Function( List<int> byteArray)  byteArray,}) {final _that = this;
+switch (_that) {
+case RawHex():
+return hex(_that.raw);case RawByteArray():
+return byteArray(_that.byteArray);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String raw)?  hex,TResult? Function( List<int> byteArray)?  byteArray,}) {final _that = this;
+switch (_that) {
+case RawHex() when hex != null:
+return hex(_that.raw);case RawByteArray() when byteArray != null:
+return byteArray(_that.byteArray);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-abstract class _$$RawHexImplCopyWith<$Res> {
-  factory _$$RawHexImplCopyWith(
-          _$RawHexImpl value, $Res Function(_$RawHexImpl) then) =
-      __$$RawHexImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String raw});
-}
-
-/// @nodoc
-class __$$RawHexImplCopyWithImpl<$Res>
-    extends _$RawMessageCopyWithImpl<$Res, _$RawHexImpl>
-    implements _$$RawHexImplCopyWith<$Res> {
-  __$$RawHexImplCopyWithImpl(
-      _$RawHexImpl _value, $Res Function(_$RawHexImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? raw = null,
-  }) {
-    return _then(_$RawHexImpl(
-      raw: null == raw
-          ? _value.raw
-          : raw // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$RawHexImpl with DiagnosticableTreeMixin implements RawHex {
-  const _$RawHexImpl({required this.raw, final String? $type})
-      : $type = $type ?? 'hex';
 
-  factory _$RawHexImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RawHexImplFromJson(json);
+class RawHex with DiagnosticableTreeMixin implements RawMessage {
+  const RawHex({required this.raw,  String? $type}): $type = $type ?? 'hex';
+  factory RawHex.fromJson(Map<String, dynamic> json) => _$RawHexFromJson(json);
 
-  @override
-  final String raw;
+ final  String raw;
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+
+/// Create a copy of RawMessage
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RawHexCopyWith<RawHex> get copyWith => _$RawHexCopyWithImpl<RawHex>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$RawHexToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    properties
+    ..add(DiagnosticsProperty('type', 'RawMessage.hex'))
+    ..add(DiagnosticsProperty('raw', raw));
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RawHex&&(identical(other.raw, raw) || other.raw == raw));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,raw);
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
     return 'RawMessage.hex(raw: $raw)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'RawMessage.hex'))
-      ..add(DiagnosticsProperty('raw', raw));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RawHexImpl &&
-            (identical(other.raw, raw) || other.raw == raw));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, raw);
-
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RawHexImplCopyWith<_$RawHexImpl> get copyWith =>
-      __$$RawHexImplCopyWithImpl<_$RawHexImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String raw) hex,
-    required TResult Function(List<int> byteArray) byteArray,
-  }) {
-    return hex(raw);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String raw)? hex,
-    TResult? Function(List<int> byteArray)? byteArray,
-  }) {
-    return hex?.call(raw);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String raw)? hex,
-    TResult Function(List<int> byteArray)? byteArray,
-    required TResult orElse(),
-  }) {
-    if (hex != null) {
-      return hex(raw);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RawHex value) hex,
-    required TResult Function(RawByteArray value) byteArray,
-  }) {
-    return hex(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(RawHex value)? hex,
-    TResult? Function(RawByteArray value)? byteArray,
-  }) {
-    return hex?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RawHex value)? hex,
-    TResult Function(RawByteArray value)? byteArray,
-    required TResult orElse(),
-  }) {
-    if (hex != null) {
-      return hex(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RawHexImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class RawHex implements RawMessage {
-  const factory RawHex({required final String raw}) = _$RawHexImpl;
 
-  factory RawHex.fromJson(Map<String, dynamic> json) = _$RawHexImpl.fromJson;
-
-  String get raw;
-
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RawHexImplCopyWith<_$RawHexImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$RawByteArrayImplCopyWith<$Res> {
-  factory _$$RawByteArrayImplCopyWith(
-          _$RawByteArrayImpl value, $Res Function(_$RawByteArrayImpl) then) =
-      __$$RawByteArrayImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<int> byteArray});
+abstract mixin class $RawHexCopyWith<$Res> implements $RawMessageCopyWith<$Res> {
+  factory $RawHexCopyWith(RawHex value, $Res Function(RawHex) _then) = _$RawHexCopyWithImpl;
+@useResult
+$Res call({
+ String raw
+});
+
+
+
+
+}
+/// @nodoc
+class _$RawHexCopyWithImpl<$Res>
+    implements $RawHexCopyWith<$Res> {
+  _$RawHexCopyWithImpl(this._self, this._then);
+
+  final RawHex _self;
+  final $Res Function(RawHex) _then;
+
+/// Create a copy of RawMessage
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? raw = null,}) {
+  return _then(RawHex(
+raw: null == raw ? _self.raw : raw // ignore: cast_nullable_to_non_nullable
+as String,
+  ));
 }
 
-/// @nodoc
-class __$$RawByteArrayImplCopyWithImpl<$Res>
-    extends _$RawMessageCopyWithImpl<$Res, _$RawByteArrayImpl>
-    implements _$$RawByteArrayImplCopyWith<$Res> {
-  __$$RawByteArrayImplCopyWithImpl(
-      _$RawByteArrayImpl _value, $Res Function(_$RawByteArrayImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? byteArray = null,
-  }) {
-    return _then(_$RawByteArrayImpl(
-      byteArray: null == byteArray
-          ? _value._byteArray
-          : byteArray // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$RawByteArrayImpl with DiagnosticableTreeMixin implements RawByteArray {
-  const _$RawByteArrayImpl(
-      {required final List<int> byteArray, final String? $type})
-      : _byteArray = byteArray,
-        $type = $type ?? 'byteArray';
 
-  factory _$RawByteArrayImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RawByteArrayImplFromJson(json);
+class RawByteArray with DiagnosticableTreeMixin implements RawMessage {
+  const RawByteArray({required  List<int> byteArray,  String? $type}): _byteArray = byteArray,$type = $type ?? 'byteArray';
+  factory RawByteArray.fromJson(Map<String, dynamic> json) => _$RawByteArrayFromJson(json);
 
-  final List<int> _byteArray;
-  @override
-  List<int> get byteArray {
-    if (_byteArray is EqualUnmodifiableListView) return _byteArray;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_byteArray);
-  }
+ final  List<int> _byteArray;
+ List<int> get byteArray {
+  if (_byteArray is EqualUnmodifiableListView) return _byteArray;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_byteArray);
+}
 
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'RawMessage.byteArray(byteArray: $byteArray)';
-  }
+@JsonKey(name: 'runtimeType')
+final String $type;
 
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
+
+/// Create a copy of RawMessage
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RawByteArrayCopyWith<RawByteArray> get copyWith => _$RawByteArrayCopyWithImpl<RawByteArray>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$RawByteArrayToJson(this, );
+}
+@override
+void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     properties
-      ..add(DiagnosticsProperty('type', 'RawMessage.byteArray'))
-      ..add(DiagnosticsProperty('byteArray', byteArray));
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RawByteArrayImpl &&
-            const DeepCollectionEquality()
-                .equals(other._byteArray, _byteArray));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_byteArray));
-
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RawByteArrayImplCopyWith<_$RawByteArrayImpl> get copyWith =>
-      __$$RawByteArrayImplCopyWithImpl<_$RawByteArrayImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(String raw) hex,
-    required TResult Function(List<int> byteArray) byteArray,
-  }) {
-    return byteArray(this.byteArray);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String raw)? hex,
-    TResult? Function(List<int> byteArray)? byteArray,
-  }) {
-    return byteArray?.call(this.byteArray);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String raw)? hex,
-    TResult Function(List<int> byteArray)? byteArray,
-    required TResult orElse(),
-  }) {
-    if (byteArray != null) {
-      return byteArray(this.byteArray);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(RawHex value) hex,
-    required TResult Function(RawByteArray value) byteArray,
-  }) {
-    return byteArray(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(RawHex value)? hex,
-    TResult? Function(RawByteArray value)? byteArray,
-  }) {
-    return byteArray?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(RawHex value)? hex,
-    TResult Function(RawByteArray value)? byteArray,
-    required TResult orElse(),
-  }) {
-    if (byteArray != null) {
-      return byteArray(this);
-    }
-    return orElse();
-  }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RawByteArrayImplToJson(
-      this,
-    );
-  }
+    ..add(DiagnosticsProperty('type', 'RawMessage.byteArray'))
+    ..add(DiagnosticsProperty('byteArray', byteArray));
 }
 
-abstract class RawByteArray implements RawMessage {
-  const factory RawByteArray({required final List<int> byteArray}) =
-      _$RawByteArrayImpl;
-
-  factory RawByteArray.fromJson(Map<String, dynamic> json) =
-      _$RawByteArrayImpl.fromJson;
-
-  List<int> get byteArray;
-
-  /// Create a copy of RawMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RawByteArrayImplCopyWith<_$RawByteArrayImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RawByteArray&&const DeepCollectionEquality().equals(other.byteArray, _byteArray));
 }
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_byteArray));
+}
+
+@override
+String toString({ DiagnosticLevel minLevel = DiagnosticLevel.info }) {
+    return 'RawMessage.byteArray(byteArray: $byteArray)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $RawByteArrayCopyWith<$Res> implements $RawMessageCopyWith<$Res> {
+  factory $RawByteArrayCopyWith(RawByteArray value, $Res Function(RawByteArray) _then) = _$RawByteArrayCopyWithImpl;
+@useResult
+$Res call({
+ List<int> byteArray
+});
+
+
+
+
+}
+/// @nodoc
+class _$RawByteArrayCopyWithImpl<$Res>
+    implements $RawByteArrayCopyWith<$Res> {
+  _$RawByteArrayCopyWithImpl(this._self, this._then);
+
+  final RawByteArray _self;
+  final $Res Function(RawByteArray) _then;
+
+/// Create a copy of RawMessage
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? byteArray = null,}) {
+  return _then(RawByteArray(
+byteArray: null == byteArray ? _self._byteArray : byteArray // ignore: cast_nullable_to_non_nullable
+as List<int>,
+  ));
+}
+
+
+}
+
+// dart format on

@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'format_unit.freezed.dart';
 
 @freezed
-class FormatUnit with _$FormatUnit {
+abstract class FormatUnit with _$FormatUnit {
   const FormatUnit._();
 
   const factory FormatUnit.ether() = _FormatUnitEther;

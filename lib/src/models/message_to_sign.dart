@@ -5,7 +5,7 @@ part 'message_to_sign.freezed.dart';
 part 'message_to_sign.g.dart';
 
 @freezed
-class MessageToSign with _$MessageToSign {
+abstract class MessageToSign with _$MessageToSign {
   const factory MessageToSign.stringMessage({
     required String message,
   }) = StringMessage;
@@ -19,7 +19,7 @@ class MessageToSign with _$MessageToSign {
 }
 
 @freezed
-class RawMessage with _$RawMessage {
+abstract class RawMessage with _$RawMessage {
   const factory RawMessage.hex({
     required String raw,
   }) = RawHex;

@@ -14,4 +14,4 @@ extension type JSSwitchChainParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSSwitchChainErrorType(JSObject _) implements JSObject {}
+extension type JSSwitchChainErrorType(JSObject _) implements JSObject;

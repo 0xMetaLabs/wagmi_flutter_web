@@ -20,7 +20,7 @@ extension type JSVerifyMessageParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSVerifyMessageReturnType(JSString _) implements JSString {}
+extension type JSVerifyMessageReturnType(JSString _) implements JSString;
 
 @JS()
-extension type JSVerifyMessageErrorType(JSObject _) implements JSObject {}
+extension type JSVerifyMessageErrorType(JSObject _) implements JSObject;

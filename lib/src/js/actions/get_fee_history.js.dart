@@ -34,4 +34,4 @@ extension type JSGetFeeHistoryReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetFeeHistoryErrorType(JSObject _) implements JSObject {}
+extension type JSGetFeeHistoryErrorType(JSObject _) implements JSObject;

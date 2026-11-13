@@ -16,4 +16,4 @@ extension type JSGetTransactionConfirmationsParameters._(JSObject _)
 
 @JS()
 extension type JSGetTransactionConfirmationsErrorType(JSObject _)
-    implements JSObject {}
+    implements JSObject;

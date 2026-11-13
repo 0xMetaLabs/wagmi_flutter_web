@@ -50,4 +50,4 @@ extension type JSGetTransactionReceiptReturnType(JSObject _)
 
 @JS()
 extension type JSGetTransactionReceiptErrorType(JSObject _)
-    implements JSObject {}
+    implements JSObject;

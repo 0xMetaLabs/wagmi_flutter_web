@@ -10,7 +10,7 @@ extension type JSGetGasPriceParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetGasPriceReturnType(JSBigInt _) implements JSBigInt {}
+extension type JSGetGasPriceReturnType(JSBigInt _) implements JSBigInt;
 
 @JS()
-extension type JSGetGasPriceErrorType(JSObject _) implements JSObject {}
+extension type JSGetGasPriceErrorType(JSObject _) implements JSObject;

@@ -17,4 +17,4 @@ extension type JSGetByteCodeParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetByteCodeErrorType(JSObject _) implements JSObject {}
+extension type JSGetByteCodeErrorType(JSObject _) implements JSObject;

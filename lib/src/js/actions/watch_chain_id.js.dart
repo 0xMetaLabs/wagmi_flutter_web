@@ -12,7 +12,7 @@ extension type JSWatchChainIdParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSWatchChainIdReturnType(JSFunction _) implements JSFunction {}
+extension type JSWatchChainIdReturnType(JSFunction _) implements JSFunction;
 
 extension JSWatchChainIdReturnTypeConversion on JSWatchChainIdReturnType {
   // ignore: unnecessary_lambdas

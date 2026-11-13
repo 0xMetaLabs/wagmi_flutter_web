@@ -24,4 +24,4 @@ extension type JSReadContractParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSReadContractErrorType(JSObject _) implements JSObject {}
+extension type JSReadContractErrorType(JSObject _) implements JSObject;

@@ -4,7 +4,7 @@ version: 1.0.0-rc.4
 homepage: https://github.com/archethic-foundation/wagmi_flutter_web
 
 environment:
-  sdk: ">=3.3.3 <4.0.0"
+  sdk: ^3.13.0
 
 dependencies:
   # Collections and utilities functions and classes related to collections

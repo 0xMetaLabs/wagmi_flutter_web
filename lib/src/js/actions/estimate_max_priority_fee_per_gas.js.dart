@@ -12,4 +12,4 @@ extension type JSEstimateMaxPriorityFeePerGasParameters._(JSObject _)
 
 @JS()
 extension type EstimateMaxPriorityFeePerGasErrorType(JSObject _)
-    implements JSObject {}
+    implements JSObject;

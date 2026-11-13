@@ -4,7 +4,7 @@ import 'package:wagmi_flutter_web/src/models/fees_values.dart';
 part 'send_transaction.freezed.dart';
 
 @freezed
-class SendTransactionParameters with _$SendTransactionParameters {
+abstract class SendTransactionParameters with _$SendTransactionParameters {
   const SendTransactionParameters._();
 
   const factory SendTransactionParameters.legacy({

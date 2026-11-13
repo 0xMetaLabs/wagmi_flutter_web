@@ -95,7 +95,7 @@ extension type JSSendTransactionParametersLegacy._(JSObject _)
 }
 
 @JS()
-extension type JSSendTransactionErrorType(JSObject _) implements JSObject {}
+extension type JSSendTransactionErrorType(JSObject _) implements JSObject;
 
 extension SendTransactionParametersToJS on SendTransactionParameters {
   JSObject get toJS => map(

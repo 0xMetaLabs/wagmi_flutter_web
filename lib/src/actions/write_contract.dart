@@ -6,7 +6,7 @@ part 'write_contract.freezed.dart';
 
 /// [Documentation API](https://wagmi.sh/core/api/actions/writeContract)
 @freezed
-class WriteContractParameters with _$WriteContractParameters {
+abstract class WriteContractParameters with _$WriteContractParameters {
   const WriteContractParameters._();
 
   const factory WriteContractParameters.legacy({

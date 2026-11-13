@@ -29,4 +29,4 @@ extension type JSReconnectReturnType(JSObject _) implements JSObject {
   }
 }
 @JS()
-extension type JSReconnectErrorType(JSObject _) implements JSObject {}
+extension type JSReconnectErrorType(JSObject _) implements JSObject;

@@ -17,4 +17,4 @@ extension type JSGetTransactionCountParameters._(JSObject _)
 }
 
 @JS()
-extension type JSGetTransactionCountErrorType(JSObject _) implements JSObject {}
+extension type JSGetTransactionCountErrorType(JSObject _) implements JSObject;

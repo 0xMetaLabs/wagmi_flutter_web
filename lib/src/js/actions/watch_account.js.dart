@@ -12,7 +12,7 @@ extension type JSWatchAccountParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSWatchAccountReturnType(JSFunction _) implements JSFunction {}
+extension type JSWatchAccountReturnType(JSFunction _) implements JSFunction;
 
 extension JSWatchAccountReturnTypeConversion on JSWatchAccountReturnType {
   // ignore: unnecessary_lambdas

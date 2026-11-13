@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'get_balance.dart';
@@ -9,588 +9,349 @@ part of 'get_balance.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$Unit {
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ether,
-    required TResult Function() gwei,
-    required TResult Function() wei,
-    required TResult Function(int id) id,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? ether,
-    TResult? Function()? gwei,
-    TResult? Function()? wei,
-    TResult? Function(int id)? id,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ether,
-    TResult Function()? gwei,
-    TResult Function()? wei,
-    TResult Function(int id)? id,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_UnitEther value) ether,
-    required TResult Function(_UnitGwei value) gwei,
-    required TResult Function(_UnitWei value) wei,
-    required TResult Function(_UnitId value) id,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_UnitEther value)? ether,
-    TResult? Function(_UnitGwei value)? gwei,
-    TResult? Function(_UnitWei value)? wei,
-    TResult? Function(_UnitId value)? id,
-  }) =>
-      throw _privateConstructorUsedError;
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_UnitEther value)? ether,
-    TResult Function(_UnitGwei value)? gwei,
-    TResult Function(_UnitWei value)? wei,
-    TResult Function(_UnitId value)? id,
-    required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is Unit);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
+    return 'Unit()';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UnitCopyWith<$Res> {
-  factory $UnitCopyWith(Unit value, $Res Function(Unit) then) =
-      _$UnitCopyWithImpl<$Res, Unit>;
+class $UnitCopyWith<$Res>  {
+$UnitCopyWith(Unit _, $Res Function(Unit) __);
+}
+
+
+/// Adds pattern-matching-related methods to [Unit].
+extension UnitPatterns on Unit {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _UnitEther value)?  ether,TResult Function( _UnitGwei value)?  gwei,TResult Function( _UnitWei value)?  wei,TResult Function( _UnitId value)?  id,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UnitEther() when ether != null:
+return ether(_that);case _UnitGwei() when gwei != null:
+return gwei(_that);case _UnitWei() when wei != null:
+return wei(_that);case _UnitId() when id != null:
+return id(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _UnitEther value)  ether,required TResult Function( _UnitGwei value)  gwei,required TResult Function( _UnitWei value)  wei,required TResult Function( _UnitId value)  id,}){
+final _that = this;
+switch (_that) {
+case _UnitEther():
+return ether(_that);case _UnitGwei():
+return gwei(_that);case _UnitWei():
+return wei(_that);case _UnitId():
+return id(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _UnitEther value)?  ether,TResult? Function( _UnitGwei value)?  gwei,TResult? Function( _UnitWei value)?  wei,TResult? Function( _UnitId value)?  id,}){
+final _that = this;
+switch (_that) {
+case _UnitEther() when ether != null:
+return ether(_that);case _UnitGwei() when gwei != null:
+return gwei(_that);case _UnitWei() when wei != null:
+return wei(_that);case _UnitId() when id != null:
+return id(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function()?  ether,TResult Function()?  gwei,TResult Function()?  wei,TResult Function( int id)?  id,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UnitEther() when ether != null:
+return ether();case _UnitGwei() when gwei != null:
+return gwei();case _UnitWei() when wei != null:
+return wei();case _UnitId() when id != null:
+return id(_that.id);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function()  ether,required TResult Function()  gwei,required TResult Function()  wei,required TResult Function( int id)  id,}) {final _that = this;
+switch (_that) {
+case _UnitEther():
+return ether();case _UnitGwei():
+return gwei();case _UnitWei():
+return wei();case _UnitId():
+return id(_that.id);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function()?  ether,TResult? Function()?  gwei,TResult? Function()?  wei,TResult? Function( int id)?  id,}) {final _that = this;
+switch (_that) {
+case _UnitEther() when ether != null:
+return ether();case _UnitGwei() when gwei != null:
+return gwei();case _UnitWei() when wei != null:
+return wei();case _UnitId() when id != null:
+return id(_that.id);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
-class _$UnitCopyWithImpl<$Res, $Val extends Unit>
-    implements $UnitCopyWith<$Res> {
-  _$UnitCopyWithImpl(this._value, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
 
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
+class _UnitEther extends Unit {
+  const _UnitEther(): super._();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UnitEther);
 }
 
-/// @nodoc
-abstract class _$$UnitEtherImplCopyWith<$Res> {
-  factory _$$UnitEtherImplCopyWith(
-          _$UnitEtherImpl value, $Res Function(_$UnitEtherImpl) then) =
-      __$$UnitEtherImplCopyWithImpl<$Res>;
-}
 
-/// @nodoc
-class __$$UnitEtherImplCopyWithImpl<$Res>
-    extends _$UnitCopyWithImpl<$Res, _$UnitEtherImpl>
-    implements _$$UnitEtherImplCopyWith<$Res> {
-  __$$UnitEtherImplCopyWithImpl(
-      _$UnitEtherImpl _value, $Res Function(_$UnitEtherImpl) _then)
-      : super(_value, _then);
+@override
+int get hashCode => runtimeType.hashCode;
 
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$UnitEtherImpl extends _UnitEther {
-  const _$UnitEtherImpl() : super._();
-
-  @override
-  String toString() {
+@override
+String toString() {
     return 'Unit.ether()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UnitEtherImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ether,
-    required TResult Function() gwei,
-    required TResult Function() wei,
-    required TResult Function(int id) id,
-  }) {
-    return ether();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? ether,
-    TResult? Function()? gwei,
-    TResult? Function()? wei,
-    TResult? Function(int id)? id,
-  }) {
-    return ether?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ether,
-    TResult Function()? gwei,
-    TResult Function()? wei,
-    TResult Function(int id)? id,
-    required TResult orElse(),
-  }) {
-    if (ether != null) {
-      return ether();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_UnitEther value) ether,
-    required TResult Function(_UnitGwei value) gwei,
-    required TResult Function(_UnitWei value) wei,
-    required TResult Function(_UnitId value) id,
-  }) {
-    return ether(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_UnitEther value)? ether,
-    TResult? Function(_UnitGwei value)? gwei,
-    TResult? Function(_UnitWei value)? wei,
-    TResult? Function(_UnitId value)? id,
-  }) {
-    return ether?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_UnitEther value)? ether,
-    TResult Function(_UnitGwei value)? gwei,
-    TResult Function(_UnitWei value)? wei,
-    TResult Function(_UnitId value)? id,
-    required TResult orElse(),
-  }) {
-    if (ether != null) {
-      return ether(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class _UnitEther extends Unit {
-  const factory _UnitEther() = _$UnitEtherImpl;
-  const _UnitEther._() : super._();
+
 }
 
-/// @nodoc
-abstract class _$$UnitGweiImplCopyWith<$Res> {
-  factory _$$UnitGweiImplCopyWith(
-          _$UnitGweiImpl value, $Res Function(_$UnitGweiImpl) then) =
-      __$$UnitGweiImplCopyWithImpl<$Res>;
-}
 
-/// @nodoc
-class __$$UnitGweiImplCopyWithImpl<$Res>
-    extends _$UnitCopyWithImpl<$Res, _$UnitGweiImpl>
-    implements _$$UnitGweiImplCopyWith<$Res> {
-  __$$UnitGweiImplCopyWithImpl(
-      _$UnitGweiImpl _value, $Res Function(_$UnitGweiImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
-}
 
 /// @nodoc
 
-class _$UnitGweiImpl extends _UnitGwei {
-  const _$UnitGweiImpl() : super._();
 
-  @override
-  String toString() {
+class _UnitGwei extends Unit {
+  const _UnitGwei(): super._();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UnitGwei);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
     return 'Unit.gwei()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UnitGweiImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ether,
-    required TResult Function() gwei,
-    required TResult Function() wei,
-    required TResult Function(int id) id,
-  }) {
-    return gwei();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? ether,
-    TResult? Function()? gwei,
-    TResult? Function()? wei,
-    TResult? Function(int id)? id,
-  }) {
-    return gwei?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ether,
-    TResult Function()? gwei,
-    TResult Function()? wei,
-    TResult Function(int id)? id,
-    required TResult orElse(),
-  }) {
-    if (gwei != null) {
-      return gwei();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_UnitEther value) ether,
-    required TResult Function(_UnitGwei value) gwei,
-    required TResult Function(_UnitWei value) wei,
-    required TResult Function(_UnitId value) id,
-  }) {
-    return gwei(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_UnitEther value)? ether,
-    TResult? Function(_UnitGwei value)? gwei,
-    TResult? Function(_UnitWei value)? wei,
-    TResult? Function(_UnitId value)? id,
-  }) {
-    return gwei?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_UnitEther value)? ether,
-    TResult Function(_UnitGwei value)? gwei,
-    TResult Function(_UnitWei value)? wei,
-    TResult Function(_UnitId value)? id,
-    required TResult orElse(),
-  }) {
-    if (gwei != null) {
-      return gwei(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class _UnitGwei extends Unit {
-  const factory _UnitGwei() = _$UnitGweiImpl;
-  const _UnitGwei._() : super._();
+
 }
 
-/// @nodoc
-abstract class _$$UnitWeiImplCopyWith<$Res> {
-  factory _$$UnitWeiImplCopyWith(
-          _$UnitWeiImpl value, $Res Function(_$UnitWeiImpl) then) =
-      __$$UnitWeiImplCopyWithImpl<$Res>;
-}
 
-/// @nodoc
-class __$$UnitWeiImplCopyWithImpl<$Res>
-    extends _$UnitCopyWithImpl<$Res, _$UnitWeiImpl>
-    implements _$$UnitWeiImplCopyWith<$Res> {
-  __$$UnitWeiImplCopyWithImpl(
-      _$UnitWeiImpl _value, $Res Function(_$UnitWeiImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
-}
 
 /// @nodoc
 
-class _$UnitWeiImpl extends _UnitWei {
-  const _$UnitWeiImpl() : super._();
 
-  @override
-  String toString() {
+class _UnitWei extends Unit {
+  const _UnitWei(): super._();
+  
+
+
+
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UnitWei);
+}
+
+
+@override
+int get hashCode => runtimeType.hashCode;
+
+@override
+String toString() {
     return 'Unit.wei()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$UnitWeiImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ether,
-    required TResult Function() gwei,
-    required TResult Function() wei,
-    required TResult Function(int id) id,
-  }) {
-    return wei();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? ether,
-    TResult? Function()? gwei,
-    TResult? Function()? wei,
-    TResult? Function(int id)? id,
-  }) {
-    return wei?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ether,
-    TResult Function()? gwei,
-    TResult Function()? wei,
-    TResult Function(int id)? id,
-    required TResult orElse(),
-  }) {
-    if (wei != null) {
-      return wei();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_UnitEther value) ether,
-    required TResult Function(_UnitGwei value) gwei,
-    required TResult Function(_UnitWei value) wei,
-    required TResult Function(_UnitId value) id,
-  }) {
-    return wei(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_UnitEther value)? ether,
-    TResult? Function(_UnitGwei value)? gwei,
-    TResult? Function(_UnitWei value)? wei,
-    TResult? Function(_UnitId value)? id,
-  }) {
-    return wei?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_UnitEther value)? ether,
-    TResult Function(_UnitGwei value)? gwei,
-    TResult Function(_UnitWei value)? wei,
-    TResult Function(_UnitId value)? id,
-    required TResult orElse(),
-  }) {
-    if (wei != null) {
-      return wei(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class _UnitWei extends Unit {
-  const factory _UnitWei() = _$UnitWeiImpl;
-  const _UnitWei._() : super._();
+
 }
 
-/// @nodoc
-abstract class _$$UnitIdImplCopyWith<$Res> {
-  factory _$$UnitIdImplCopyWith(
-          _$UnitIdImpl value, $Res Function(_$UnitIdImpl) then) =
-      __$$UnitIdImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int id});
-}
 
-/// @nodoc
-class __$$UnitIdImplCopyWithImpl<$Res>
-    extends _$UnitCopyWithImpl<$Res, _$UnitIdImpl>
-    implements _$$UnitIdImplCopyWith<$Res> {
-  __$$UnitIdImplCopyWithImpl(
-      _$UnitIdImpl _value, $Res Function(_$UnitIdImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$UnitIdImpl(
-      null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
 
 /// @nodoc
 
-class _$UnitIdImpl extends _UnitId {
-  const _$UnitIdImpl(this.id) : super._();
 
-  @override
-  final int id;
+class _UnitId extends Unit {
+  const _UnitId(this.id): super._();
+  
 
-  @override
-  String toString() {
+ final  int id;
+
+/// Create a copy of Unit
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UnitIdCopyWith<_UnitId> get copyWith => __$UnitIdCopyWithImpl<_UnitId>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UnitId&&(identical(other.id, id) || other.id == id));
+}
+
+
+@override
+int get hashCode {
+    return Object.hash(runtimeType,id);
+}
+
+@override
+String toString() {
     return 'Unit.id(id: $id)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnitIdImpl &&
-            (identical(other.id, id) || other.id == id));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, id);
-
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnitIdImplCopyWith<_$UnitIdImpl> get copyWith =>
-      __$$UnitIdImplCopyWithImpl<_$UnitIdImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() ether,
-    required TResult Function() gwei,
-    required TResult Function() wei,
-    required TResult Function(int id) id,
-  }) {
-    return id(this.id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? ether,
-    TResult? Function()? gwei,
-    TResult? Function()? wei,
-    TResult? Function(int id)? id,
-  }) {
-    return id?.call(this.id);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? ether,
-    TResult Function()? gwei,
-    TResult Function()? wei,
-    TResult Function(int id)? id,
-    required TResult orElse(),
-  }) {
-    if (id != null) {
-      return id(this.id);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_UnitEther value) ether,
-    required TResult Function(_UnitGwei value) gwei,
-    required TResult Function(_UnitWei value) wei,
-    required TResult Function(_UnitId value) id,
-  }) {
-    return id(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_UnitEther value)? ether,
-    TResult? Function(_UnitGwei value)? gwei,
-    TResult? Function(_UnitWei value)? wei,
-    TResult? Function(_UnitId value)? id,
-  }) {
-    return id?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_UnitEther value)? ether,
-    TResult Function(_UnitGwei value)? gwei,
-    TResult Function(_UnitWei value)? wei,
-    TResult Function(_UnitId value)? id,
-    required TResult orElse(),
-  }) {
-    if (id != null) {
-      return id(this);
-    }
-    return orElse();
-  }
 }
 
-abstract class _UnitId extends Unit {
-  const factory _UnitId(final int id) = _$UnitIdImpl;
-  const _UnitId._() : super._();
 
-  int get id;
-
-  /// Create a copy of Unit
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UnitIdImplCopyWith<_$UnitIdImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$UnitIdCopyWith<$Res> implements $UnitCopyWith<$Res> {
+  factory _$UnitIdCopyWith(_UnitId value, $Res Function(_UnitId) _then) = __$UnitIdCopyWithImpl;
+@useResult
+$Res call({
+ int id
+});
+
+
+
+
+}
+/// @nodoc
+class __$UnitIdCopyWithImpl<$Res>
+    implements _$UnitIdCopyWith<$Res> {
+  __$UnitIdCopyWithImpl(this._self, this._then);
+
+  final _UnitId _self;
+  final $Res Function(_UnitId) _then;
+
+/// Create a copy of Unit
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? id = null,}) {
+  return _then(_UnitId(
+null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,
+  ));
+}
+
+
+}
+
+// dart format on

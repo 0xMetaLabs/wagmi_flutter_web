@@ -24,4 +24,4 @@ extension type JSGetWalletClientReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetWalletClientErrorType(JSObject _) implements JSObject {}
+extension type JSGetWalletClientErrorType(JSObject _) implements JSObject;

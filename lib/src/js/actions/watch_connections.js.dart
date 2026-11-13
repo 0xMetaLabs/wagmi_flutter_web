@@ -13,7 +13,7 @@ extension type JSWatchConnectionsParameters._(JSObject _) implements JSObject {
 
 @JS()
 extension type JSWatchConnectionsReturnType(JSFunction _)
-    implements JSFunction {}
+    implements JSFunction;
 
 extension JSWatchConnectionsReturnTypeConversion
     on JSWatchConnectionsReturnType {

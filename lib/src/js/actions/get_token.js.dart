@@ -44,4 +44,4 @@ extension type JSGetTokenReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetTokenErrorType(JSObject _) implements JSObject {}
+extension type JSGetTokenErrorType(JSObject _) implements JSObject;

@@ -11,4 +11,4 @@ extension type JSDisconnectParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSDisconnectErrorType(JSObject _) implements JSObject {}
+extension type JSDisconnectErrorType(JSObject _) implements JSObject;

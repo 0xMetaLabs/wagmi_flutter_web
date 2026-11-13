@@ -10,4 +10,4 @@ extension type JSReadContractsParameters._(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSReadContractsErrorType(JSObject _) implements JSObject {}
+extension type JSReadContractsErrorType(JSObject _) implements JSObject;

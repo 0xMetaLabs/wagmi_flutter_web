@@ -4,7 +4,7 @@ import 'package:wagmi_flutter_web/src/models/fees_values.dart';
 part 'estimate_gas.freezed.dart';
 
 @freezed
-class EstimateGasParameters with _$EstimateGasParameters {
+abstract class EstimateGasParameters with _$EstimateGasParameters {
   const EstimateGasParameters._();
 
   const factory EstimateGasParameters.legacy({

@@ -73,4 +73,4 @@ extension type JSGetBlockReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetBlockErrorType(JSObject _) implements JSObject {}
+extension type JSGetBlockErrorType(JSObject _) implements JSObject;

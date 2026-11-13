@@ -69,4 +69,4 @@ extension type JSGetTransactionReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSGetTransactionErrorType(JSObject _) implements JSObject {}
+extension type JSGetTransactionErrorType(JSObject _) implements JSObject;

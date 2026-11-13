@@ -43,4 +43,4 @@ extension type JSCallReturnType(JSObject _) implements JSObject {
 }
 
 @JS()
-extension type JSCallErrorType(JSObject _) implements JSObject {}
+extension type JSCallErrorType(JSObject _) implements JSObject;
