@@ -1,7 +1,7 @@
 library wagmi_flutter_web;
 
 import 'dart:async';
-import 'dart:html' as html;
+import 'dart:html' as html; // ignore: deprecated_member_use, avoid_web_libraries_in_flutter
 
 import 'package:flutter/foundation.dart';
 

@@ -73,42 +73,35 @@ class _SwitchChainDialogState extends State<SwitchChainDialog> {
                 Container(
                   width: 250,
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: widget.chains.length,
-                    itemBuilder: (context, index) {
-                      final chain = widget.chains[index];
-
-                      // chain with radio button
-                      return Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // ignore: deprecated_member_use
-                          Radio<int>(
-                            value: chain.id,
-                            groupValue: widget.currentChain,
-                            onChanged: (int? value) {
-                              if (value != null) {
-                                // ignore: void_checks
-                                return widget.callback(value);
-                              }
-                            },
-                          ),
-                          Container(
-                            width: 180,
-                            margin: const EdgeInsets.only(top: 8),
-                            child: Text(
-                              '${chain.name} (${chain.id})',
-                              maxLines: 120,
-                              style: TextStyle(
-                                color: Colors.black.withValues(alpha: 0.7),
-                                fontSize: contentFontSize,
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
+                  child: RadioGroup<int>(
+                    groupValue: widget.currentChain,
+                    onChanged: (int? value) {
+                      if (value != null) {
+                        widget.callback(value);
+                      }
                     },
+                    child: Column(
+                      children: [
+                        for (final chain in widget.chains)
+                          Row(
+                            children: [
+                              Radio<int>(
+                                value: chain.id,
+                              ),
+                              Expanded(
+                                child: Text(
+                                  '${chain.name} (${chain.id})',
+                                  maxLines: 120,
+                                  style: TextStyle(
+                                    color: Colors.black.withValues(alpha: 0.7),
+                                    fontSize: contentFontSize,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(

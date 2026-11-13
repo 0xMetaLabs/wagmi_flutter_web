@@ -54,10 +54,8 @@ linter:
     - avoid_function_literals_in_foreach_calls
     - avoid_init_to_null
     - avoid_js_rounded_ints
-    - avoid_null_checks_in_equality_operators
     # - avoid_positional_boolean_parameters
     - avoid_print
-    - avoid_private_typedef_functions
     - avoid_redundant_argument_values
     - avoid_relative_lib_imports
     - avoid_renaming_method_parameters
@@ -118,7 +116,6 @@ linter:
     - omit_local_variable_types
     - only_throw_errors
     - overridden_fields
-    - package_api_docs
     - package_names
     - package_prefixed_library_names
     - parameter_assignments
@@ -172,7 +169,6 @@ linter:
     - type_init_formals
     - type_literal_in_constant_pattern
     - unawaited_futures
-    - unnecessary_await_in_return
     - unnecessary_brace_in_string_interps
     - unnecessary_const
     - unnecessary_constructor_name
